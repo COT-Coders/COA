@@ -2,10 +2,9 @@
  
 Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 
-	1) Deepak Bisht
 	2) Mayank Chaudhari
 	3) Samaksh Garg
-	4) Shubham Oli
+
 
 
 -->
@@ -66,11 +65,9 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
           	<div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:0%;">
             	<div class="row">
               		<div class="col-md-12">
-          				<h3 style="font-weight:bolder; text-align:center;">International Journal of Basic and Applied Agricultural Research</h3>
+          				<h2 style="font-weight:bolder; text-align:center;">College of Agriculture</h2>
               		</div>
-              		<div class="col-md-12" style="text-align:center;">
-          				<h5>An offical Publication of</h5>
-              		</div>
+              		
            	  		<div class="col-md-12 university_link" style="text-align:center;">
           				<h4><a href="http://www.gbpuat.ac.in" target="_blank">Govind Ballabh Pant University of Agriculture and Technology, Pantnagar Uttarakhand</a></h4>
               		</div>

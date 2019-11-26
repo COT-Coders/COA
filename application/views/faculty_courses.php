@@ -66,87 +66,13 @@
                 reputed journals and has been serving as associate editor/ editorial board member of reputed journals. He has to his credit many 
                 prestegeous awards viz Young Scientist Awards (twice), Dr BB Singh Research Excellence Award, Faculty Excellence Award (twice) etc. 
 								    
-								</span>
+								
 
-                <h4><b>Contact Details</b></h4>
-								<span>
-                  <p>Head Department of Agrometeorology</p>
-                  <p>College of Agriculture</p>
-                  <p>G B Pant University, Pantnagar</p>
-                  <p> Email : <span class="text-danger">abc@gmail.com</span></p>
-                  <p> Phone : <span class="text-danger">911</span></p>
-                  <p> Fax : <span class="text-danger">100</span></p>
-								</span>
+                
 
 
-                <h4><b>Membership details</b></h4>
-                <span>
-                  <ul>  
-                    <li><b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b></li>
-                    <li><b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b></li>
-                  </ul>
-								</span>
-
-                <h4><b>Personal details</b></h4>
-								<span>
-                  <div class="table-responsive">          
-                    <table class="table">
-                      <thead>
-                        <tr><th>Year</th><th>Degree</th><th>Description</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>1919</td><td>Degree 1</td><td>in xsz stream, from xyz college + any other</td></tr>
-                        <tr><td>1919</td><td>Degree 2</td><td>in xsz stream, from xyz college + any other</td></tr>
-                        <tr><td>1919</td><td>Degree 3</td><td>in xsz stream, from xyz college + any other</td></tr>
-                        <tr><td>1919</td><td>Degree 4</td><td>in xsz stream, from xyz college + any other</td></tr>
-                      </tbody>
-                    </table>
-                    </div>
-                  
-								</span>
-
-
-                <h4><b>Professional Experience</b></h4>
-								<span> 
-                <div class="table-responsive">          
-                    <table class="table">
-                      <thead>
-                        <tr><th>Year</th><th>Experience</th><th>Description</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-                        
-                      </tbody>
-                    </table>
-                    
-                  </div>
-								</span>
-
-                <h4><b>Administrative Experience</b></h4>
-								<span>
-                <div class="table-responsive">          
-                    <table class="table">
-                      <thead>
-                        <tr><th>Year</th><th>Experience</th><th>Description</th></tr>
-                      </thead>
-                      <tbody>
-                        <tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-                        <tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-                        
-                      </tbody>
-                    </table>
-                    </div>
-                  </div>
-								</span>
+                
+								
         					</div>
 		    		
 					</div>

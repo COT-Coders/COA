@@ -45,14 +45,11 @@
 				<div class="col-md-9" id="main-section" style="padding:1%">
 					<div class="row">
 						<div class="col-md-12">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><h4><b>Profile</b></h4></a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Library</li>
-                            </ol>
-                            </nav>
-
-
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page"><h4><b>Profile</b></h4></li>
+                </ol>
+            </nav>
 
 							<div class="topslider">
 		            
@@ -61,6 +58,7 @@
         						<div class="separator"></div>
 								<h3><b>Dr A.S. Nain</b></h3>
 								<div class="separator"></div>
+                <h4><b>Courses</b></h4>
 								<span>Dr A.S. Nain completed his PhD from Indian Space Research Organization (ISRO), India in the year 2002 and worked as 
                 Visiting Scientist / postdoctoral fellow in ZALF (Leibniz), Muncheberg, Germany from 2003 to 2005. He is currently holding 
                 prestigious NABARD-Chair and Head, Department of Agrometeorology, GB Pant University of Agriculture and Technology. Prior to 
@@ -69,6 +67,26 @@
                 prestegeous awards viz Young Scientist Awards (twice), Dr BB Singh Research Excellence Award, Faculty Excellence Award (twice) etc. 
 								    
 								</span>
+
+                <h4><b>Contact Details</b></h4>
+								<span>
+                  <p>Head Department of Agrometeorology</p>
+                  <p>College of Agriculture</p>
+                  <p>G B Pant University, Pantnagar</p>
+                  <p> Email : <span class="text-danger">abc@gmail.com</span></p>
+                  <p> Phone : <span class="text-danger">911</span></p>
+                  <p> Fax : <span class="text-danger">100</span></p>
+								</span>
+
+
+                <h4><b>Membership details</b></h4>
+                
+
+
+                
+
+                <h4><b>Administrative Experience</b></h4>
+			
         					</div>
 		    		
 					</div>

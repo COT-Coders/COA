@@ -45,11 +45,14 @@
 				<div class="col-md-9" id="main-section" style="padding:1%">
 					<div class="row">
 						<div class="col-md-12">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page"><h4><b>Profile</b></h4></li>
-                </ol>
-            </nav>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><h4><b>Profile</b></h4></a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                            </ol>
+                            </nav>
+
+
 
 							<div class="topslider">
 		            
@@ -58,28 +61,6 @@
         						<div class="separator"></div>
 								<h3><b>Dr A.S. Nain</b></h3>
 								<div class="separator"></div>
-                <h4><b>About the faculty</b></h4>
-								<span>Dr A.S. Nain completed his PhD from Indian Space Research Organization (ISRO), India in the year 2002 and worked as 
-                Visiting Scientist / postdoctoral fellow in ZALF (Leibniz), Muncheberg, Germany from 2003 to 2005. He is currently holding 
-                prestigious NABARD-Chair and Head, Department of Agrometeorology, GB Pant University of Agriculture and Technology. Prior to 
-                present engagement he had served Indira Gandhi Agricultural University for five years. He has published more than 100 papers in 
-                reputed journals and has been serving as associate editor/ editorial board member of reputed journals. He has to his credit many 
-                prestegeous awards viz Young Scientist Awards (twice), Dr BB Singh Research Excellence Award, Faculty Excellence Award (twice) etc. 
-								    
-								</span>
-
-                <h4><b>Contact Details</b></h4>
-								<span>Dr A.S. Nain completed his PhD from Indian Space Research Organization (ISRO), India in the year 2002 and worked as 
-                Visiting Scientist / postdoctoral fellow in ZALF (Leibniz), Muncheberg, Germany from 2003 to 2005. He is currently holding 
-                prestigious NABARD-Chair and Head, Department of Agrometeorology, GB Pant University of Agriculture and Technology. Prior to 
-                present engagement he had served Indira Gandhi Agricultural University for five years. He has published more than 100 papers in 
-                reputed journals and has been serving as associate editor/ editorial board member of reputed journals. He has to his credit many 
-                prestegeous awards viz Young Scientist Awards (twice), Dr BB Singh Research Excellence Award, Faculty Excellence Award (twice) etc. 
-								    
-								</span>
-
-
-                <h4><b>Membership details</b></h4>
 								<span>Dr A.S. Nain completed his PhD from Indian Space Research Organization (ISRO), India in the year 2002 and worked as 
                 Visiting Scientist / postdoctoral fellow in ZALF (Leibniz), Muncheberg, Germany from 2003 to 2005. He is currently holding 
                 prestigious NABARD-Chair and Head, Department of Agrometeorology, GB Pant University of Agriculture and Technology. Prior to 

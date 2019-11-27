@@ -21,9 +21,9 @@
                     <p class="card-text"> <b> B.Sc, M.Sc, Phd </b> </p>
                   </div>
                   <ul class="list-group">
-                    <li class="list-group-item"><a href="#">Profile</a></li>
+                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty">Profile</a></li>
                     <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fcourses">Courses</a></li>
-                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fpublications">Publications</a></li>
+                    <li class="list-group-item"><a href="#">Publications</a></li>
                     <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fresearch">Research</a></li>
                     
                     <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fmeetings">Meetings & Conferences</a></li>
@@ -48,7 +48,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                     
-                                    <li class="breadcrumb-item"><a href="#">Profile</a></li>
+                                    <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>/faculty">Profile</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Publications</li>
                                     </ol>
                                 </nav>

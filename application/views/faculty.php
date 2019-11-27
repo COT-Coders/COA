@@ -47,7 +47,8 @@
 						<div class="col-md-12">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page"><h4><b>Profile</b></h4></li>
+                  
+                <li class="breadcrumb-item active" aria-current="page"><h4>Profile</h4></li>
                 </ol>
             </nav>
 

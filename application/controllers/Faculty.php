@@ -22,6 +22,13 @@
          $this->load->view('templets/header');
          $this->load->view('faculty_courses'); 
          $this->load->view('templets/footer');
+      }
+      
+      public function fpublications() { 
+         $this->load->helper('url');
+         $this->load->view('templets/header');
+         $this->load->view('faculty_publications'); 
+         $this->load->view('templets/footer');
       } 
    } 
 ?>

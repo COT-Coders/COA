@@ -49,7 +49,7 @@
                 <ol class="breadcrumb">
                   
                   <li class="breadcrumb-item"><a href="#">Profile</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                  <li class="breadcrumb-item active" aria-current="page">Publications</li>
                 </ol>
             </nav>
 
@@ -60,14 +60,25 @@
         						<div class="separator"></div>
 								<h3><b>Dr A.S. Nain</b></h3>
 								<div class="separator"></div>
-                <h4><b>Courses </b></h4>
-								<span>
-                                    <ul>
-                                        <li>course 1 </li>
-                                        <li>course 2 </li>
-                                        <li>course 3 </li>
-                                        <li>course 4 </li>
-                                    </ul>
+                <h4><b>Publications </b></h4>
+								
+                  <div class="table-responsive">          
+                    <table class="table">
+                      <thead>
+                        <tr><th>Year</th><th>Title</th><th>Publication</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>1945</td><td>How to kill Hitler</td><td>World war 2 publication house</td></tr>
+                        <tr><td>1945</td><td>How to kill Hitler</td><td>World war 2 publication house</td></tr>
+                        <tr><td>1945</td><td>How to kill Hitler</td><td>World war 2 publication house</td></tr>
+                        <tr><td>1945</td><td>How to kill Hitler</td><td>World war 2 publication house</td></tr>
+                        <tr><td>1945</td><td>How to kill Hitler</td><td>World war 2 publication house</td></tr>
+                        <tr><td>1945</td><td>How to kill Hitler</td><td>World war 2 publication house</td></tr>
+                      </tbody>
+                    </table>
+                    </div>
+                  
+								</span>
                                 </span>
 
                 

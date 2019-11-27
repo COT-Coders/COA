@@ -26,7 +26,7 @@
                     <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fpublications">Publications</a></li>
                     <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fresearch">Research</a></li>
                     
-                    <li class="list-group-item">Meetings & Conferences</li>
+                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fmeetings">Meetings & Conferences</a></li>
                    
                     
                   </ul>  

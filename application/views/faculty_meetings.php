@@ -21,12 +21,12 @@
                     <p class="card-text"> <b> B.Sc, M.Sc, Phd </b> </p>
                   </div>
                   <ul class="list-group">
-                    <li class="list-group-item">Profile</li>
-                    <li class="list-group-item">Courses</li>
-                    <li class="list-group-item">Publications</li>
-                    <li class="list-group-item">Research</li>
+                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty">Profile</a></li>
+                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fcourses">Courses</a></li>
+                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fpublications">Publications</a></li>
+                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fresearch">Research</a></li>
                     
-                    <li class="list-group-item">Meetings & Conferences</li>
+                    <li class="list-group-item"><a href="#">Meetings & Conferences</li>
                    
                     
                   </ul>  

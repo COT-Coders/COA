@@ -30,5 +30,19 @@
          $this->load->view('faculty_publications'); 
          $this->load->view('templets/footer');
       } 
+
+      public function fresearch() { 
+         $this->load->helper('url');
+         $this->load->view('templets/header');
+         $this->load->view('faculty_research'); 
+         $this->load->view('templets/footer');
+      } 
+
+      public function fmeetings() { 
+         $this->load->helper('url');
+         $this->load->view('templets/header');
+         $this->load->view('faculty_meetings'); 
+         $this->load->view('templets/footer');
+      } 
    } 
 ?>

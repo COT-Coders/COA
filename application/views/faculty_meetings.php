@@ -45,13 +45,13 @@
 				<div class="col-md-9" id="main-section" style="padding:1%">
 					<div class="row">
 						<div class="col-md-12">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                    
-                                    <li class="breadcrumb-item"><a href="#">Profile</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Publications</li>
-                                    </ol>
-                                </nav>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  
+                  <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>/faculty/index/">Profile</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Meetings</li>
+                </ol>
+            </nav>
 
 							<div class="topslider">
 		            
@@ -60,23 +60,22 @@
         						<div class="separator"></div>
 								<h3><b>Dr A.S. Nain</b></h3>
 								<div class="separator"></div>
-                <h4><b>Publications </b></h4>
-				<span>
-                    <ol>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+                <h4><b>Meetings and Conferences</b></h4>
+								<span>
+                                    <ul>
+                                        <li>Hitler Kaise mara gaya </li>
+                                        <li>Hitler Kaise mara gaya </li>
+                                        <li>Hitler Kaise mara gaya </li>
+                                        <li>Hitler Kaise mara gaya </li>
+                                        <li>Hitler Kaise mara gaya </li>
+                                        <li>Hitler Kaise mara gaya </li>
+                                        <li>Hitler Kaise mara gaya </li>
+                                        <li>Hitler Kaise mara gaya </li>
+                                    </ul>
+                                </span>
 
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
 
-
-                </span>				
-                  
-                  
-							
+                
 
                 
 								
@@ -101,3 +100,6 @@
 	    </div>
 	</div>
 </section>
+
+
+

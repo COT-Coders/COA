@@ -21,10 +21,10 @@
                     <p class="card-text"> <b> B.Sc, M.Sc, Phd </b> </p>
                   </div>
                   <ul class="list-group">
-                    <li class="list-group-item">Profile</li>
-                    <li class="list-group-item">Courses</li>
-                    <li class="list-group-item">Publications</li>
-                    <li class="list-group-item">Research</li>
+                  <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/">Profile</a></li>
+                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fcourses/">Courses</a></li>
+                    <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fpublications/">Publications</a></li>
+                    <li class="list-group-item"><a href="#">Research</a></li>
                     
                     <li class="list-group-item">Meetings & Conferences</li>
                    
@@ -45,13 +45,13 @@
 				<div class="col-md-9" id="main-section" style="padding:1%">
 					<div class="row">
 						<div class="col-md-12">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                    
-                                    <li class="breadcrumb-item"><a href="#">Profile</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Publications</li>
-                                    </ol>
-                                </nav>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  
+                  <li class="breadcrumb-item"><a href="#">Profile</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Research</li>
+                </ol>
+            </nav>
 
 							<div class="topslider">
 		            
@@ -60,23 +60,39 @@
         						<div class="separator"></div>
 								<h3><b>Dr A.S. Nain</b></h3>
 								<div class="separator"></div>
-                <h4><b>Publications </b></h4>
-				<span>
-                    <ol>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
-
-                     <li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+                <h4><b>Research Interest </b></h4>
+								<span>
+                                    <ul>
+                                        <li>course 1 </li>
+                                        <li>course 2 </li>
+                                        <li>course 3 </li>
+                                        <li>course 4 </li>
+                                    </ul>
+                                </span>
 
 
-                </span>				
-                  
-                  
-							
+                <h4><b>Research Projects </b></h4>
+                <span>
+                    <div class="table-responsive">          
+                        <table class="table">
+                        <thead>
+                            <tr><th>Title</th><th>Description</th><th>Duration</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Hitler ki Aatma ki Shanti</td><td> Prtform rituals to calm down the Bhatkti Hitler ki aatma</td><td>Till his rebirth</td><td>Open</td></tr>
+                            <tr><td>Hitler ki Aatma ki Shanti</td><td> Prtform rituals to calm down the Bhatkti Hitler ki aatma</td><td>Till his rebirth</td><td>Open</td></tr>
+                            <tr><td>Hitler ki Aatma ki Shanti</td><td> Prtform rituals to calm down the Bhatkti Hitler ki aatma</td><td>Till his rebirth</td><td>Open</td></tr>
+                            <tr><td>Hitler ki Aatma ki Shanti</td><td> Prtform rituals to calm down the Bhatkti Hitler ki aatma</td><td>Till his rebirth</td><td>Open</td></tr>
+                            <tr><td>Hitler ki Aatma ki Shanti</td><td> Prtform rituals to calm down the Bhatkti Hitler ki aatma</td><td>Till his rebirth</td><td>Open</td></tr>
+                            <tr><td>Hitler ki Aatma ki Shanti</td><td> Prtform rituals to calm down the Bhatkti Hitler ki aatma</td><td>Till his rebirth</td><td>Open</td></tr>
+                            <tr><td>Hitler ki Aatma ki Shanti</td><td> Prtform rituals to calm down the Bhatkti Hitler ki aatma</td><td>Till his rebirth</td><td>Open</td></tr>
+                            
+                            
+                        </tbody>
+                        </table>
+                        </div>
+                    </div>
+				</span>
 
                 
 								

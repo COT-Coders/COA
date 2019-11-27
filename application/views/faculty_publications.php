@@ -48,7 +48,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                     
-                                    <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>/faculty">Profile</a></li>
+                                    <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>/facultys">Profile</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Publications</li>
                                     </ol>
                                 </nav>

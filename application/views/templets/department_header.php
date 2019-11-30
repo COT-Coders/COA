@@ -55,7 +55,8 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 
     <header class="container-fluid">
         <div class="row" >
-            <div class="col-md-12" id="header">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" id="header">
                 <div class="row" style="width:98%">
                             
                     <div class="col-md-2 col-sm-2 col-xs-2 img-circle" id="logo" style="margin-left:0%;margin-top:1%;">
@@ -65,7 +66,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                     
                     <div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:0%;">
                         <div class="row">
-                                <div class="col-md-5 university_link">
+                                <div class="col-md-6 university_link">
                                 <h2><a href="http://www.gbpuat.ac.in" target="_blank">College Of Agriculture</a></h2>
                                 <h4 style="margin-left:1%;"><a href="http://www.gbpuat.ac.in" target="_blank">G. B. Pant Universiity of Agriculture and Technology</a></h4>
                             </div>
@@ -88,7 +89,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                     </div>
                     <div class="col-md-9 hidden-xs hidden-sm" id="title" style="text-align:left;">
                         <div class="row">
-                            <div class="col-md-5 university_link">
+                            <div class="col-md-12 university_link">
                                     <h1><a href="#" target="_blank">Department of Agrometrology</a></h1>
                             </div>
                                 
@@ -104,7 +105,8 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 
         <!--   -=-=-=-=-=-=-=-=-=-=-=-=-=-  navigation Bar   -=-=-=-=-=-=-=-=-=-=-=-=-   -->
         <div class="row">
-            <div class="col-md-12 navbar navbar-custom" role="navigation">
+        <div class="col-md-1"></div>
+            <div class="col-md-10 navbar navbar-custom" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
                         <span class="icon-bar"></span>

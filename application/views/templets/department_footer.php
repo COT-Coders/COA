@@ -2,7 +2,8 @@
 	    
 <footer class="container-fluid" style"margin-top:auto;">
 	   		<div class="row">
-	   			<div class="col-md-12" style="margin-bottom:0.5%;height:80px;background-color:#0F204B;border-top:1px solid RGB(0,76,102);">
+			   <div class="col-md-1"></div>
+	   			<div class="col-md-10" style="margin-bottom:0.5%;height:80px;background-color:#0F204B;border-top:1px solid RGB(0,76,102);">
 	   				<p style="color:white; text-align:center; margin-top:2.8%;">
 	   					<?php 
 	   					if( isset($visitor) && $visitor ){

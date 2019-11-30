@@ -64,12 +64,8 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
           
           <div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:0%;">
             <div class="row">
-                  <div class="col-md-12">
-                      <h2 style="font-weight:bolder; text-align:center;">College of Agriculture</h2>
-                  </div>
-                  
                      <div class="col-md-12 university_link" style="text-align:center;">
-                      <h4><a href="http://www.gbpuat.ac.in" target="_blank">Govind Ballabh Pant University of Agriculture and Technology, Pantnagar Uttarakhand</a></h4>
+                      <h2><a href="http://www.gbpuat.ac.in" target="_blank">Department of Agrometerology</a></h2>
                   </div>
             </div>
           </div>

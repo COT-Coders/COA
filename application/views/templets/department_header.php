@@ -55,41 +55,52 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 
     <header class="container-fluid">
         <div class="row" >
-      <div class="col-md-12" id="header">
-        <div class="row" style="width:98%">
+            <div class="col-md-12" id="header">
+                <div class="row" style="width:98%">
+                            
+                    <div class="col-md-2 col-sm-2 col-xs-2 img-circle" id="logo" style="margin-left:0%;margin-top:1%;">
+                            <img src="<?php echo base_url();?>assets/img/pantnagar_logo.png" alt="GBPUAT Pantnagar" width="100" height="100">
+                            
+                    </div>
                     
-          <div class="col-md-1 col-sm-2 col-xs-2 img-circle" id="logo" style="margin-left:0%;margin-top:1%;">
-               <img src="<?php echo base_url();?>assets/img/logo.png" alt="IJBAAR">
-          </div>
+                    <div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:0%;">
+                        <div class="row">
+                                <div class="col-md-5 university_link">
+                                <h2><a href="http://www.gbpuat.ac.in" target="_blank">College Of Agriculture</a></h2>
+                                <h4 style="margin-left:1%;"><a href="http://www.gbpuat.ac.in" target="_blank">G. B. Pant Universiity of Agriculture and Technology</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-9 col-xs-7 col-sm-7 hidden-md hidden-lg visible-sm-block visible-xs-block" id="title" style="margin-left:2%;">
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <h3 style="font-weight:bolder; text-align:center;">College of Agriculture</h3>
+                                </div>
+                            
+                                <div class="col-md-12 university_link" style="text-align:center;">
+                                    <h4><a href="http://www.gbpuat.ac.in" target="_blank">G.B.P.U.A&amp;T, Pantnagar</a></h4>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12">
+                        <hr>
+                    </div>
+                    <div class="col-md-9 hidden-xs hidden-sm" id="title" style="text-align:left;">
+                        <div class="row">
+                            <div class="col-md-5 university_link">
+                                    <h1><a href="#" target="_blank">Department of Agrometrology</a></h1>
+                            </div>
+                                
+                        </div>
+                    </div>
+                
           
-          <div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:0%;">
-            <div class="row">
-                     <div class="col-md-12 university_link" style="text-align:center;">
-                      <h2><a href="http://www.gbpuat.ac.in" target="_blank">Department of Agrometerology</a></h2>
-                  </div>
-            </div>
-          </div>
-          <div class="col-md-9 col-xs-7 col-sm-7 hidden-md hidden-lg visible-sm-block visible-xs-block" id="title" style="margin-left:2%;">
-              <div class="row">
-                    <div class="col-md-12">
-                        <h3 style="font-weight:bolder; text-align:center;">I.J.B.A.A.R</h3>
-                    </div>
-                    <div class="col-md-12" style="text-align:center;">
-                        <h5>An offical Publication of</h5>
-                    </div>
-                       <div class="col-md-12 university_link" style="text-align:center;">
-                        <h4><a href="http://www.gbpuat.ac.in" target="_blank">G.B.P.U.A&amp;T, Pantnagar</a></h4>
-                    </div>
-              </div>
-          </div>
-
-          <div class="col-md-2 col-sm-2 col-xs-2 img-circle" id="logo" style="margin-left:0%;margin-top:1%;">
-                 <img src="<?php echo base_url();?>assets/img/pantnagar_logo.png" alt="GBPUAT Pantnagar" width="100" height="100">
-            </div>
       
-      </div>
-    </div>
-  </div>
+                </div>
+            </div>
+        </div>
+        
 
         <!--   -=-=-=-=-=-=-=-=-=-=-=-=-=-  navigation Bar   -=-=-=-=-=-=-=-=-=-=-=-=-   -->
         <div class="row">

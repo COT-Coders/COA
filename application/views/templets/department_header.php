@@ -64,12 +64,12 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                             
                     </div>
                     
-                    <div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:0%;">
+                    <div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:1.5%;margin-top:1.02%">
                         <div class="row">
-                                <div class="col-md-6 university_link">
-                                <h2><a href="http://www.gbpuat.ac.in" target="_blank">College Of Agriculture</a></h2>
-                                <h4 style="margin-left:1%;"><a href="http://www.gbpuat.ac.in" target="_blank">G. B. Pant Universiity of Agriculture and Technology</a></h4>
-                            </div>
+                                <div class="col-md-6 university_link text-left">
+                                    <h2><a href="http://www.gbpuat.ac.in" target="_blank">College Of Agriculture</a></h2>
+                                    <h4 style="margin-left:1%;"><a href="http://www.gbpuat.ac.in" target="_blank">G. B. Pant Universiity of Agriculture and Technology</a></h4>
+                                </div>
                         </div>
                     </div>
                     

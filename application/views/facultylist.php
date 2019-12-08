@@ -14,7 +14,7 @@
                     <table cellspacing="10">
                         <tr><td width="140">Office</td><td></td> <td> B114 </td> </tr>
                         <tr><td>Phone </td> <td></td><td> +91901234567890 </td></tr>
-                        <tr><td>Website</td><td></td><td>link to faculty profiles </td></tr> 
+                        <tr><td>Website</td><td></td><td><a href="<?php echo site_url(); ?>/faculty">Faculty Website</td></tr> 
                         <tr><td>Email</td><td></td><td>abc@xyz.com</td></tr>
                         <tr><td>Specialization</td><td></td><td>Agrometrology, Agriculture</td></tr>
                         <tr><td width="140">Area of Interest</td><td></td><td>Agrometrology</td></tr>
@@ -36,7 +36,7 @@
                     <table cellspacing="10">
                         <tr><td width="140">Office</td><td></td> <td> B114 </td> </tr>
                         <tr><td>Phone </td> <td></td><td> +91901234567890 </td></tr>
-                        <tr><td>Website</td><td></td><td>link to faculty profiles </td></tr> 
+                        <tr><td>Website</td><td></td><td><a href="<?php echo site_url(); ?>/faculty">Faculty Website</td></tr> 
                         <tr><td>Email</td><td></td><td>abc@xyz.com</td></tr>
                         <tr><td>Specialization</td><td></td><td>Agrometrology, Agriculture</td></tr>
                         <tr><td width="140">Area of Interest</td><td></td><td>Agrometrology</td></tr>
@@ -58,7 +58,7 @@
                     <table cellspacing="10">
                         <tr><td width="140">Office</td><td></td> <td> B114 </td> </tr>
                         <tr><td>Phone </td> <td></td><td> +91901234567890 </td></tr>
-                        <tr><td>Website</td><td></td><td>link to faculty profiles </td></tr> 
+                        <tr><td>Website</td><td></td><td><a href="<?php echo site_url(); ?>/faculty">Faculty Website</td></tr> 
                         <tr><td>Email</td><td></td><td>abc@xyz.com</td></tr>
                         <tr><td>Specialization</td><td></td><td>Agrometrology, Agriculture</td></tr>
                         <tr><td width="140">Area of Interest</td><td></td><td>Agrometrology</td></tr>

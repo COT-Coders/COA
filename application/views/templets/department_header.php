@@ -116,7 +116,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                 </div>
                 <div class="navbar-collapse collapse navbar-inverse-collapse">
                     <ul class="nav navbar-nav navbar-main-menu" style="color:blue;font-weight:bolder;">
-                       <li><a href="<?php echo site_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                       <li><a href="<?php echo site_url(); ?>/department"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                        <li><a href="<?php echo site_url(); ?>/issue/volumes"><i class="fa fa-ellipsis-v" aria-hidden="true"></i>Programs</a></li>
                        <li><a href="<?php echo site_url(); ?>/department/faculty"><i class="fa fa-edit" aria-hidden="true"></i> Faculty</a></li>
                        <li><a href="<?php echo site_url(); ?>/guidelines"><i class="fa fa-reorder" aria-hidden="true"></i>Staff</a></li>

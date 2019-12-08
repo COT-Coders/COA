@@ -3,8 +3,9 @@
         <div class="col-md-1"></div>
 	    <div class="col-md-10" style="background-color:RGB(245,245,245);">
 
-        
+            <h2> About Agrometeorology </h2>
             <div class="row">
+            
                 <div class="col-sm-2 col-md-2 col-xs-2 float-left">
                     <img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
                 </div>
@@ -28,8 +29,9 @@
             </div>
         
 
-
+            <h2> Vision </h2>
             <div class="row">
+                
                 <div class="col-sm-2 col-md-2 col-xs-2 float-left">
                     <img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
                 </div>
@@ -52,7 +54,9 @@
                 </div>
             </div>
 
+            <h2> Mission </h2>
             <div class="row">
+                
                 <div class="col-sm-2 col-md-2 col-xs-2 float-left">
                     <img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
                 </div>

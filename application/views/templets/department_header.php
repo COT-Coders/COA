@@ -14,7 +14,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 <html>
 
 <head>
-    <title>&nbsp;&nbsp;<?php echo $title;?>&nbsp;&nbsp;||&nbsp;&nbsp;IJBAAR</title>
+    <title>&nbsp;&nbsp;<?php echo $title;?>&nbsp;&nbsp;||&nbsp;&nbsp;College of Agriculture</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -90,7 +90,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                     <div class="col-md-9 hidden-xs hidden-sm" id="title" style="text-align:left;">
                         <div class="row">
                             <div class="col-md-12 university_link">
-                                    <h1><a href="#" target="_blank">Department of Agrometrology</a></h1>
+                                    <h1><a href="#" target="_blank"><?php if(!empty($records)) echo $records[0]->Dept_Name; ?></a></h1>
                             </div>
                                 
                         </div>

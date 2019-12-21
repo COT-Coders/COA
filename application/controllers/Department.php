@@ -19,7 +19,7 @@
 
 		public function program() {
 			$this->load->view('templets/department_header');
-			$this->load->view('program');
+			$this->load->view('d_programs');
 			$this->load->view('templets/department_footer');
 		}
 

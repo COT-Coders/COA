@@ -106,9 +106,17 @@
         <div class="col-md-2" style="background-color:RGB(245,245,245);">
         <div class="panel panel-primary">
             <div class="panel-heading">Panel with panel-primary class</div>
-            <div class="panel-body">Panel Content</div>
+            <div class="panel-body">
+            <ul>
+                <li>content 1 </li>
+                <li> content 2</li>
+                <li> content 3 </li>
+                <li> content 4 </li>
+                <li> content 5 </li>
+            </ul>
+            </div>
         </div>
-
+            
         </div>
 
 

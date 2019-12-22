@@ -120,8 +120,8 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                        <li><a href="<?php echo site_url(); ?>/department/program"><i class="fa fa-ellipsis-v" aria-hidden="true"></i>Programs</a></li>
                        <li><a href="<?php echo site_url(); ?>/department/faculty"><i class="fa fa-edit" aria-hidden="true"></i> Faculty</a></li>
                        <li><a href="<?php echo site_url(); ?>/department/staff"><i class="fa fa-reorder" aria-hidden="true"></i>Staff</a></li>
-                       <li><a href="<?php echo site_url(); ?>/faq"><i class="fa fa-question" aria-hidden="true"></i> Research</a></li>
-                       <li><a href="<?php echo site_url(); ?>/about"><i class="fa fa-info-circle" aria-hidden="true"></i> Students</a></li>
+                       <li><a href="<?php echo site_url(); ?>/department/research"><i class="fa fa-question" aria-hidden="true"></i> Research</a></li>
+                       <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Students</a></li>
                        <li><a href="<?php echo site_url(); ?>/contact"><i class="fa fa-paper-plane" aria-hidden="true"></i> Resources</a></li>
                        <li><a href="<?php echo site_url(); ?>/contact"><i class="fa fa-paper-plane" aria-hidden="true"></i> Activities</a></li>
                    

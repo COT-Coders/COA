@@ -27,13 +27,19 @@
 			$this->load->view('templets/department_header');
 			$this->load->view('facultylist');
 			$this->load->view('templets/department_footer');
-	  }
+	  	}
 
-	  public function staff() {
-		$this->load->view('templets/department_header');
-		$this->load->view('stafflist');
-		$this->load->view('templets/department_footer');
-  }
+		public function staff() {
+			$this->load->view('templets/department_header');
+			$this->load->view('stafflist');
+			$this->load->view('templets/department_footer');
+		}
+		  
+		public function research() {
+			$this->load->view('templets/department_header');
+			$this->load->view('research');
+			$this->load->view('templets/department_footer');
+		}
 	  
    } 
 ?>

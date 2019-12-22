@@ -28,6 +28,12 @@
 			$this->load->view('facultylist');
 			$this->load->view('templets/department_footer');
 	  }
+
+	  public function staff() {
+		$this->load->view('templets/department_header');
+		$this->load->view('stafflist');
+		$this->load->view('templets/department_footer');
+  }
 	  
    } 
 ?>

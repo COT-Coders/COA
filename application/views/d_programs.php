@@ -4,7 +4,7 @@
         <div class="col-md-8" style="background-color:RGB(245,245,245);">
         
         <p><h4> The department of Agrometrology offers following programs </h4></p>
-        <div class="panel panel-info">
+        <div class="panel panel-primary">
             <div class="panel-heading">B.Sc Agrometrology</div>
             <div class="panel-body">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="panel panel-info">
+        <div class="panel panel-primary">
             <div class="panel-heading"> M.Sc Agrometrology</div>
             <div class="panel-body">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        <div class="panel panel-info">
+        <div class="panel panel-primary">
             <div class="panel-heading">Phd Agrometrology</div>
             <div class="panel-body">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

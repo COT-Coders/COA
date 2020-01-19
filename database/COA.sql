@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 25, 2019 at 12:15 AM
+-- Generation Time: Jan 20, 2020 at 12:04 AM
 -- Server version: 5.7.28-0ubuntu0.18.04.4
--- PHP Version: 7.2.24-0ubuntu0.18.04.1
+-- PHP Version: 7.2.24-0ubuntu0.18.04.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -72,8 +72,17 @@ CREATE TABLE `Faculty` (
   `Designation` varchar(50) NOT NULL,
   `Dept_ID` int(11) NOT NULL,
   `Professional_Info` text NOT NULL,
-  `Link` varchar(100) NOT NULL
+  `Link` varchar(100) NOT NULL,
+  `Password` varchar(50) DEFAULT NULL,
+  `Role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Faculty`
+--
+
+INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Address`, `Contact`, `Designation`, `Dept_ID`, `Professional_Info`, `Link`, `Password`, `Role`) VALUES
+(1, 'Samaksh', 'Somewhere but not nowhere', 123, 'Student', 1, 'Will not give', '', 'samaksh', 3);
 
 -- --------------------------------------------------------
 
@@ -133,6 +142,25 @@ CREATE TABLE `Student` (
   `Dept_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Users`
+--
+
+CREATE TABLE `Users` (
+  `User_ID` int(11) NOT NULL,
+  `User_Name` varchar(30) NOT NULL,
+  `Password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `Users` (`User_ID`, `User_Name`, `Password`) VALUES
+(1, 'samaksh', 'samaksh');
+
 --
 -- Indexes for dumped tables
 --
@@ -188,6 +216,13 @@ ALTER TABLE `Student`
   ADD KEY `Dept_ID` (`Dept_ID`);
 
 --
+-- Indexes for table `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`User_ID`),
+  ADD UNIQUE KEY `User Name` (`User_Name`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -205,12 +240,17 @@ ALTER TABLE `Department`
 -- AUTO_INCREMENT for table `Faculty`
 --
 ALTER TABLE `Faculty`
-  MODIFY `Faculty_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Faculty_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `Staff`
 --
 ALTER TABLE `Staff`
   MODIFY `Staff_ID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `Users`
+--
+ALTER TABLE `Users`
+  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --

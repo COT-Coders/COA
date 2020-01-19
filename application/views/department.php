@@ -55,8 +55,8 @@
 			<div class="panel-heading">News</div>
 			<div class="panel-body">
 				<ul>
-					<li>content 1 </li>
-					<li> content 2</li>
+					<li> content 1 </li>
+					<li> content 2 </li>
 					<li> content 3 </li>
 					<li> content 4 </li>
 					<li> content 5 </li>

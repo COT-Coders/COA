@@ -123,7 +123,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                        <li><a href="<?php echo site_url(); ?>/department/research"><i class="fa fa-question" aria-hidden="true"></i> Research</a></li>
                        <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Students</a></li>
                        <li><a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i> Resources</a></li>
-                       <li><a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i> Activities</a></li>
+                       <li><a href="<?php echo site_url(); ?>/department/activities"><i class="fa fa-paper-plane" aria-hidden="true"></i> Activities</a></li>
                    
                     </ul>
                        

@@ -40,6 +40,12 @@
 			$this->load->view('research');
 			$this->load->view('templets/department_footer');
 		}
+
+		public function activities() {
+			$this->load->view('templets/department_header');
+			$this->load->view('activities');
+			$this->load->view('templets/department_footer');
+		}
 	  
    } 
 ?>

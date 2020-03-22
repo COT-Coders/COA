@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 09, 2019 at 01:57 AM
+-- Generation Time: Jan 20, 2020 at 12:04 AM
 -- Server version: 5.7.28-0ubuntu0.18.04.4
--- PHP Version: 7.2.24-0ubuntu0.18.04.1
+-- PHP Version: 7.2.24-0ubuntu0.18.04.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `COA`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Course`
+--
+
+CREATE TABLE `Course` (
+  `Course_ID` int(11) NOT NULL,
+  `Course_Name` varchar(100) NOT NULL,
+  `Dept_ID` int(11) NOT NULL,
+  `Active` int(11) NOT NULL,
+  `Year` int(11) NOT NULL,
+  `Semester` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -50,19 +65,113 @@ INSERT INTO `Department` (`Dept_ID`, `Dept_Name`, `HOD`, `Vision`, `Mission`, `H
 --
 
 CREATE TABLE `Faculty` (
-  `FID` int(11) NOT NULL,
+  `Faculty_ID` int(11) NOT NULL,
   `Name` varchar(50) NOT NULL,
   `Address` text NOT NULL,
   `Contact` int(11) NOT NULL,
   `Designation` varchar(50) NOT NULL,
   `Dept_ID` int(11) NOT NULL,
   `Professional_Info` text NOT NULL,
-  `Link` varchar(100) NOT NULL
+  `Link` varchar(100) NOT NULL,
+  `Password` varchar(50) DEFAULT NULL,
+  `Role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Faculty`
+--
+
+INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Address`, `Contact`, `Designation`, `Dept_ID`, `Professional_Info`, `Link`, `Password`, `Role`) VALUES
+(1, 'Samaksh', 'Somewhere but not nowhere', 123, 'Student', 1, 'Will not give', '', 'samaksh', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Programme`
+--
+
+CREATE TABLE `Programme` (
+  `Prog_ID` int(11) NOT NULL,
+  `Prog_Name` varchar(100) NOT NULL,
+  `Description` varchar(250) NOT NULL,
+  `Dept_ID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Publication`
+--
+
+CREATE TABLE `Publication` (
+  `Pub_ID` int(11) NOT NULL,
+  `Faculty_ID` int(11) NOT NULL,
+  `Dept_ID` int(11) NOT NULL,
+  `Title` varchar(200) NOT NULL,
+  `Description` text NOT NULL,
+  `Publication_Name` varchar(100) NOT NULL,
+  `Date` date NOT NULL,
+  `Pub_Link` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Staff`
+--
+
+CREATE TABLE `Staff` (
+  `Staff_ID` int(11) NOT NULL,
+  `Staff_Name` varchar(50) NOT NULL,
+  `Dept_ID` int(11) NOT NULL,
+  `Designation` varchar(50) NOT NULL,
+  `Personal_Info` text NOT NULL,
+  `Img_Link` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Student`
+--
+
+CREATE TABLE `Student` (
+  `Stud_ID` int(11) NOT NULL,
+  `Stud_Name` varchar(50) NOT NULL,
+  `Personal_Info` text NOT NULL,
+  `Dept_ID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Users`
+--
+
+CREATE TABLE `Users` (
+  `User_ID` int(11) NOT NULL,
+  `User_Name` varchar(30) NOT NULL,
+  `Password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Users`
+--
+
+INSERT INTO `Users` (`User_ID`, `User_Name`, `Password`) VALUES
+(1, 'samaksh', 'samaksh');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `Course`
+--
+ALTER TABLE `Course`
+  ADD PRIMARY KEY (`Course_ID`),
+  ADD KEY `Course_ID` (`Course_ID`),
+  ADD KEY `Dept_ID` (`Dept_ID`);
 
 --
 -- Indexes for table `Department`
@@ -74,13 +183,54 @@ ALTER TABLE `Department`
 -- Indexes for table `Faculty`
 --
 ALTER TABLE `Faculty`
-  ADD PRIMARY KEY (`FID`),
+  ADD PRIMARY KEY (`Faculty_ID`),
   ADD KEY `Dept_ID` (`Dept_ID`);
+
+--
+-- Indexes for table `Programme`
+--
+ALTER TABLE `Programme`
+  ADD PRIMARY KEY (`Prog_ID`),
+  ADD KEY `Dept_ID` (`Dept_ID`);
+
+--
+-- Indexes for table `Publication`
+--
+ALTER TABLE `Publication`
+  ADD PRIMARY KEY (`Pub_ID`),
+  ADD KEY `Faculty_ID` (`Faculty_ID`),
+  ADD KEY `Dept_ID` (`Dept_ID`);
+
+--
+-- Indexes for table `Staff`
+--
+ALTER TABLE `Staff`
+  ADD PRIMARY KEY (`Staff_ID`),
+  ADD KEY `Dept_ID` (`Dept_ID`);
+
+--
+-- Indexes for table `Student`
+--
+ALTER TABLE `Student`
+  ADD PRIMARY KEY (`Stud_ID`),
+  ADD KEY `Dept_ID` (`Dept_ID`);
+
+--
+-- Indexes for table `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`User_ID`),
+  ADD UNIQUE KEY `User Name` (`User_Name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `Course`
+--
+ALTER TABLE `Course`
+  MODIFY `Course_ID` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `Department`
 --
@@ -90,16 +240,56 @@ ALTER TABLE `Department`
 -- AUTO_INCREMENT for table `Faculty`
 --
 ALTER TABLE `Faculty`
-  MODIFY `FID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Faculty_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `Staff`
+--
+ALTER TABLE `Staff`
+  MODIFY `Staff_ID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `Users`
+--
+ALTER TABLE `Users`
+  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `Course`
+--
+ALTER TABLE `Course`
+  ADD CONSTRAINT `Course_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Faculty`
 --
 ALTER TABLE `Faculty`
   ADD CONSTRAINT `Faculty_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Programme`
+--
+ALTER TABLE `Programme`
+  ADD CONSTRAINT `Programme_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Publication`
+--
+ALTER TABLE `Publication`
+  ADD CONSTRAINT `Publication_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Staff`
+--
+ALTER TABLE `Staff`
+  ADD CONSTRAINT `Staff_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Student`
+--
+ALTER TABLE `Student`
+  ADD CONSTRAINT `Student_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

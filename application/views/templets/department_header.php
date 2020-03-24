@@ -21,6 +21,44 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
 	
+ 
+Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
+
+	2) Mayank Chaudhari
+	3) Samaksh Garg
+
+
+
+-->
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>&nbsp;&nbsp;<?php echo $title;?>&nbsp;&nbsp;||&nbsp;&nbsp;College of Agriculture</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-sca
+ 
+Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
+
+	2) Mayank Chaudhari
+	3) Samaksh Garg
+
+
+
+-->
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>&nbsp;&nbsp;<?php echo $title;?>&nbsp;&nbsp;||&nbsp;&nbsp;College of Agriculture</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-sca
 	
 	<!-- For online usage -->
 

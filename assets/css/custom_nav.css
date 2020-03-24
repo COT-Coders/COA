@@ -10,7 +10,9 @@
 	h1,h2,h3,h4,h5,h6{color:#323233;text-transform:uppercase;}
 .navbar-brand  span{
 	color: #fed136;
-	font-size:25px;font-weight:700;letter-spacing:0.1em;
+	font-size:25px;
+	font-weight:700;
+	letter-spacing:0.1em;
     font-family: 'Kaushan Script','Helvetica Neue',Helvetica,Arial,cursive;
 }
 .navbar-brand {
@@ -46,7 +48,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     background-color: #212529;
 }
 .banner{
-	background-image:url('http://indianadmissionsguru.com/wp-content/uploads/2018/01/GOVIND-BALLABH-PANT-UNIVERSITY-OF-AGRICULTURE-AND-TECHNOLOGY-PANTNAGAR.jpg');
+	background-image:url('https://www.google.com/url?sa=i&url=htntnagIQjRxqFwoTCKi75fDbsOgCFQAAAAAdAAAAABAD');
 	text-align: center;
     color: #fff;
    

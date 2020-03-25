@@ -1,13 +1,15 @@
-
-<div class="container">
-    <!----------- Footer ------------>
+<!----------- Footer ------------>
     <footer class="footer-bs">
         <div class="row">
 
         	<div class="col-md-3 footer-brand animated fadeInLeft">
-            	<h2>Logo</h2>
-                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
-                <p>© 2014 BS3 UI Kit, All rights reserved</p>
+            	<span style="padding-bottom: 10px; padding-top: 10px"><img src="<?php echo base_url();?>assets/img/pantnagar_logo.png" alt="GBPUAT Pantnagar" width="50" height="50"></span> 
+
+                    <span style="padding-left:8px">G. B. Pant University of Agriculture & Technology</span>
+                    
+                    &nbsp;
+                     <p>G. B. Pant University of Agriculture and Technology (GBPUA&T), also known as Pantnagar University, is the first agricultural university of India. It was inaugurated by Jawahar Lal Nehru on 17 November 1960 as the "Uttar Pradesh Agricultural University" (UPAU). Later the name was changed to "Govind Ballabh Pant University of Agriculture and Technology" in 1972 in memory of the first Chief Minister of Uttar Pradesh, statesman and Bharat Ratna recipient Pandit Govind Ballabh Pant.</p>
+                                    <p>© 2020 College of Agriculture, G.B Pant University of Agriculture and Technology, All rights reserved</p>
             </div>
 
         	<div class="col-md-4 footer-nav animated fadeInUp">
@@ -19,7 +21,7 @@
                         <li><a href="#">Explores</a></li>
                         <li><a href="#">Science</a></li>
                         <li><a href="#">Advice</a></li>
-                    </ul>
+                    </ul>   
                 </div>
             	<div class="col-md-6">
                     <ul class="list">
@@ -53,6 +55,4 @@
             </div>
         </div>
     </footer>
-
-</div>
  

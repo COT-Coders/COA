@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->helper('url');
          $this->load->view('templets/header_new');
-         $this->load->view('courses'); 
+         // $this->load->view('courses'); 
          $this->load->view('templets/footer_new');
 	}
 }

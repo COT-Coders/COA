@@ -33,15 +33,19 @@
 
 		  <!-- Navbar links -->
 		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-		    <ul class="navbar-nav ml-auto">
+		    <ul class="navbar-nav ml-auto">   
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Link</a>
+		        <a class="nav-link" href="#">Home</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Link</a>
+		        <a class="nav-link" href="#">About Us</a>
+		      </li>
+
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Academics</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Link</a>
+		        <a class="nav-link" href="#">Centers</a>
 		      </li> 
 			   <!-- Dropdown -->
 		    <li class="nav-item dropdown">

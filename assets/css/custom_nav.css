@@ -7,7 +7,7 @@
 	color:#6c6c6f;
 	font-size:1em;
 	}
-	h1,h2,h3,h4,h5,h6{color:#323233;text-transform:uppercase;}
+	h1,h2,h3,h4,h5,h6{color:#323233;}
 .navbar-brand  span{
 	color: #fed136;
 	font-size:25px;
@@ -48,7 +48,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     background-color: #212529;
 }
 .banner{
-	background-image:url('cover.jpeg');
+	background-image:url('cover1.jpeg');
 	text-align: center;
     color: #fff;
    
@@ -61,7 +61,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     background-size: cover;
 }
 .banner-text{
-	padding:200px 0 150px 0;
+	padding:300px 0 150px 0;
 }
 .banner-heading{
 	font-family: 'Lobster', cursive;

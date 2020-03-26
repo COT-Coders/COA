@@ -21,8 +21,16 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('url');
-         $this->load->view('templets/header_new');
+         $this->load->view('templets/header_home');
          // $this->load->view('courses'); 
+         $this->load->view('templets/footer_new');
+	}
+
+	public function about()
+	{
+		$this->load->helper('url');
+         $this->load->view('templets/header_new');
+         $this->load->view('about'); 
          $this->load->view('templets/footer_new');
 	}
 }

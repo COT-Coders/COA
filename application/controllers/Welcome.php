@@ -29,8 +29,8 @@ class Welcome extends CI_Controller {
 	public function about()
 	{
 		$this->load->helper('url');
-         $this->load->view('templets/header_new');
-         $this->load->view('about'); 
+         $this->load->view('templets/header_common');
+         $this->load->view('about_us'); 
          $this->load->view('templets/footer_new');
 	}
 }

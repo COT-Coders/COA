@@ -38,7 +38,7 @@
 		        <a class="nav-link" href="#">Home</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">About Us</a>
+		        <a href="<?php echo site_url(); ?>/Welcome/about">About Us</a>
 		      </li>
 
 		      <li class="nav-item">

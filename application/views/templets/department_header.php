@@ -14,7 +14,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 <html>
 
 <head>
-	<title>&nbsp;&nbsp;<?php echo $title;?>&nbsp;&nbsp;||&nbsp;&nbsp;College of Agriculture</title>
+	<title>&nbsp;&nbsp;<?php //echo $title; $title is getting some garbage value, socommenting ?>&nbsp;&nbsp;||&nbsp;&nbsp;College of Agriculture</title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,12 +67,13 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                     <div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:1.5%;margin-top:1.02%">
                         <div class="row">
                                 <div class="col-md-6 university_link text-left">
-                                    <h2><a href="http://www.gbpuat.ac.in" target="_blank">College Of Agriculture</a></h2>
+                                    <h2><a href="http://www.gbpuat.ac.in" target="_blank">College Of Agriculture</a></h2> <?php //  change url of COA to this website only ?>
                                     <h4 style="margin-left:1%;"><a href="http://www.gbpuat.ac.in" target="_blank">G. B. Pant Universiity of Agriculture and Technology</a></h4>
                                 </div>
                         </div>
                     </div>
                     
+                    <!-- Line starts -->
                     <div class="col-md-9 col-xs-7 col-sm-7 hidden-md hidden-lg visible-sm-block visible-xs-block" id="title" style="margin-left:2%;">
                         <div class="row">
                                 <div class="col-md-12">
@@ -94,8 +95,8 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                             </div>
                                 
                         </div>
-                    </div>
-                
+                    </div> 
+                    <!-- Line ends -->
           
       
                 </div>
@@ -128,10 +129,10 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
                     </ul>
                        
                     <ul class="nav navbar-nav navbar-right" style="font-weight:bolder;">
-
+                    			<!-- Change according to user_logged_in to Logout link -->
                                   <li><a href="<?php echo site_url(); ?>/login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a></li>
                                   <li><a href="<?php echo site_url(); ?>/signup">SignUp</a></li>
-                      
+
 
                        </ul>
             

@@ -15,7 +15,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<!--<input type="image" src="<?php echo base_url();?>assets/layout/images/sign_in.gif" id="signin" alt="Sign In" />-->
 		<p> If not registered yet, </p><a href="<?php echo site_url(); ?>/signup"> Sign Up<!--<input type="button" id="signup" alt="Sign Up" name="Sign_Up" value="SIGN UP" style="height:20px;width:80px"/>--></a>
 	  </div>
-	</form>
+
+	<?php echo form_close(); ?>
 
 </body>
 </html>

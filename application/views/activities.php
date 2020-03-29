@@ -28,7 +28,7 @@
                         Food Security and Nutritional Status among Agricultural Workers in California
                         
                         WCAHS seminars are held the first Monday of the month at 4:00 p.m. at the Center for Health and the Environment.
-                    </P>
+                    </p>
                 </div>
             
             </div>

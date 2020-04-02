@@ -32,9 +32,14 @@
    font-family: 'Gothic A1', sans-serif;
 }
 .navbar-nav .nav-item .nav-link:hover{color:#fed136;}
-.navbar-expand-md .navbar-nav .dropdown-menu{
+/*.navbar-expand-md .navbar-nav .dropdown-menu{
 	border-top:3px solid #fed136;
+}*/
+
+.dropdown:hover .dropdown-menu{
+	border-top:3px solid #7878;
 }
+
 .dropdown-item:hover{background-color:#fed136;color:#fff;}
 nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     -moz-transition: padding-top .3s,padding-bottom .3s;

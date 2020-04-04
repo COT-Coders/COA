@@ -89,9 +89,12 @@
                     <div class="col-sm-4 col-md-3"> </div>
                     <div class="col-sm-4 col-md-6">
 
-                        <blockquote class="blockquote">
-                          <p class="mb-0 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <blockquote class="blockquote" style="margin-top: 20">
+                          <p class="text-justify text-center" style="font-size: 28px">Since its founding in 1867, the University of Illinois at Urbana-Champaign has earned a reputation as a world-class leader in research, teaching, and public engagement.
+
+                            </p>
                         </blockquote>
+                        <hr class="mt-5 mb-5" style="height:10;box-shadow: 0 10px 10px -10px #8c8b8b inset;">
                     </div>
                 </div>
             </div>

@@ -48,7 +48,7 @@
 		      </li>
 
 		     <li class="nav-item dropdown">
-	            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+	            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
 	            <div class="dropdown-menu">
 	            <a class="dropdown-item" href="#">Link 1</a>
 	            <a class="dropdown-item" href="#">Link 2</a>
@@ -56,18 +56,21 @@
 	          </div>
 
           </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Centers</a>
-		      </li> 
+		       
 			   <!-- Dropdown -->
 		    <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Link 1</a>
-            <a class="dropdown-item" href="#">Link 2</a>
-            <a class="dropdown-item" href="#">Link 3</a>
-          </div>
-        </li>
+	          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Centers</a>
+	          <div class="dropdown-menu">
+	            <a class="dropdown-item" href="#">Link 1</a>
+	            <a class="dropdown-item" href="#">Link 2</a>
+	            <a class="dropdown-item" href="#">Link 3</a>
+	          </div>
+	        </li>
+
+	        <li class="nav-item">
+		        <a class="nav-link" href="#">Activities</a>
+		    </li>
+
 		    </ul>
 		  </div>
 	</div>

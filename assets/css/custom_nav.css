@@ -7,7 +7,7 @@
 	color:#6c6c6f;
 	font-size:1em;
 	}
-	h1,h2,h3,h4,h5,h6{color:#323233;}
+	
 .navbar-brand  span{
 	color: #fed136;
 	font-size:25px;
@@ -32,9 +32,9 @@
    font-family: 'Gothic A1', sans-serif;
 }
 .navbar-nav .nav-item .nav-link:hover{color:#fed136;}
-/*.navbar-expand-md .navbar-nav .dropdown-menu{
+.navbar-expand-md .navbar-nav .dropdown-menu{
 	border-top:3px solid #fed136;
-}*/
+}
 
 .dropdown:hover .dropdown-menu{
 	border-top:3px solid #7878;

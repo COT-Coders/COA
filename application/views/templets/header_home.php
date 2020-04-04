@@ -90,10 +90,12 @@
 <div class="container">
 	<div class="text-intro">
 	<h2>Sample Title</h2>
-		<p>The College of Agriculture, Pantnagar, India, is a constituent of Govind Ballabh Pant University of Agriculture & Technology, Pantnagar. It was opened on 17 November 1960 when Jawaharlal Nehru, the first Prime Minister of India, inaugurated the university. It has a triple mandate of teaching, research and extension.
+		<p > The College of Agriculture, Pantnagar, India, is a constituent of Govind Ballabh Pant University of Agriculture & Technology, Pantnagar. It was opened on 17 November 1960 when Jawaharlal Nehru, the first Prime Minister of India, inaugurated the university. It has a triple mandate of teaching, research and extension.
 
 The college has more than 200 faculty members engaged in agricultural sciences. The college has played a role in the Green Revolution in the country. More than 185 varieties of crops like cereals, pulses, oilseeds, forages, fruits and vegetables, etc. have been released. The 4 year Bachelor of Science in Agriculture (BScAg) is the flagship course of the college.
 </p>
+<hr class="mt-5 mb-5" style="height:10;box-shadow: 0 10px 10px -10px #8c8b8b inset;">
 	</div>
 </div>
+
 </section>

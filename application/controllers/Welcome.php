@@ -30,7 +30,9 @@ class Welcome extends CI_Controller {
 
 	public function about()
 	{
-		$this->load->view('templets/header_common');
+		$this->load->model('dep_model');
+		$data['dept_names'] = $this->dep_model->get_dept_names();
+		$this->load->view('templets/header_common', $data);
 		$this->load->view('about_us'); 
 		$this->load->view('templets/footer_new');
 	}

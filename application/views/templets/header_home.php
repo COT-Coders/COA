@@ -38,7 +38,7 @@
 		  </button>
 
 		  <!-- Navbar links -->
-		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav ml-auto">   
 			  <li class="nav-item">
 				<a class="nav-link" href="<?php echo site_url(); ?>/Welcome">Home</a>
@@ -46,32 +46,40 @@
 			  <li class="nav-item">
 				<a  class="nav-link" href="<?php echo site_url(); ?>/Welcome/about">About Us</a>
 			  </li>
-
-			 <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Departments</a>
-				<div class="dropdown-menu">
-					<?php
-						$no_of_dept = count($dept_names);
-						for($i=0; $i<$no_of_dept; $i++) { ?>
-							<a class="dropdown-item" href="<?php echo site_url("department/desc/".$i); ?>" > <?php echo $dept_names[$i]['Dept_Name']; ?> </a> <?php
-						}
-					?>
-			  </div>
-
-		  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#">Centers</a>
-			  </li> 
+				
+		      <li class="nav-item dropdown">
+	            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
+	            <ul class="dropdown-menu">
+	            	<li class="dropdown-item"><a href="#">Link 1</a></li>
+	            	<li class="dropdown-item"><a href="#">Link 2</a></li>
+	            	<li class="dropdown-submenu"> <a class="dropdown-item dropdown-toggle" href="#">Link 3</a>
+	            		<ul>
+	            			<?php
+	            				$no_of_dept = count($dept_names);
+	            				for($i=0; $i<$no_of_dept; $i++) { ?>
+	            					<a class="dropdown-item" href="<?php echo site_url("department/desc/".$i); ?>" > <?php echo $dept_names[$i]['Dept_Name']; ?> </a> <?php
+	            				}
+	            			?>
+	            		</ul>
+	            	</li>
+	          	</ul>
+              </li>
+		       
 			   <!-- Dropdown -->
-			<li class="nav-item dropdown">
-		  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
-		  <div class="dropdown-menu">
-			<a class="dropdown-item" href="#">Link 1</a>
-			<a class="dropdown-item" href="#">Link 2</a>
-			<a class="dropdown-item" href="#">Link 3</a>
-		  </div>
-		</li>
-			</ul>
+		      <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Centers</a>
+	          <div class="dropdown-menu">
+	            <a class="dropdown-item" href="#">Link 1</a>
+	            <a class="dropdown-item" href="#">Link 2</a>
+	            <a class="dropdown-item" href="#">Link 3</a>
+	          </div>
+	          </li>
+
+	          <li class="nav-item">
+		        <a class="nav-link" href="#">Activities</a>
+		      </li>
+
+		    </ul>
 		  </div>
 	</div>
 </nav>
@@ -92,11 +100,13 @@
 <section id="about">
 <div class="container">
 	<div class="text-intro">
-	<h2>About Us</h2>
-		<p>The College of Agriculture, Pantnagar, India, is a constituent of Govind Ballabh Pant University of Agriculture & Technology, Pantnagar. It was opened on 17 November 1960 when Jawaharlal Nehru, the first Prime Minister of India, inaugurated the university. It has a triple mandate of teaching, research and extension.
+	<h2>Sample Title</h2>
+		<p > The College of Agriculture, Pantnagar, India, is a constituent of Govind Ballabh Pant University of Agriculture & Technology, Pantnagar. It was opened on 17 November 1960 when Jawaharlal Nehru, the first Prime Minister of India, inaugurated the university. It has a triple mandate of teaching, research and extension.
 
 The college has more than 200 faculty members engaged in agricultural sciences. The college has played a role in the Green Revolution in the country. More than 185 varieties of crops like cereals, pulses, oilseeds, forages, fruits and vegetables, etc. have been released. The 4 year Bachelor of Science in Agriculture (BScAg) is the flagship course of the college.
 </p>
+<hr class="mt-5 mb-5" style="height:10;box-shadow: 0 10px 10px -10px #8c8b8b inset;">
 	</div>
 </div>
+
 </section>

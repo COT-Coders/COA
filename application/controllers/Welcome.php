@@ -20,7 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('templets/header_home');
+		$this->load->model('dep_model');
+		$data['dept_names'] = $this->dep_model->get_dept_names();
+		//print_r($data);
+		$this->load->view('templets/header_home', $data);
 		$this->load->view('college_home'); 
 		$this->load->view('templets/footer_new');
 	}

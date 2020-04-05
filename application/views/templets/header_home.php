@@ -6,9 +6,9 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/custom_nav.css">
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/footer.css">
@@ -23,8 +23,8 @@
 		  <!--
 		  <a class="navbar-brand" href="#">
 
-		  	<span ><img src="<?php echo base_url();?>assets/img/pantnagar_logo.png" alt="GBPUAT Pantnagar" width="100" height="100">
-		  	</span> <span><h3>College Of Agriculture</h3></span>
+			<span ><img src="<?php echo base_url();?>assets/img/pantnagar_logo.png" alt="GBPUAT Pantnagar" width="100" height="100">
+			</span> <span><h3>College Of Agriculture</h3></span>
 		  </a>
 		-->
 
@@ -34,41 +34,44 @@
 
 		  <!-- Toggler/collapsibe Button -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-		    <span class="navbar-toggler-icon"></span>
+			<span class="navbar-toggler-icon"></span>
 		  </button>
 
 		  <!-- Navbar links -->
 		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-		    <ul class="navbar-nav ml-auto">   
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Home</a>
-		      </li>
-		      <li class="nav-item">
-		        <a  class="nav-link" href="<?php echo site_url(); ?>/Welcome/about">About Us</a>
-		      </li>
+			<ul class="navbar-nav ml-auto">   
+			  <li class="nav-item">
+				<a class="nav-link" href="<?php echo site_url(); ?>/Welcome">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a  class="nav-link" href="<?php echo site_url(); ?>/Welcome/about">About Us</a>
+			  </li>
 
-		     <li class="nav-item dropdown">
-	            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
-	            <div class="dropdown-menu">
-	            <a class="dropdown-item" href="#">Link 1</a>
-	            <a class="dropdown-item" href="#">Link 2</a>
-	            <a class="dropdown-item" href="#">Link 3</a>
-	          </div>
+			 <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Departments</a>
+				<div class="dropdown-menu">
+					<?php
+						$no_of_dept = count($dept_names);
+						for($i=0; $i<$no_of_dept; $i++) { ?>
+							<a class="dropdown-item" href="<?php echo site_url("department/desc/".$i); ?>" > <?php echo $dept_names[$i]['Dept_Name']; ?> </a> <?php
+						}
+					?>
+			  </div>
 
-          </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="#">Centers</a>
-		      </li> 
+		  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Centers</a>
+			  </li> 
 			   <!-- Dropdown -->
-		    <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Link 1</a>
-            <a class="dropdown-item" href="#">Link 2</a>
-            <a class="dropdown-item" href="#">Link 3</a>
-          </div>
-        </li>
-		    </ul>
+			<li class="nav-item dropdown">
+		  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+		  <div class="dropdown-menu">
+			<a class="dropdown-item" href="#">Link 1</a>
+			<a class="dropdown-item" href="#">Link 2</a>
+			<a class="dropdown-item" href="#">Link 3</a>
+		  </div>
+		</li>
+			</ul>
 		  </div>
 	</div>
 </nav>

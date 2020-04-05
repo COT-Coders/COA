@@ -3,7 +3,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-8" style="background-color:RGB(245,245,245);">
 
-		<h2> About Agrometeorology </h2>
+		<h2> About <?php echo $records[0]['Dept_Name']	; ?> </h2>
 		<div class="row">
 
 			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
@@ -11,7 +11,7 @@
 			</div>
 			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
 				<p class="text-justify">
-					<?php echo $records[0]->History; ?>
+					<?php echo $records[0]['History']; ?>
 				</p>
 				<p class="clearfix"></p>
 			</div>
@@ -26,7 +26,7 @@
 			</div>
 			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
 				<p class="text-justify">
-					<?php echo $records[0]->Vision; ?>
+					<?php echo $records[0]['Vision']; ?>
 				</p>
 				<p class="clearfix"></p>
 			</div>
@@ -40,7 +40,7 @@
 			</div>
 			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
 				<p class="text-justify">
-					<?php echo $records[0]->Mission; ?>
+					<?php echo $records[0]['Mission']; ?>
 				</p>
 				<p class="clearfix"></p>
 			</div>

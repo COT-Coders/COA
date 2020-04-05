@@ -85,7 +85,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 					<div class="col-md-9 hidden-xs hidden-sm" id="title" style="text-align:left;">
 						<div class="row">
 							<div class="col-md-12 university_link">
-								<h1><a href="#" target="_blank"><?php if(!empty($records)) echo $records[0]->Dept_Name; ?></a></h1>
+								<h1><a href="#" target="_blank"><?php if(!empty($records)) echo $records[0]['Dept_Name']; ?></a></h1>
 							</div>	
 						</div>
 					</div> 

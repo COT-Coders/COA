@@ -4,12 +4,17 @@
 
 		function __construct() {
 			parent::__construct();
-			$this->load->helper('url');
+			$this->load->model('dep_model');
 		}
 
 		public function index() {
-			$query = $this->db->get("Department");
-			$data['records'] = $query->result();
+			$this->load->view('templets/department_header', $data);
+			$this->load->view('department', $data);
+			$this->load->view('templets/department_footer');
+		}
+
+		public function desc($index) {
+			$data['records'] = $this->dep_model->get_dept_info($index);
 			//print_r($data);
 
 			$this->load->view('templets/department_header', $data);

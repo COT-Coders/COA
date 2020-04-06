@@ -123,8 +123,14 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 					   
 					<ul class="nav navbar-nav navbar-right" style="font-weight:bolder;">
 						<!-- Change according to user_logged_in to Logout link -->
-						<li><a href="<?php echo site_url(); ?>/login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></li>
-						<li><a href="<?php echo site_url(); ?>/signup">SignUp</a></li>
+						<?php
+							if( $this->session->userdata('logged_in') == 'true' ) { ?>
+								<li><a href="<?php echo site_url(); ?>/logout"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> LogOut </a></li> <?php
+							}
+							else { ?>
+								<li><a href="<?php echo site_url(); ?>/login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></li>
+								<li><a href="<?php echo site_url(); ?>/signup">SignUp</a></li> <?php
+							} ?>
 					</ul>
 			
 				</div>

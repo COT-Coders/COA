@@ -47,7 +47,7 @@
 				<address>
 					<i>@mail: <a href="mailto:webmaster@example.com">info@coa.edu.in</a>.<br> 
 					Visit us at: www.coa.edu.in<br>
-					College of Africulture,<br> G.B Pant Univerrsity of Agriculture and Technology Pantnagar, Pantnagar<br> Udham Singh nagar, 263145<br>
+					College of Agriculture,<br> G.B. Pant Univerrsity of Agriculture and Technology Pantnagar, Pantnagar<br> Udham Singh nagar, 263145<br>
 					Uttrakhand, India
 					<br>
 				</i>

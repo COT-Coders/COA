@@ -3,21 +3,26 @@
 
 class Login extends CI_Controller {
 
-	/*function __construct() {
+	function __construct() {
 		parent::__construct();
-		$this->load->helper('url');
-	}*/
+	}
 
 	public function index() {
 		$this->load->helper('form');
 
 		//$this->load->view('templets/header');
-		$this->load->view('login');
+		/*if($this->session->userdata('logged_in')) {  //  if user(faculty) is logged in, then redirect to his/her home page
+			redirect('/logout/');
+			//redirect('/welcome/');
+		}
+		else {*/  //  if session is not set(i.e., user is not logged in, then redirect him to login page to enter login credentials)
+			$this->load->view('login');
+		//}
 		//$this->load->view('templets/footer');
 	}
 
 	public function form_check() {
-		if($this->session->userdata('logged_in')) {
+		if($this->session->userdata('logged_in')) {  //  ideally if a user is logged in, control should not come here
 			redirect('/logout/');
 			//redirect('/welcome/');
 		}
@@ -49,13 +54,22 @@ class Login extends CI_Controller {
 					$newdata = array(
 						//'username' => $user_name,
 						//'email' => $user_email,
-						'logged_in' => 'true'
+						'logged_in' => 'true',
+						'fac_id' => '1',  //  hard coding as of now
+						'dept_id' => '1'
 					);
 					$this->session->set_userdata($newdata);
 
 					echo "session set";
 
 					redirect('/faculty/');
+					/*
+					user_roles:
+						1 - admin
+						2 - dean
+						3 - hod
+						4 - other faculty
+					*/
 					/*if($user_role==1)
 						redirect('/student/');  //  role=1 asigned to student
 					else if($user_role==2)

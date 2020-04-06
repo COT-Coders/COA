@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 20, 2020 at 12:04 AM
--- Server version: 5.7.28-0ubuntu0.18.04.4
--- PHP Version: 7.2.24-0ubuntu0.18.04.2
+-- Generation Time: Apr 06, 2020 at 10:53 PM
+-- Server version: 5.7.29-0ubuntu0.18.04.1
+-- PHP Version: 7.2.24-0ubuntu0.18.04.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -56,7 +56,9 @@ CREATE TABLE `Department` (
 --
 
 INSERT INTO `Department` (`Dept_ID`, `Dept_Name`, `HOD`, `Vision`, `Mission`, `History`, `Mandate`) VALUES
-(1, 'Department of Agrometrology', 'Dr. A. S. Nain', 'Will Add', 'Will Add', '\r\n\r\nThe department of Agrometeorology came in to existence in the year 2000 after the bifurcation of Soil Science Department. Until the inception of department, teaching research and extension activities in Agrometeorology were carried out within the Department of Soil Science. The M. Sc. Programme in Agrometeorology was initiated in 1995, while Ph. D. programme was started in 2000. Research thrust in Agrometeorology includes Climatic characterization of Uttarakhand, application of weather driven dynamic crop growth and yield simulation models for various crops, crop-weather relationships, weather-crop-insects/disease interactions, climate changes and its effects on crop productivity, evapotranspiration, suitability analysis using Remote Sensing and GIS etc. Department is imparting education to UG and PG students related to application of meteorology in Agriculture. Department is continuously taking up research projects related to Agrometeorology, Remote Sensing and GIS for devising the methodologies/techniques for sustainable Agriculture production and precision crop management. The main moto of the department is to encourage the weather based responsive farming in Uttarakhand state to maximize the production and to protect the environment from different Hazards.\r\n', 'Will Add');
+(1, 'Department of Agrometeorology', 'Dr. Ajeet Singh Nain', 'To develop department of Agrometeorology as a Center of Excellence for imparting quality education and conducting cutting edge research in the field of crop-weather interaction, pests/diseases weather interaction, climate change, its impact on agriculture and mitigation measures, geospatial technologies and their uses in agriculture and sustainable natural resources management.', 'Will Add', 'The department of Agrometeorology came in to existence in the year 2000 after the bifurcation of Soil Science Department. Until the inception of department, teaching research and extension activities in Agrometeorology were carried out within the Department of Soil Science. The M. Sc. Programme in Agrometeorology was initiated in 1995, while Ph. D. programme was started in 2000. Research thrust in Agrometeorology includes Climatic characterization of Uttarakhand, application of weather driven dynamic crop growth and yield simulation models for various crops, crop-weather relationships, weather-crop-insects/disease interactions, climate changes and its effects on crop productivity, evapotranspiration, suitability analysis using Remote Sensing and GIS etc. Department is imparting education to UG and PG students related to application of meteorology in Agriculture. Department is continuously taking up research projects related to Agrometeorology, Remote Sensing and GIS for devising the methodologies/techniques for sustainable Agriculture production and precision crop management. The main moto of the department is to encourage the weather based responsive farming in Uttarakhand state to maximize the production and to protect the environment from different Hazards.', 'Will Add'),
+(2, 'Department of Entomology', 'Dr. Pramod Mall', 'The Department of Entomology strives to be a network of faculty, staff and students that creates a culture of excellence resulting in the Department being one of the pr-eminent entomological teachings, research and extension organizations in the country.', 'Will Add', 'Will Add', 'We embrace discovery, transitional, and applied entomological research from levels of ecological landscapes to biological molecules. The department provides exciting experience yet scientifically, agriculturally and environmentally relevant research and training as part of undergraduate and graduate instruction from a Faculty of nationally and internationally recognized scholars who contemplate our science from a global perspective.'),
+(3, 'Department of Agronomy', 'Dr. K.S. Shekhar', 'Bringing positive changes in the lives of people through scientific intervention of Agronomy.', 'Thriving for safe and quality production of farm produce with innovative agronomic management practices.', 'Department of agronomy came into being in 1963 with Master’s Programme in agronomy. The Ph. D. Programme in agronomy was commenced from 1965. A well-knit U.G., P.G., and Ph.D. Programme with updated syllabi has been operating in the department. The research work has been programmed to cater the needs of the area. The department serves as nodal agency for various extension activities and resource management. The department shares more than 25% of course load of the under graduate teaching.', 'Teaching, research and extension education.');
 
 -- --------------------------------------------------------
 
@@ -72,17 +74,35 @@ CREATE TABLE `Faculty` (
   `Designation` varchar(50) NOT NULL,
   `Dept_ID` int(11) NOT NULL,
   `Professional_Info` text NOT NULL,
-  `Link` varchar(100) NOT NULL,
+  `Img_Link` varchar(100) NOT NULL,
   `Password` varchar(50) DEFAULT NULL,
-  `Role` int(11) NOT NULL
+  `Role` int(11) NOT NULL,
+  `Active` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `Faculty`
 --
 
-INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Address`, `Contact`, `Designation`, `Dept_ID`, `Professional_Info`, `Link`, `Password`, `Role`) VALUES
-(1, 'Samaksh', 'Somewhere but not nowhere', 123, 'Student', 1, 'Will not give', '', 'samaksh', 3);
+INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Address`, `Contact`, `Designation`, `Dept_ID`, `Professional_Info`, `Img_Link`, `Password`, `Role`, `Active`) VALUES
+(1, 'Samaksh', 'Somewhere but not nowhere', 123, 'Student', 1, 'Will not give', '', 'samaksh', 3, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Miscellaneous`
+--
+
+CREATE TABLE `Miscellaneous` (
+  `M_Id` int(11) NOT NULL,
+  `Faculty_ID` int(11) NOT NULL,
+  `Start_Date` date NOT NULL,
+  `End_Date` date NOT NULL,
+  `Title` varchar(100) NOT NULL,
+  `Event` varchar(100) NOT NULL,
+  `Description` text NOT NULL,
+  `Gallery_Link` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -136,30 +156,14 @@ CREATE TABLE `Staff` (
 --
 
 CREATE TABLE `Student` (
-  `Stud_ID` int(11) NOT NULL,
+  `S_ID` int(11) NOT NULL,
+  `Stud_Roll` int(11) NOT NULL,
   `Stud_Name` varchar(50) NOT NULL,
-  `Personal_Info` text NOT NULL,
-  `Dept_ID` int(11) NOT NULL
+  `Address` text NOT NULL,
+  `Dept_ID` int(11) NOT NULL,
+  `E-mail` varchar(50) NOT NULL,
+  `Phone` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Users`
---
-
-CREATE TABLE `Users` (
-  `User_ID` int(11) NOT NULL,
-  `User_Name` varchar(30) NOT NULL,
-  `Password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Users`
---
-
-INSERT INTO `Users` (`User_ID`, `User_Name`, `Password`) VALUES
-(1, 'samaksh', 'samaksh');
 
 --
 -- Indexes for dumped tables
@@ -187,6 +191,12 @@ ALTER TABLE `Faculty`
   ADD KEY `Dept_ID` (`Dept_ID`);
 
 --
+-- Indexes for table `Miscellaneous`
+--
+ALTER TABLE `Miscellaneous`
+  ADD PRIMARY KEY (`M_Id`);
+
+--
 -- Indexes for table `Programme`
 --
 ALTER TABLE `Programme`
@@ -212,15 +222,9 @@ ALTER TABLE `Staff`
 -- Indexes for table `Student`
 --
 ALTER TABLE `Student`
-  ADD PRIMARY KEY (`Stud_ID`),
+  ADD PRIMARY KEY (`S_ID`),
+  ADD UNIQUE KEY `Email` (`E-mail`),
   ADD KEY `Dept_ID` (`Dept_ID`);
-
---
--- Indexes for table `Users`
---
-ALTER TABLE `Users`
-  ADD PRIMARY KEY (`User_ID`),
-  ADD UNIQUE KEY `User Name` (`User_Name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -235,22 +239,22 @@ ALTER TABLE `Course`
 -- AUTO_INCREMENT for table `Department`
 --
 ALTER TABLE `Department`
-  MODIFY `Dept_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Dept_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `Faculty`
 --
 ALTER TABLE `Faculty`
   MODIFY `Faculty_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `Miscellaneous`
+--
+ALTER TABLE `Miscellaneous`
+  MODIFY `M_Id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `Staff`
 --
 ALTER TABLE `Staff`
   MODIFY `Staff_ID` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `Users`
---
-ALTER TABLE `Users`
-  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --

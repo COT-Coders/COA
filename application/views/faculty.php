@@ -11,7 +11,7 @@
   <div class="col-md-1"></div>
 	    <div class="col-md-10" style="background-color:RGB(245,245,245);">
 	        <div class="row">
-	        	<div class="col-sm-2 col-md-2 id="left-sidebar"  style="margin-top:1%">
+	        	<div class="col-sm-2 col-md-2" id="left-sidebar"  style="margin-top:1%">
 	        		
 	        		<!-- Accordian left-sidebar  starts -->
 	            <div class="card" >
@@ -29,6 +29,7 @@
                       <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fresearch">Research</a></li>
                       
                       <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fmeetings">Meetings & Conferences</a></li>
+                      <li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/add_staff">Add Staff</a></li>
                    
                     
                     </ul>  

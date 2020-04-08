@@ -62,6 +62,6 @@
 			
 		</div>
 
-			<p class="text-center text-white" style="margin-top: 10; margin-bottom: 10">© 2020 College of Agriculture, G.B Pant University of Agriculture and Technology, All rights reserved</p>
+			<p class="text-center text-white" style="margin-top: 10; margin-bottom: 10">© 2020 College of Agriculture, G.B. Pant University of Agriculture and Technology, All rights reserved</p>
 	</footer>
  

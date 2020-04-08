@@ -1,8 +1,8 @@
 <html>
 <body>
-<!---<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>-->
+<?php
+	defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 
 	<?php echo form_open('login/form_check'); ?>
 		<div class="fl_right">

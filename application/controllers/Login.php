@@ -7,7 +7,7 @@ class Login extends CI_Controller {
 		parent::__construct();
 	}
 
-	public function index() {
+	public function index() {  //  not used as of 7/4/2020 as login view is called from faculty/index()
 		$this->load->helper('form');
 
 		//$this->load->view('templets/header');
@@ -37,7 +37,8 @@ class Login extends CI_Controller {
 				//$data['invalid_login_class'] = 'hidden';
 
 				//$this->load->view('templates/header', $data);
-				$this->load->view('login');  //  redirect back to login form
+				//$this->load->view('login');  //  redirect back to login form
+				redirect('/faculty/');
 				//$this->load->view('templates/footer');
 			}
 			else {  //  form validation is true
@@ -82,12 +83,13 @@ class Login extends CI_Controller {
 					//$data['invalid_login_class'] = 'show';
 
 					//$this->load->view('templates/header', $data);
-					$this->load->view('login');
+					//$this->load->view('login');
+					redirect('/faculty/');
 					//$this->load->view('templates/footer');
 				}
 			}  //  end of else checking from validation
 		}  //  end of else
-	}  //  end of index function
+	}  //  end of form_check function
 
 
 	/*public function forget_password(){

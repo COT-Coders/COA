@@ -26,6 +26,22 @@
 			return $this->db->get('Department')->result_array();
 		}
 		
+		public function insert_staff() {
+			$staff_name = $this->input->post('staff_name');
+			$designation = $this->input->post('staff_desig');
+			$personal_info = $this->input->post('staff_info');
+
+			$data = array(
+					'Staff_Name' => $staff_name,
+					'Dept_ID' => $this->session->userdata('dept_id'),
+					'Designation' => $designation,
+					'Personal_Info' => $personal_info
+					);  //  associative array of field value pairs
+			if ($this->db->insert("Staff", $data))
+				return true;
+			else
+				return false;
+		}
 		/*public function insert($data) {
 			$data = array(
 					'Dept_Name' => ‘1’,

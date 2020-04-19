@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 06, 2020 at 10:53 PM
+-- Generation Time: Apr 19, 2020 at 10:03 PM
 -- Server version: 5.7.29-0ubuntu0.18.04.1
--- PHP Version: 7.2.24-0ubuntu0.18.04.3
+-- PHP Version: 7.2.24-0ubuntu0.18.04.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -69,8 +69,10 @@ INSERT INTO `Department` (`Dept_ID`, `Dept_Name`, `HOD`, `Vision`, `Mission`, `H
 CREATE TABLE `Faculty` (
   `Faculty_ID` int(11) NOT NULL,
   `Name` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
   `Address` text NOT NULL,
-  `Contact` int(11) NOT NULL,
+  `Office_Contact` int(11) NOT NULL,
+  `Personal_Contact` int(11) NOT NULL,
   `Designation` varchar(50) NOT NULL,
   `Dept_ID` int(11) NOT NULL,
   `Professional_Info` text NOT NULL,
@@ -84,8 +86,8 @@ CREATE TABLE `Faculty` (
 -- Dumping data for table `Faculty`
 --
 
-INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Address`, `Contact`, `Designation`, `Dept_ID`, `Professional_Info`, `Img_Link`, `Password`, `Role`, `Active`) VALUES
-(1, 'Samaksh', 'Somewhere but not nowhere', 123, 'Student', 1, 'Will not give', '', 'samaksh', 3, 1);
+INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Email`, `Address`, `Office_Contact`, `Personal_Contact`, `Designation`, `Dept_ID`, `Professional_Info`, `Img_Link`, `Password`, `Role`, `Active`) VALUES
+(1, 'Samaksh', '', 'Somewhere but not nowhere', 123, 0, 'Student', 1, 'Will not give', '', 'samaksh', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -146,8 +148,18 @@ CREATE TABLE `Staff` (
   `Dept_ID` int(11) NOT NULL,
   `Designation` varchar(50) NOT NULL,
   `Personal_Info` text NOT NULL,
-  `Img_Link` text NOT NULL
+  `Address` varchar(100) NOT NULL,
+  `Phone` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Staff`
+--
+
+INSERT INTO `Staff` (`Staff_ID`, `Staff_Name`, `Dept_ID`, `Designation`, `Personal_Info`, `Address`, `Phone`) VALUES
+(1, 'Samaksh', 1, 'Lab Assistant', 'Will not tell', '', NULL),
+(2, 'Annoo', 1, 'Lab Technician', 'Will tell later', '', NULL),
+(3, 'Alien', 1, 'Developer', 'Known', 'Pithoragrah', 123456789);
 
 -- --------------------------------------------------------
 
@@ -188,6 +200,8 @@ ALTER TABLE `Department`
 --
 ALTER TABLE `Faculty`
   ADD PRIMARY KEY (`Faculty_ID`),
+  ADD UNIQUE KEY `Email` (`Email`),
+  ADD UNIQUE KEY `Personal_Contact` (`Personal_Contact`),
   ADD KEY `Dept_ID` (`Dept_ID`);
 
 --
@@ -216,6 +230,7 @@ ALTER TABLE `Publication`
 --
 ALTER TABLE `Staff`
   ADD PRIMARY KEY (`Staff_ID`),
+  ADD UNIQUE KEY `Staff_Phone` (`Phone`),
   ADD KEY `Dept_ID` (`Dept_ID`);
 
 --
@@ -254,7 +269,7 @@ ALTER TABLE `Miscellaneous`
 -- AUTO_INCREMENT for table `Staff`
 --
 ALTER TABLE `Staff`
-  MODIFY `Staff_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Staff_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --

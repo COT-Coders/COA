@@ -15,10 +15,16 @@
 			return $this->db->get('Department')->result_array();
 		}
 		
-		public function get_dept_info($index) {
+		public function get_dept_info($dept_id) {
 			$this->db->select();
-			$this->db->where("Dept_ID", $index+1);
+			$this->db->where("Dept_ID", $dept_id+1);
 			return $this->db->get('Department')->result_array();
+		}
+
+		public function get_staff_info($dept_id) {
+			$this->db->select();
+			$this->db->where("Dept_ID", $dept_id);
+			return $this->db->get('Staff')->result_array();
 		}
 		
 		/*public function insert($data) {

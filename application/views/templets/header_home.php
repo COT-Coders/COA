@@ -50,23 +50,9 @@
 		      <li class="nav-item dropdown">
 	            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
 	            <ul class="dropdown-menu">
-	            	<li class="dropdown-item"><a href="#">Link 1</a></li>
-	            	<li class="dropdown-item"><a href="#">Link 2</a></li>
-	            	<li class="dropdown-submenu"> <a class="dropdown-item dropdown-toggle" href="<?php echo site_url(); ?>/department">Departments</a>
-	            		<ul>
-	            			<?php
-	            				$no_of_dept = count($dept_names);
-	            				for($i=0; $i<$no_of_dept; $i++) {
-	            					//<!-- dept_id not to be displayed in URL, either do it by session or encode the url -->
-	            					//$link = "department/desc/".$i;
-	            					//echo $link;
-	            					//$encoded_link = urlencode($link);
-	            					//echo $encoded_link;
-	            					?><a class="dropdown-item" href="<?php echo site_url("department/desc/".$i); // echo $encoded_link; ?>" > <?php echo $dept_names[$i]['Dept_Name']; ?> </a> <?php
-	            				}
-	            			?>
-	            		</ul>
-	            	</li>
+	            	<li class="dropdown-item"><a href="<?php echo site_url(); ?>/Welcome/departments_list" style="text-decoration: none;">Departments</a></li>
+	            	<li class="dropdown-item"><a href="#">Programs of Study</a></li>
+	            	<li class="dropdown-item"><a href="#">Link 2</a></li>	      
 	          	</ul>
               </li>
 		       

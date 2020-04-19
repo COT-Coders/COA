@@ -56,4 +56,31 @@ class Welcome extends CI_Controller {
 		$this->load->view('collage_activity_details'); 
 		$this->load->view('templets/footer_new');
 	}
+
+	public function departments_list()
+	{
+		$this->load->model('dep_model');
+		$data['dept_names'] = $this->dep_model->get_dept_names();
+		$this->load->view('templets/header_common', $data);
+		$this->load->view('collage_activity_details'); 
+		$this->load->view('templets/footer_new');
+	}
+
+	public function ug_programs()
+	{
+		$this->load->model('dep_model');
+		$data['dept_names'] = $this->dep_model->get_dept_names();
+		$this->load->view('templets/header_common', $data);
+		$this->load->view('collage_activity_details'); 
+		$this->load->view('templets/footer_new');
+	}
+
+	public function pg_programs()
+	{
+		$this->load->model('dep_model');
+		$data['dept_names'] = $this->dep_model->get_dept_names();
+		$this->load->view('templets/header_common', $data);
+		$this->load->view('collage_activity_details'); 
+		$this->load->view('templets/footer_new');
+	}
 }

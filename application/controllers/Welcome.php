@@ -60,16 +60,16 @@ class Welcome extends CI_Controller {
 		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templets/header_common', $data);
-		$this->load->view('collage_activity_details'); 
+		$this->load->view('collage_departments'); 
 		$this->load->view('templets/footer_new');
 	}
 
 	public function ug_programs()
 	{
 		$this->load->model('dep_model');
-		$data['dept_names'] = $this->dep_model->get_dept_names();
+		//$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templets/header_common', $data);
-		$this->load->view('collage_activity_details'); 
+		//$this->load->view('collage_activity_details'); 
 		$this->load->view('templets/footer_new');
 	}
 
@@ -78,7 +78,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templets/header_common', $data);
-		$this->load->view('collage_activity_details'); 
+		//$this->load->view('collage_activity_details'); 
 		$this->load->view('templets/footer_new');
 	}
 }

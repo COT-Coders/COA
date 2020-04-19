@@ -50,18 +50,10 @@
 		      <li class="nav-item dropdown">
 	            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
 	            <ul class="dropdown-menu">
-	            	<li class="dropdown-item"><a href="#">Link 1</a></li>
+	            	<li class="dropdown-item"><a href="<?php echo site_url(); ?>/Welcome/departments_list" style="text-decoration: none;">Departments</a></li>
+	            	<li class="dropdown-item"><a href="#">Programs of Study</a></li>
 	            	<li class="dropdown-item"><a href="#">Link 2</a></li>
-	            	<li class="dropdown-submenu"> <a class="dropdown-item dropdown-toggle" href="#">Link 3</a>
-	            		<ul>
-	            			<?php
-	            				$no_of_dept = count($dept_names);
-	            				for($i=0; $i<$no_of_dept; $i++) { ?>
-	            					<a class="dropdown-item" href="<?php echo site_url("department/desc/".$i); ?>" > <?php echo $dept_names[$i]['Dept_Name']; ?> </a> <?php
-	            				}
-	            			?>
-	            		</ul>
-	            	</li>
+	            	
 	          	</ul>
               </li>
 		       
@@ -69,7 +61,7 @@
 		      <li class="nav-item dropdown">
 	          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Centers</a>
 	          <div class="dropdown-menu">
-	            <a class="dropdown-item" href="#">Link 1</a>
+	            <a class="dropdown-item" href="">Link 1</a>
 	            <a class="dropdown-item" href="#">Link 2</a>
 	            <a class="dropdown-item" href="#">Link 3</a>
 	          </div>

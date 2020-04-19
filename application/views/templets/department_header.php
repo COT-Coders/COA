@@ -61,7 +61,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 					<div class="col-md-9 hidden-xs hidden-sm" id="title" style="margin-left:1.5%;margin-top:1.02%">
 						<div class="row">
 							<div class="col-md-6 university_link text-left">
-								<h2><a href="http://www.gbpuat.ac.in" target="_blank">College Of Agriculture</a></h2> <?php //  change url of COA to this website only ?>
+								<h2><a href="<?php echo site_url(); ?>" target="_blank">College Of Agriculture</a></h2>
 								<h4 style="margin-left:1%;"><a href="http://www.gbpuat.ac.in" target="_blank">G. B. Pant Universiity of Agriculture and Technology</a></h4>
 							</div>
 						</div>
@@ -71,7 +71,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 					<div class="col-md-9 col-xs-7 col-sm-7 hidden-md hidden-lg visible-sm-block visible-xs-block" id="title" style="margin-left:2%;">
 						<div class="row">
 								<div class="col-md-12">
-									<h3 style="font-weight:bolder; text-align:center;">College of Agriculture</h3>
+									<h3 style="font-weight:bolder; text-align:center;"><a href="<?php echo site_url(); ?>" target="_blank">College of Agriculture</a></h3>
 								</div>
 							
 								<div class="col-md-12 university_link" style="text-align:center;">
@@ -85,7 +85,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 					<div class="col-md-9 hidden-xs hidden-sm" id="title" style="text-align:left;">
 						<div class="row">
 							<div class="col-md-12 university_link">
-								<h1><a href="#" target="_blank"><?php if(!empty($records)) echo $records[0]['Dept_Name']; ?></a></h1>
+								<h1><?php if(!empty($records)) echo $records[0]['Dept_Name']; ?></h1>
 							</div>	
 						</div>
 					</div> 

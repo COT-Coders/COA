@@ -7,7 +7,23 @@
 		}
 
 		public function index() {
+			if( $this->session->userdata('logged_in') == 'true' ) {
+				//echo $this->session->userdata('fac_id');
+				$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
+				//print_r($data);
+
+				$this->load->view('templets/department_header');
+				$this->load->view('faculty', $data);
+				$this->load->view('templets/department_footer');
+			}
+			else {
+				redirect(site_url());
+			}
+		}
+
+		/*public function index() {
 			$this->load->view('templets/department_header');
+			//  if not logged in, redirect to home page. Flow will be: Home -> Dept. index -> login -> faculty home page
 			if( $this->session->userdata('logged_in') == 'true' ) {
 				//echo $this->session->userdata('fac_id');
 				$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
@@ -19,13 +35,13 @@
 				$this->load->view('login');
 			}
 			$this->load->view('templets/department_footer');
-		}
+		}*/
+
 
 		public function add_staff() {
 			$this->load->helper('form');
 			$this->load->view('add_staff');
 		}
-
 
 		public function staff_form_check() {
 			if(!$this->session->userdata('logged_in')) {  //  if faculty is not looged in, redirect to faculty home/index page
@@ -36,6 +52,8 @@
 				$this->form_validation->set_rules('staff_name', 'Staff Name', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
 				$this->form_validation->set_rules('staff_desig', 'Staff Designation', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
 				$this->form_validation->set_rules('staff_info', 'Staff Personal Info', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
+				$this->form_validation->set_rules('staff_address', 'Staff Address', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
+				$this->form_validation->set_rules('staff_ph_no', 'Staff Phone Number', 'trim|min_length[10]|encode_php_tags|required|htmlspecialchars');  //  Phone no. of staff will be of atleast 10 digits
 
 				if($this->form_validation->run() == false) {
 					//$data['user_logged_in'] = 'false';
@@ -52,8 +70,8 @@
 
 					$status = $this->faculty_model->insert_staff();
 					echo $status;
+					sleep(5);
 					redirect('/faculty/');
-					echo $status;
 				}  //  end of else checking from validation
 			}  //  end of else checking logged_in
 		}  //  end of staff_form_check function

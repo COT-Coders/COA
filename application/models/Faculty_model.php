@@ -30,37 +30,22 @@
 			$staff_name = $this->input->post('staff_name');
 			$designation = $this->input->post('staff_desig');
 			$personal_info = $this->input->post('staff_info');
+			$staff_address = $this->input->post('staff_address');
+			$staff_ph_no = $this->input->post('staff_ph_no');
 
 			$data = array(
 					'Staff_Name' => $staff_name,
-					'Dept_ID' => $this->session->userdata('dept_id'),
+					'Dept_ID' => $this->session->userdata('dept_id'),  //  hard coded in login controller
 					'Designation' => $designation,
-					'Personal_Info' => $personal_info
+					'Personal_Info' => $personal_info,
+					'Address' => $staff_address,
+					'Phone' => $staff_ph_no
 					);  //  associative array of field value pairs
 			if ($this->db->insert("Staff", $data))
 				return true;
 			else
 				return false;
 		}
-		/*public function insert($data) {
-			$data = array(
-					'Dept_Name' => ‘1’,
-					'HOD' => ‘Virat’,
-					'Vision' => ,
-					'Mission' => ,
-					'History' => ,
-					'Mandate' =>
-					);  //  associative array of field value pairs
-			if ($this->db->insert("department", $data)) { 
-				return true; 
-			}
-
-			$data = array(
-					'roll_no' => ‘1’,
-					'name' => ‘Virat’
-					);  //  associative array of field value pairs
-			$this->db->insert("stud", $data);
-		}*/
 
 		/*public function delete($roll_no) { 
 			if ($this->db->delete("stud", "roll_no = ".$roll_no)) { // can have table's string or array

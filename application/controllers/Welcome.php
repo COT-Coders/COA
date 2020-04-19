@@ -18,9 +18,14 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	function __construct() {
+		parent::__construct();
+		$this->load->model('dep_model');
+	}
+	
 	public function index()
 	{
-		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		//print_r($data);
 		$this->load->view('templets/header_home', $data);
@@ -30,7 +35,6 @@ class Welcome extends CI_Controller {
 
 	public function about()
 	{
-		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templets/header_common', $data);
 		$this->load->view('about_us'); 
@@ -39,7 +43,6 @@ class Welcome extends CI_Controller {
 
 	public function collage_activities()
 	{
-		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templets/header_common', $data);
 		$this->load->view('collage_activities'); 
@@ -48,7 +51,6 @@ class Welcome extends CI_Controller {
 
 	public function event_details()
 	{
-		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templets/header_common', $data);
 		$this->load->view('collage_activity_details'); 

@@ -15,82 +15,24 @@
                 <tr>
                     <th>Name</th>
                     <th>Designation</th>
+                    <th>Personal Info</th>
                     <th>Address</th>
                     <th>Phone</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
-                <tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr><tr>
-                    <td>John</td>
-                    <td>Lab Incharge</td>
-                    <td>C-17,Pantnagar, Uttarakhand</td>
-                    <td>+910123424244</td>
-                </tr>
+                    <?php
+                        $staff_count = count($records);
+                        for($i = 0; $i < $staff_count; $i++) {
+                            echo "<tr>";
+                                echo "<td>".$records[$i]["Staff_Name"]."</td>";
+                                echo "<td>".$records[$i]["Designation"]."</td>";
+                                echo "<td>".$records[$i]["Personal_Info"]."</td>";
+                                echo "<td>".$records[$i]["Address"]."</td>";
+                                echo "<td>".$records[$i]["Phone"]."</td>";
+                            echo "</tr>";
+                        }
+                    ?>
                 </tbody>
             </table>
             

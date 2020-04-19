@@ -8,13 +8,16 @@
 		}
 
 		public function index() {
+			$data['dept_names'] = $this->dep_model->get_dept_names();
+			//print_r($data);
+
 			$this->load->view('templets/department_header', $data);
 			$this->load->view('department', $data);
 			$this->load->view('templets/department_footer');
 		}
 
-		public function desc($index) {
-			$data['records'] = $this->dep_model->get_dept_info($index);
+		public function desc($dept_id) {
+			$data['records'] = $this->dep_model->get_dept_info($dept_id);
 			//print_r($data);
 
 			$this->load->view('templets/department_header', $data);
@@ -35,8 +38,12 @@
 	  	}
 
 		public function staff() {
+			//  passing parameter to the model function to get staff of that particular dept_id only (either by argument to staff() function or by session)
+			$data['records'] = $this->dep_model->get_staff_info(1);
+			//print_r($data);
+
 			$this->load->view('templets/department_header');
-			$this->load->view('stafflist');
+			$this->load->view('stafflist', $data);
 			$this->load->view('templets/department_footer');
 		}
 		  

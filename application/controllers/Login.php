@@ -38,7 +38,10 @@ class Login extends CI_Controller {
 
 				//$this->load->view('templates/header', $data);
 				//$this->load->view('login');  //  redirect back to login form
-				redirect('/faculty/');
+				redirect('/department/');  //  Flow will be: Home -> Dept. index -> login -> faculty home page
+				//  if incorrect login credentials, then resend to department (from here it has come)
+				//  but department's index page takes paramters and the index function is not called from anywhere as of 18/4/2020. from home page, desc/dept_id is called.
+
 				//$this->load->view('templates/footer');
 			}
 			else {  //  form validation is true
@@ -57,7 +60,7 @@ class Login extends CI_Controller {
 						//'email' => $user_email,
 						'logged_in' => 'true',
 						'fac_id' => '1',  //  hard coding as of now
-						'dept_id' => '1'
+						'dept_id' => '1'  //  hard coding as of now
 					);
 					$this->session->set_userdata($newdata);
 
@@ -84,7 +87,7 @@ class Login extends CI_Controller {
 
 					//$this->load->view('templates/header', $data);
 					//$this->load->view('login');
-					redirect('/faculty/');
+					redirect('/department/');
 					//$this->load->view('templates/footer');
 				}
 			}  //  end of else checking from validation

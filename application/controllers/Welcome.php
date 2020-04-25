@@ -28,59 +28,61 @@ class Welcome extends CI_Controller {
 	{
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		//print_r($data);
-		$this->load->view('templets/header_home', $data);
+		$this->load->view('templates/header_home', $data);
 		$this->load->view('college_home'); 
-		$this->load->view('templets/footer_new');
+		$this->load->view('templates/footer_new');
 	}
 
 	public function about()
 	{
 		$data['dept_names'] = $this->dep_model->get_dept_names();
-		$this->load->view('templets/header_common', $data);
+		$this->load->view('templates/header_common', $data);
 		$this->load->view('about_us'); 
-		$this->load->view('templets/footer_new');
+		$this->load->view('templates/footer_new');
 	}
 
 	public function collage_activities()
 	{
 		$data['dept_names'] = $this->dep_model->get_dept_names();
-		$this->load->view('templets/header_common', $data);
+		$this->load->view('templates/header_common', $data);
 		$this->load->view('collage_activities'); 
-		$this->load->view('templets/footer_new');
+		$this->load->view('templates/footer_new');
 	}
 
 	public function event_details()
 	{
 		$data['dept_names'] = $this->dep_model->get_dept_names();
-		$this->load->view('templets/header_common', $data);
+		$this->load->view('templates/header_common', $data);
 		$this->load->view('collage_activity_details'); 
-		$this->load->view('templets/footer_new');
+		$this->load->view('templates/footer_new');
 	}
 
 	public function departments_list()
 	{
 		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
-		$this->load->view('templets/header_common', $data);
-		$this->load->view('collage_departments'); 
-		$this->load->view('templets/footer_new');
+		sort($data['dept_names']);
+		//print_r($data);
+		$this->load->view('templates/header_common', $data);
+		$this->load->view('college_departments'); 
+		$this->load->view('templates/footer_new');
 	}
 
 	public function ug_programs()
 	{
 		$this->load->model('dep_model');
 		//$data['dept_names'] = $this->dep_model->get_dept_names();
-		$this->load->view('templets/header_common', $data);
+		$this->load->view('templates/header_common', $data);
 		//$this->load->view('collage_activity_details'); 
-		$this->load->view('templets/footer_new');
+		$this->load->view('templates/footer_new');
 	}
 
 	public function pg_programs()
 	{
 		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
-		$this->load->view('templets/header_common', $data);
+		$this->load->view('templates/header_common', $data);
 		//$this->load->view('collage_activity_details'); 
-		$this->load->view('templets/footer_new');
+		$this->load->view('templates/footer_new');
 	}
 }

@@ -11,30 +11,30 @@
 			$data['dept_names'] = $this->dep_model->get_dept_names();
 			//print_r($data);
 
-			$this->load->view('templets/department_header', $data);
+			$this->load->view('templates/department_header', $data);
 			$this->load->view('department', $data);
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}
 
 		public function desc($dept_id) {
 			$data['records'] = $this->dep_model->get_dept_info($dept_id);
 			//print_r($data);
 
-			$this->load->view('templets/department_header', $data);
+			$this->load->view('templates/department_header', $data);
 			$this->load->view('department', $data);
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}
 
 		public function program() {
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('d_programs');
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}
 
 		public function faculty() {
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('facultylist');
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 	  	}
 
 		public function staff() {
@@ -42,21 +42,21 @@
 			$data['records'] = $this->dep_model->get_staff_info(1);
 			//print_r($data);
 
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('stafflist', $data);
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}
 		  
 		public function research() {
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('research');
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}
 
 		public function activities() {
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('activities');
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}
 	  
    } 

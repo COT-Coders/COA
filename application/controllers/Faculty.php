@@ -12,9 +12,9 @@
 				$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
 				//print_r($data);
 
-				$this->load->view('templets/department_header');
+				$this->load->view('templates/department_header');
 				$this->load->view('faculty', $data);
-				$this->load->view('templets/department_footer');
+				$this->load->view('templates/department_footer');
 			}
 			else {
 				redirect(site_url());
@@ -22,7 +22,7 @@
 		}
 
 		/*public function index() {
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			//  if not logged in, redirect to home page. Flow will be: Home -> Dept. index -> login -> faculty home page
 			if( $this->session->userdata('logged_in') == 'true' ) {
 				//echo $this->session->userdata('fac_id');
@@ -34,7 +34,7 @@
 				$this->load->helper('form');
 				$this->load->view('login');
 			}
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}*/
 
 
@@ -77,38 +77,38 @@
 		}  //  end of staff_form_check function
 
 		public function courses() {
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('courses'); 
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}
 		
 		
 		public function fcourses() { 
 			$this->load->helper('url');
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('faculty_courses'); 
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		}
 		
 		public function fpublications() { 
 			$this->load->helper('url');
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('faculty_publications'); 
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		} 
 
 		public function fresearch() { 
 			$this->load->helper('url');
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('faculty_research'); 
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		} 
 
 		public function fmeetings() { 
 			$this->load->helper('url');
-			$this->load->view('templets/department_header');
+			$this->load->view('templates/department_header');
 			$this->load->view('faculty_meetings'); 
-			$this->load->view('templets/department_footer');
+			$this->load->view('templates/department_footer');
 		} 
 	} 
 ?>

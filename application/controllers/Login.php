@@ -10,7 +10,7 @@ class Login extends CI_Controller {
 	public function index() {  //  not used as of 7/4/2020 as login view is called from faculty/index()
 		$this->load->helper('form');
 
-		//$this->load->view('templets/header');
+		//$this->load->view('templates/header');
 		/*if($this->session->userdata('logged_in')) {  //  if user(faculty) is logged in, then redirect to his/her home page
 			redirect('/logout/');
 			//redirect('/welcome/');
@@ -18,7 +18,7 @@ class Login extends CI_Controller {
 		else {*/  //  if session is not set(i.e., user is not logged in, then redirect him to login page to enter login credentials)
 			$this->load->view('login');
 		//}
-		//$this->load->view('templets/footer');
+		//$this->load->view('templates/footer');
 	}
 
 	public function form_check() {

@@ -8,9 +8,8 @@
 				<div class="jumbotron jumbotron-fluid"> 
 
 					<h3 style="margin-left: 10"> Departments </h3>
-
 					<ul>
-						<li><a href="#"> Agricultural Communication </a></li>
+						<!--<li><a href="#"> Agricultural Communication </a></li>
 						<li><a href="#"> Agrometerology</a></li>
 						<li><a href="#"> Entomology </a></li>
 						<li><a href="#"> Genetics and Plant Breeding </a></li>
@@ -20,21 +19,25 @@
 						<li><a href="#"> Agronomy</a></li>
 						<li><a href="#"> Food Science and Technology </a></li>
 						<li><a href="#"> Horticulture </a></li>
-						<li><a href="#"> Soil Science </a></li>
+						<li><a href="#"> Soil Science </a></li>-->
 
-
+						<?php
+						$no_of_dept = count($dept_names);
+	            		for($i=0; $i<$no_of_dept; $i++) {
+	            			//<!-- dept_id not to be displayed in URL, either do it by session or encode the url -->
+	            			//$link = "department/desc/".$i;
+	            			//echo $link;
+	            			//$encoded_link = urlencode($link);
+	            			//echo $encoded_link;
+	            			?><li><a href="<?php echo site_url("department/desc/".$i); // echo $encoded_link; ?>" > <?php echo $dept_names[$i]['Dept_Name']; ?> </a> </li><?php
+	            		}
+	            		?>
 					</ul>
 
 				</div>
 			</div>
-
-
 	</div>
 
-
 </div>
-
-
-
 
 </body>

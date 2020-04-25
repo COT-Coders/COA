@@ -11,7 +11,7 @@
 		}
 
 		public function get_dept_names() {
-			$this->db->select('Dept_Name');
+			$this->db->select('Dept_Name, Dept_ID');
 			return $this->db->get('Department')->result_array();
 		}
 		

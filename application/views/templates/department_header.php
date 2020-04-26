@@ -128,8 +128,46 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 								<li><a href="<?php echo site_url(); ?>/logout"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> LogOut </a></li> <?php
 							}
 							else { ?>
+
+
 								<li><a href="<?php echo site_url(); ?>/login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></li>
-								<li><a href="<?php echo site_url(); ?>/signup">SignUp</a></li> <?php
+								<li><a href="<?php echo site_url(); ?>/signup">SignUp</a></li>
+
+								<!--- Code to implement a modal based login form -->
+
+								<!--<li> <a><button type='button' class="label" data-toggle="modal" data-target="#popUpWindow" style="background-color:transparent;border: none;box-shadow: none;margin-top: 0px;margin-bottom: 0px;" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </button></a> </li> -->
+
+								<li><a data-toggle="modal" data-target="#popUpWindow"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></a></li>
+
+								<div class="modal fade" id="popUpWindow">
+								    <div class="modal-dialog">
+								      <div class="modal-content">
+								        <!-- header -->
+								        <div class="modal-header">
+								          <button type="button" class="close" data-dismiss="modal">&times;</button>
+								          <h3 class="modal-title">Login Form</h3>
+								        </div>
+								        <!-- body -->
+								        <div class="modal-header">
+								          <form role="form">
+								            <div class="form-group">
+								              <input type="email" class="form-control" placeholder="Email"/>
+								              <input type="password" class="form-control" placeholder="Password" />
+								            </div>
+								          </form>
+								        </div>
+								        <!-- footer -->
+								        <div class="modal-footer">
+								          <button class="btn btn-primary btn-block">Log In</button>
+								        </div>
+								        
+								      </div>
+								    </div>
+								  </div>
+
+
+
+								 <?php
 							} ?>
 					</ul>
 			

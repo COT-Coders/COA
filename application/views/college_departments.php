@@ -29,8 +29,17 @@
 	            			//echo $link;
 	            			//$encoded_link = urlencode($link);
 	            			//echo $encoded_link;
-	            			?><li><a href="<?php echo site_url("department/desc/".$i); // echo $encoded_link; ?>" > <?php echo $dept_names[$i]['Dept_Name']; ?> </a> </li><?php
+	            			?><li><a href="<?php echo site_url("department/desc/".$dept_names[$i]['Dept_ID']); // echo $encoded_link; ?>" > <?php echo $dept_names[$i]['Dept_Name']; ?> </a> </li><?php
 	            		}
+
+	            		/*echo form_open('department/index'); ?>
+
+	            		<?php for($i=0; $i<$no_of_dept; $i++) { ?>
+	            		<li><input type="submit" id="dept_id" name="dept_id" value="<?php echo $dept_names[$i]['Dept_Name']; ?>" ></li>
+	            		<?php } ?>
+
+	            		<?php echo form_close();
+	            		*/
 	            		?>
 					</ul>
 

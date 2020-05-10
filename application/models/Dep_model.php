@@ -17,7 +17,7 @@
 		
 		public function get_dept_info($dept_id) {
 			$this->db->select();
-			$this->db->where("Dept_ID", $dept_id+1);
+			$this->db->where("Dept_ID", $dept_id);
 			return $this->db->get('Department')->result_array();
 		}
 

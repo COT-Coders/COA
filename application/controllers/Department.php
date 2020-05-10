@@ -5,24 +5,46 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->model('dep_model');
+			$this->load->library('session');
+			$this->load->helper(array('form'));
 		}
 
 		public function index() {
-			$data['dept_names'] = $this->dep_model->get_dept_names();
+			//$data['dept_names'] = $this->dep_model->get_dept_names();
 			//print_r($data);
 
+			$brow_dept_id = $this->session->userdata('browsing_dept_id');
+			//echo "Recieved from session".$brow_dept_id;
+
+			if($brow_dept_id)
+				$dept_id = $brow_dept_id;
+			else
+				$dept_id = $this->session->userdata('fac_dept_id');
+
+			if(!$dept_id)
+				echo "Neither browsing, not faculty dept. id is set in department/index";
+
+			$data['records'] = $this->dep_model->get_dept_info($dept_id);
+			//$dept_id = $this->input->post('dept_id');
+			//echo "Department ID from button in dept. list".$dept_id;
 			$this->load->view('templates/department_header', $data);
 			$this->load->view('department', $data);
 			$this->load->view('templates/department_footer');
 		}
 
-		public function desc($dept_id) {
+		public function desc() {
+			$id = $this->uri->segment(3);
+			echo "URI".$id;
+			$this->session->set_userdata('browsing_dept_id', $id);
+
+			redirect('/department/');
+			/*$dept_id = $id;
 			$data['records'] = $this->dep_model->get_dept_info($dept_id);
 			//print_r($data);
 
 			$this->load->view('templates/department_header', $data);
 			$this->load->view('department', $data);
-			$this->load->view('templates/department_footer');
+			$this->load->view('templates/department_footer');*/
 		}
 
 		public function program() {

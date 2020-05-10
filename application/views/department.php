@@ -3,14 +3,6 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-8" style="background-color:RGB(245,245,245);">
 
-		<?php
-		
-		$no_of_dept = count($dept_names);
-		for($i=0; $i<$no_of_dept; $i++) {
-			echo $dept_names[$i]['Dept_Name']."<br>";
-		}
-		?>
-
 		<h2> About <?php echo $records[0]['Dept_Name']	; ?> </h2>
 		<div class="row">
 

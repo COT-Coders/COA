@@ -22,13 +22,14 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 	<!-- For online usage -->
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
-	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
-
 	<!-- For offline usage -->
 	<!--<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/font-awesome.min.css">
@@ -38,7 +39,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 			
 	<script src="<?php echo base_url();?>/assets/js/bootstrap.min.js"></script>-->
 	
-	<script src="<?php echo base_url();?>/assets/js/more.js"></script>	   
+	<script src="<?php echo base_url();?>/assets/js/more.js"></script>
 
 	<link rel="icon" href="<?php echo base_url();?>assets/img/logo.png">
 
@@ -125,47 +126,52 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 						<!-- Change according to user_logged_in to Logout link -->
 						<?php
 							if( $this->session->userdata('logged_in') == 'true' ) { ?>
-								<li><a href="<?php echo site_url(); ?>/logout"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> LogOut </a></li> <?php
+								<li><a href="<?php echo site_url('logout'); ?>"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> LogOut </a></li> <?php
 							}
 							else { ?>
-
-
-								<li><a href="<?php echo site_url(); ?>/login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></li>
-								<li><a href="<?php echo site_url(); ?>/signup">SignUp</a></li>
+								<!--<li><a href="<?php echo site_url('login'); ?>"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></li>-->
+								<!--<li><a href="<?php echo site_url('signup'); ?>">SignUp</a></li>-->
 
 								<!--- Code to implement a modal based login form -->
 
 								<!--<li> <a><button type='button' class="label" data-toggle="modal" data-target="#popUpWindow" style="background-color:transparent;border: none;box-shadow: none;margin-top: 0px;margin-bottom: 0px;" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </button></a> </li> -->
 
-								<li><a data-toggle="modal" data-target="#popUpWindow"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></a></li>
+								<li><a data-toggle="modal" data-target="#popUpWindow"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></li>
 
 								<div class="modal fade" id="popUpWindow">
 								    <div class="modal-dialog">
 								      <div class="modal-content">
+
+								      	<?php
+								      		$url = site_url('login/form_check');
+								      		$attributes = array("name" => "login_form", "id" => "login_form");
+								      		echo form_open($url, $attributes);
+								      	?>
 								        <!-- header -->
 								        <div class="modal-header">
 								          <button type="button" class="close" data-dismiss="modal">&times;</button>
 								          <h3 class="modal-title">Login Form</h3>
 								        </div>
+
 								        <!-- body -->
-								        <div class="modal-header">
-								          <form role="form">
+								        <div class="modal-body">
 								            <div class="form-group">
-								              <input type="email" class="form-control" placeholder="Email"/>
-								              <input type="password" class="form-control" placeholder="Password" />
+								              <input type="text" id="user_email" name="user_email" class="form-control" placeholder="Email"/>
 								            </div>
-								          </form>
-								        </div>
-								        <!-- footer -->
-								        <div class="modal-footer">
-								          <button class="btn btn-primary btn-block">Log In</button>
+								            <div class="form-group">
+								              <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+								            </div>
+								          <div id="alert-msg"></div>
 								        </div>
 								        
+								        <!-- footer -->
+								        <div class="modal-footer">
+								          <button class="btn btn-primary btn-block" id="login" name="login">Log In</button>
+								        </div>
+								        <?php echo form_close(); ?>
 								      </div>
 								    </div>
 								  </div>
-
-
 
 								 <?php
 							} ?>
@@ -174,4 +180,30 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 				</div>
 			</div>
 		</div>
+
+		<script type="text/javascript">
+			$('#login').click(function() {
+				var form_data = {
+					user_email: $('#user_email').val(),
+					password: $('#password').val()
+				};
+
+				$.ajax({
+					url: "<?php echo site_url('login/form_check'); ?>",
+					type: 'POST',
+					data: form_data,
+					success: function(msg) {
+						if ($.trim(msg) == 'Valid')  //  "Valid" is returned by login/form_check function on valid credentials
+							$('#alert-msg').html('<div class="alert alert-success text-center">Valid credentials</div>');
+						else if($.trim(msg) === 'Invalid')
+							$('#alert-msg').html('<div class="alert alert-danger text-center">Invalid credentials. Please try again later.</div>');
+						else
+							$('#alert-msg').html('<div class="alert alert-danger">' + msg + '</div>');
+					}
+				});
+				
+				return false;
+			});
+		</script>
 	</header>
+</body>

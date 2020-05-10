@@ -23,29 +23,35 @@ class Login extends CI_Controller {
 
 	public function form_check() {
 		if($this->session->userdata('logged_in')) {  //  ideally if a user is logged in, control should not come here
+			//  unset session variable's values
 			redirect('/logout/');
 			//redirect('/welcome/');
 		}
 		else {
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules('user_name', 'User Name', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
-			$this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
+			$this->form_validation->set_rules('user_email', 'Email', 'trim|min_length[5]|valid_email|required|htmlspecialchars');
+			$this->form_validation->set_rules('password', 'Password', 'trim|min_length[5]|required|htmlspecialchars');
+			//encode_php_tags, xss_clean is now deprecated
 
 			if($this->form_validation->run() == false) {
+				echo validation_errors();
+				
 				//$data['user_logged_in'] = 'false';
 				//$data['title'] = 'Login';
 				//$data['invalid_login_class'] = 'hidden';
 
 				//$this->load->view('templates/header', $data);
 				//$this->load->view('login');  //  redirect back to login form
-				redirect('/department/');  //  Flow will be: Home -> Dept. index -> login -> faculty home page
-				//  if incorrect login credentials, then resend to department (from here it has come)
+				
+				//redirect('/department/');  //  Flow will be: Home -> Dept. index -> login -> faculty home page
+				
+				//  if incorrect login credentials, then resend to department (from where it has come)
 				//  but department's index page takes paramters and the index function is not called from anywhere as of 18/4/2020. from home page, desc/dept_id is called.
 
 				//$this->load->view('templates/footer');
 			}
 			else {  //  form validation is true
-				echo "Form validated";
+				//echo "Form validated";
 				$this->load->model('login_model');
 				$check_login_details = $this->login_model->check_login_details();
 
@@ -64,9 +70,11 @@ class Login extends CI_Controller {
 					);
 					$this->session->set_userdata($newdata);
 
-					echo "session set";
+					//echo "session set";
 
+					sleep(2);
 					redirect('/faculty/');
+					
 					/*
 					user_roles:
 						1 - admin
@@ -81,17 +89,20 @@ class Login extends CI_Controller {
 				}
 				else if($check_login_details == 'invalid') {
 					echo "Invalid";
+
 					//$data['user_logged_in'] = 'false';
 					//$data['title'] = 'Login';
 					//$data['invalid_login_class'] = 'show';
 
 					//$this->load->view('templates/header', $data);
 					//$this->load->view('login');
-					redirect('/department/');
+					
+					//redirect('/department/');
+					
 					//$this->load->view('templates/footer');
 				}
 			}  //  end of else checking from validation
-		}  //  end of else
+		}  //  end of else checking user logged in or not logged in
 	}  //  end of form_check function
 
 

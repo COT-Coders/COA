@@ -7,12 +7,12 @@
 		}
 	
 		public function check_login_details() {
-			$user_name = $this->input->post('user_name');
+			$user_email = $this->input->post('user_email');
 			//$password = md5( $this->input->post('password') );
 			$password = $this->input->post('password');
-			$query = $this->db->get_where('Faculty', array('Name' => $user_name, 'Password' => $password) );  //  Name needs to change according to DB field(maybe Email ID)
+			$query = $this->db->get_where('Faculty', array('Email' => $user_email, 'Password' => $password) );
 
-			print_r($query->result());
+			//print_r($query->result());
 			$temp = '';
 			foreach($query->result() as $row ) {
 				$temp = $row->Name;

@@ -4,6 +4,7 @@
 		function __construct() {
 			parent::__construct();
 			$this->load->model('faculty_model');
+			$this->load->helper(array('form'));
 		}
 
 		public function index() {

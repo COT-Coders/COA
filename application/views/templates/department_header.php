@@ -193,8 +193,15 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 					type: 'POST',
 					data: form_data,
 					success: function(msg) {
-						if ($.trim(msg) == 'Valid')  //  "Valid" is returned by login/form_check function on valid credentials
+						if ($.trim(msg) === 'Valid')  //  "Valid" is returned by login/form_check function on valid credentials
+						{
+							"<?php
+								$redirect_url = site_url('faculty');
+								echo $redirect_url;
+							?>"
 							$('#alert-msg').html('<div class="alert alert-success text-center">Valid credentials</div>');
+							window.location.href = "<?php echo $redirect_url; ?>";
+						}
 						else if($.trim(msg) === 'Invalid')
 							$('#alert-msg').html('<div class="alert alert-danger text-center">Invalid credentials. Please try again later.</div>');
 						else

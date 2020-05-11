@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 19, 2020 at 10:03 PM
+-- Generation Time: May 12, 2020 at 12:39 AM
 -- Server version: 5.7.29-0ubuntu0.18.04.1
 -- PHP Version: 7.2.24-0ubuntu0.18.04.4
 
@@ -87,7 +87,7 @@ CREATE TABLE `Faculty` (
 --
 
 INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Email`, `Address`, `Office_Contact`, `Personal_Contact`, `Designation`, `Dept_ID`, `Professional_Info`, `Img_Link`, `Password`, `Role`, `Active`) VALUES
-(1, 'Samaksh', '', 'Somewhere but not nowhere', 123, 0, 'Student', 1, 'Will not give', '', 'samaksh', 3, 1);
+(1, 'Samaksh', 'abc@gmail.com', 'Somewhere but not nowhere', 123, 0, 'Student', 1, 'Will not give', '', 'samaksh', 3, 1);
 
 -- --------------------------------------------------------
 

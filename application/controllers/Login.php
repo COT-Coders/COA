@@ -61,20 +61,26 @@ class Login extends CI_Controller {
 					//$user_name = $this->login_model->get_user_name($user_name);  //  to get full name corresponding to login/user id
 					//$user_email = $this->login_model->get_user_email($user_id);
 
+					$existing_session = $this->session->userdata;
+					//echo "Existing Session";
+					//print_r($existing_session);
+
 					$newdata = array(
 						//'username' => $user_name,
 						//'email' => $user_email,
 						'logged_in' => 'true',
 						'fac_id' => '1',  //  hard coding as of now
-						'dept_id' => '1'  //  hard coding as of now
+						'fac_dept_id' => '1'  //  hard coding as of now
 					);
+
+					//print_r($newdata);
+					$newdata = $newdata + $existing_session;
+
+					//print_r($newdata);
 					$this->session->set_userdata($newdata);
 
 					//echo "session set";
 
-					sleep(2);
-					redirect('/faculty/');
-					
 					/*
 					user_roles:
 						1 - admin

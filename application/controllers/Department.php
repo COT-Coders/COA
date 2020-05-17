@@ -12,6 +12,7 @@
 		public function index() {
 			//$data['dept_names'] = $this->dep_model->get_dept_names();
 			//print_r($data);
+			//print_r($this->session->userdata);
 
 			$brow_dept_id = $this->session->userdata('browsing_dept_id');
 			//echo "Recieved from session".$brow_dept_id;
@@ -21,8 +22,12 @@
 			else
 				$dept_id = $this->session->userdata('fac_dept_id');
 
-			if(!$dept_id)
-				echo "Neither browsing, not faculty dept. id is set in department/index";
+			if(!$dept_id) {
+				//echo "Neither browsing, not faculty dept. id is set in department/index";
+				$this->session->set_userdata('browsing_dept_id', 1);
+				$dept_id = $this->session->userdata('browsing_dept_id');
+				//echo "Setting default browsing id to: ".$dept_id;
+			}
 
 			$data['records'] = $this->dep_model->get_dept_info($dept_id);
 			//$dept_id = $this->input->post('dept_id');

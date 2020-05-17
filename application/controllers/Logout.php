@@ -8,10 +8,13 @@ class Logout extends CI_Controller {
 		}
 
 	function index() {
+		$session_vars_to_dest = array('logged_in', 'fac_id', 'fac_dept_id', 'role');
+		$this->session->unset_userdata($session_vars_to_dest);
+
 		/*$brow_dept_id = $this->session->userdata('browsing_dept_id');
 		echo $brow_dept_id;*/
 		
-		$this->session->sess_destroy();
+		//$this->session->sess_destroy();
 
 		/*echo "Just After destroying session<br>";
 		print_r($this->session->userdata);

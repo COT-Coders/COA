@@ -65,12 +65,17 @@ class Login extends CI_Controller {
 					//echo "Existing Session";
 					//print_r($existing_session);
 
+					$user_email = $this->input->post('user_email');
+					$user_details = $this->login_model->get_user_details($user_email);
+					//print_r($user_details);
+					
 					$newdata = array(
 						//'username' => $user_name,
 						//'email' => $user_email,
 						'logged_in' => 'true',
-						'fac_id' => '1',  //  hard coding as of now
-						'fac_dept_id' => '1'  //  hard coding as of now
+						'fac_id' => $user_details[0]['Faculty_ID'],
+						'fac_dept_id' => $user_details[0]['Dept_ID'],
+						'role' => $user_details[0]['Role']
 					);
 
 					//print_r($newdata);
@@ -88,10 +93,6 @@ class Login extends CI_Controller {
 						3 - hod
 						4 - other faculty
 					*/
-					/*if($user_role==1)
-						redirect('/student/');  //  role=1 asigned to student
-					else if($user_role==2)
-						redirect('/secretary/');  //  role=2 asigned to secretary*/
 				}
 				else if($check_login_details == 'invalid') {
 					echo "Invalid";

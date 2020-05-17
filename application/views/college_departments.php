@@ -9,18 +9,6 @@
 
 					<h3 style="margin-left: 10"> Departments </h3>
 					<ul>
-						<!--<li><a href="#"> Agricultural Communication </a></li>
-						<li><a href="#"> Agrometerology</a></li>
-						<li><a href="#"> Entomology </a></li>
-						<li><a href="#"> Genetics and Plant Breeding </a></li>
-						<li><a href="#"> Plant Pathology </a></li>
-						<li><a href="#"> Vegetable Science </a></li>
-						<li><a href="#"> Agricultural Economics </a></li>
-						<li><a href="#"> Agronomy</a></li>
-						<li><a href="#"> Food Science and Technology </a></li>
-						<li><a href="#"> Horticulture </a></li>
-						<li><a href="#"> Soil Science </a></li>-->
-
 						<?php
 						$no_of_dept = count($dept_names);
 	            		for($i=0; $i<$no_of_dept; $i++) {

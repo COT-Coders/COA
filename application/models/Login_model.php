@@ -10,6 +10,8 @@
 			$user_email = $this->input->post('user_email');
 			//$password = md5( $this->input->post('password') );
 			$password = $this->input->post('password');
+
+			//  later add check whether user is active or not
 			$query = $this->db->get_where('Faculty', array('Email' => $user_email, 'Password' => $password) );
 
 			//print_r($query->result());
@@ -26,19 +28,10 @@
 			}
 		}
 
-		public function get_role($user_name) {  //  get role by unique key, maybe faculty_id/email-id
-			$query = $this->db->get_where('Faculty', array('Name' => $user_name, 'Password' => $password) );  //  Name needs to change according to DB field(maybe Email ID)
-
-			$temp = '';
-			foreach($query->result() as $row ) {
-				$temp = $row->Name;
-			}
-			if($temp) {
-				return 'valid';
-			}
-			else {
-				return 'invalid';
-			}
+		public function get_user_details($user_email) {  //  get role by unique key, maybe faculty_id/email-id
+			$this->db->select('Faculty_ID, Dept_ID, Role');
+			$this->db->where("Email", $user_email);
+			return $this->db->get('Faculty')->result_array();
 		}
 
 		/*public function delete($roll_no) { 

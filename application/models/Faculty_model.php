@@ -47,6 +47,32 @@
 				return false;
 		}
 
+		public function get_publication_info($fac_id) {
+			$this->db->select();
+			$this->db->where("Faculty_ID", $fac_id);
+			return $this->db->get('Publication')->result_array();
+		}
+
+		public function insert_publication() {
+			$pub_title = $this->input->post('pub_title');
+			$pub_desc = $this->input->post('pub_desc');
+			$pub_name = $this->input->post('pub_name');
+			$pub_date = $this->input->post('pub_date');
+
+			$data = array(
+					'Faculty_ID' => $this->session->userdata('fac_id'),
+					'Dept_ID' => $this->session->userdata('fac_dept_id'),
+					'Title' => $pub_title,
+					'Description' => $pub_desc,
+					'Publication_Name' => $pub_name,
+					'Date' => $pub_date
+					);  //  associative array of field value pairs
+			if ($this->db->insert("Publication", $data))
+				return true;
+			else
+				return false;
+		}
+
 		/*public function delete($roll_no) { 
 			if ($this->db->delete("stud", "roll_no = ".$roll_no)) { // can have table's string or array
 				return true; 

@@ -40,8 +40,10 @@
 
 
 		public function add_staff() {
-			$this->load->helper('form');
-			$this->load->view('add_staff');
+			if( $this->session->userdata('logged_in') == 'true' )
+				$this->load->view('add_staff');
+			else
+				redirect(site_url());
 		}
 
 		public function staff_form_check() {
@@ -50,11 +52,11 @@
 			}
 			else {  //  faculty should be logged in
 				$this->load->library('form_validation');
-				$this->form_validation->set_rules('staff_name', 'Staff Name', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
-				$this->form_validation->set_rules('staff_desig', 'Staff Designation', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
-				$this->form_validation->set_rules('staff_info', 'Staff Personal Info', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
-				$this->form_validation->set_rules('staff_address', 'Staff Address', 'trim|min_length[5]|encode_php_tags|required|htmlspecialchars');
-				$this->form_validation->set_rules('staff_ph_no', 'Staff Phone Number', 'trim|min_length[10]|encode_php_tags|required|htmlspecialchars');  //  Phone no. of staff will be of atleast 10 digits
+				$this->form_validation->set_rules('staff_name', 'Staff Name', 'trim|min_length[5]|required|htmlspecialchars');
+				$this->form_validation->set_rules('staff_desig', 'Staff Designation', 'trim|min_length[5]|required|htmlspecialchars');
+				$this->form_validation->set_rules('staff_info', 'Staff Personal Info', 'trim|min_length[5]|required|htmlspecialchars');
+				$this->form_validation->set_rules('staff_address', 'Staff Address', 'trim|min_length[5]|required|htmlspecialchars');
+				$this->form_validation->set_rules('staff_ph_no', 'Staff Phone Number', 'trim|min_length[10]|required|htmlspecialchars');  //  Phone no. of staff will be of atleast 10 digits
 
 				if($this->form_validation->run() == false) {
 					//$data['user_logged_in'] = 'false';
@@ -84,19 +86,54 @@
 		}
 		
 		
-		public function fcourses() { 
-			$this->load->helper('url');
+		public function fcourses() {
 			$this->load->view('templates/department_header');
 			$this->load->view('faculty_courses'); 
 			$this->load->view('templates/department_footer');
 		}
 		
-		public function fpublications() { 
-			$this->load->helper('url');
-			$this->load->view('templates/department_header');
-			$this->load->view('faculty_publications'); 
-			$this->load->view('templates/department_footer');
-		} 
+		public function fpublications() {
+			if( $this->session->userdata('logged_in') == 'true' ) {
+				$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
+				$data['pub_info'] = $this->faculty_model->get_publication_info($this->session->userdata('fac_id'));
+
+				$this->load->view('templates/department_header');
+				$this->load->view('faculty_publications', $data);
+				$this->load->view('templates/department_footer');
+			}
+			else
+				redirect(site_url());
+		}
+
+		public function add_publication() {
+			if(!$this->session->userdata('logged_in')) {  //  if faculty is not looged in, redirect to faculty home/index page
+				redirect('/faculty/');
+			}
+			else {  //  faculty should be logged in
+				$this->load->library('form_validation');
+				$this->form_validation->set_rules('pub_title', 'Publication Title', 'trim|min_length[5]|required|htmlspecialchars');
+				$this->form_validation->set_rules('pub_desc', 'Publication Description', 'trim|min_length[20]|required|htmlspecialchars');
+				$this->form_validation->set_rules('pub_name', 'Publication Name', 'trim|min_length[5]|required|htmlspecialchars');
+				$this->form_validation->set_rules('pub_date', 'Publication Date', 'required');
+				//$this->form_validation->set_rules('pub_link', 'Publication Link', 'trim|min_length[10]|required|htmlspecialchars');
+
+				if($this->form_validation->run() == false) {
+					$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
+					$this->load->view('templates/department_header');
+					$this->load->view('faculty_publications', $data);
+					$this->load->view('templates/department_footer');
+				}
+				else {  //  form validation is true
+					echo "Form validated";
+					//  insert values in publication table
+
+					$status = $this->faculty_model->insert_publication();
+					echo $status;
+					sleep(5);
+					redirect('/faculty/');
+				}  //  end of else checking from validation
+			}  //  end of else checking logged_in
+		}  //  end of add_publication function
 
 		public function fresearch() { 
 			$this->load->helper('url');

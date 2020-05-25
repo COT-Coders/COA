@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 12, 2020 at 12:39 AM
--- Server version: 5.7.29-0ubuntu0.18.04.1
+-- Generation Time: May 25, 2020 at 01:13 AM
+-- Server version: 5.7.30-0ubuntu0.18.04.1
 -- PHP Version: 7.2.24-0ubuntu0.18.04.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,6 +23,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `Awards`
+--
+
+CREATE TABLE `Awards` (
+  `H_ID` int(11) NOT NULL,
+  `Faculty_ID` int(11) NOT NULL,
+  `Dept_ID` int(11) NOT NULL,
+  `Description` text NOT NULL,
+  `Date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `Course`
 --
 
@@ -33,6 +47,17 @@ CREATE TABLE `Course` (
   `Active` int(11) NOT NULL,
   `Year` int(11) NOT NULL,
   `Semester` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Courses_Fac`
+--
+
+CREATE TABLE `Courses_Fac` (
+  `Course_ID` int(11) NOT NULL,
+  `Faculty_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -75,6 +100,8 @@ CREATE TABLE `Faculty` (
   `Personal_Contact` int(11) NOT NULL,
   `Designation` varchar(50) NOT NULL,
   `Dept_ID` int(11) NOT NULL,
+  `Specialization` varchar(300) DEFAULT NULL,
+  `Interest_Area` varchar(300) DEFAULT NULL,
   `Professional_Info` text NOT NULL,
   `Img_Link` varchar(100) NOT NULL,
   `Password` varchar(50) DEFAULT NULL,
@@ -86,8 +113,8 @@ CREATE TABLE `Faculty` (
 -- Dumping data for table `Faculty`
 --
 
-INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Email`, `Address`, `Office_Contact`, `Personal_Contact`, `Designation`, `Dept_ID`, `Professional_Info`, `Img_Link`, `Password`, `Role`, `Active`) VALUES
-(1, 'Samaksh', 'abc@gmail.com', 'Somewhere but not nowhere', 123, 0, 'Student', 1, 'Will not give', '', 'samaksh', 3, 1);
+INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Email`, `Address`, `Office_Contact`, `Personal_Contact`, `Designation`, `Dept_ID`, `Specialization`, `Interest_Area`, `Professional_Info`, `Img_Link`, `Password`, `Role`, `Active`) VALUES
+(1, 'Samaksh', 'abc@gmail.com', 'Somewhere but not nowhere', 123, 0, 'Student', 1, NULL, NULL, 'Will not give', '', 'samaksh', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -127,13 +154,31 @@ CREATE TABLE `Programme` (
 
 CREATE TABLE `Publication` (
   `Pub_ID` int(11) NOT NULL,
-  `Faculty_ID` int(11) NOT NULL,
-  `Dept_ID` int(11) NOT NULL,
   `Title` varchar(200) NOT NULL,
-  `Description` text NOT NULL,
+  `Abstract` text NOT NULL,
   `Publication_Name` varchar(100) NOT NULL,
   `Date` date NOT NULL,
+  `Authors` varchar(200) NOT NULL,
   `Pub_Link` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Publication`
+--
+
+INSERT INTO `Publication` (`Pub_ID`, `Title`, `Abstract`, `Publication_Name`, `Date`, `Authors`, `Pub_Link`) VALUES
+(1, 'Title is unique and test1', 'Entering description for test1. Will be adding more tests.', 'Pub Name', '2018-03-06', '', ''),
+(2, 'Title for test2', 'Will continue to enter details, but currently entering for test2', 'IJBAAR', '2020-05-04', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Pub_Fac`
+--
+
+CREATE TABLE `Pub_Fac` (
+  `Pub_ID` int(11) NOT NULL,
+  `Faculty_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -182,12 +227,27 @@ CREATE TABLE `Student` (
 --
 
 --
+-- Indexes for table `Awards`
+--
+ALTER TABLE `Awards`
+  ADD PRIMARY KEY (`H_ID`),
+  ADD KEY `Faculty_ID` (`Faculty_ID`),
+  ADD KEY `Dept_ID` (`Dept_ID`);
+
+--
 -- Indexes for table `Course`
 --
 ALTER TABLE `Course`
   ADD PRIMARY KEY (`Course_ID`),
   ADD KEY `Course_ID` (`Course_ID`),
   ADD KEY `Dept_ID` (`Dept_ID`);
+
+--
+-- Indexes for table `Courses_Fac`
+--
+ALTER TABLE `Courses_Fac`
+  ADD PRIMARY KEY (`Course_ID`,`Faculty_ID`),
+  ADD KEY `Faculty_ID` (`Faculty_ID`);
 
 --
 -- Indexes for table `Department`
@@ -221,9 +281,14 @@ ALTER TABLE `Programme`
 -- Indexes for table `Publication`
 --
 ALTER TABLE `Publication`
-  ADD PRIMARY KEY (`Pub_ID`),
-  ADD KEY `Faculty_ID` (`Faculty_ID`),
-  ADD KEY `Dept_ID` (`Dept_ID`);
+  ADD PRIMARY KEY (`Pub_ID`);
+
+--
+-- Indexes for table `Pub_Fac`
+--
+ALTER TABLE `Pub_Fac`
+  ADD PRIMARY KEY (`Pub_ID`,`Faculty_ID`),
+  ADD KEY `Faculty_ID` (`Faculty_ID`);
 
 --
 -- Indexes for table `Staff`
@@ -246,6 +311,11 @@ ALTER TABLE `Student`
 --
 
 --
+-- AUTO_INCREMENT for table `Awards`
+--
+ALTER TABLE `Awards`
+  MODIFY `H_ID` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `Course`
 --
 ALTER TABLE `Course`
@@ -266,6 +336,11 @@ ALTER TABLE `Faculty`
 ALTER TABLE `Miscellaneous`
   MODIFY `M_Id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `Publication`
+--
+ALTER TABLE `Publication`
+  MODIFY `Pub_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `Staff`
 --
 ALTER TABLE `Staff`
@@ -275,10 +350,24 @@ ALTER TABLE `Staff`
 --
 
 --
+-- Constraints for table `Awards`
+--
+ALTER TABLE `Awards`
+  ADD CONSTRAINT `Awards_ibfk_1` FOREIGN KEY (`Faculty_ID`) REFERENCES `Faculty` (`Faculty_ID`),
+  ADD CONSTRAINT `Awards_ibfk_2` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
+
+--
 -- Constraints for table `Course`
 --
 ALTER TABLE `Course`
   ADD CONSTRAINT `Course_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `Courses_Fac`
+--
+ALTER TABLE `Courses_Fac`
+  ADD CONSTRAINT `Courses_Fac_ibfk_1` FOREIGN KEY (`Course_ID`) REFERENCES `Course` (`Course_ID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `Courses_Fac_ibfk_2` FOREIGN KEY (`Faculty_ID`) REFERENCES `Faculty` (`Faculty_ID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Faculty`
@@ -293,10 +382,11 @@ ALTER TABLE `Programme`
   ADD CONSTRAINT `Programme_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `Publication`
+-- Constraints for table `Pub_Fac`
 --
-ALTER TABLE `Publication`
-  ADD CONSTRAINT `Publication_ibfk_1` FOREIGN KEY (`Dept_ID`) REFERENCES `Department` (`Dept_ID`) ON UPDATE CASCADE;
+ALTER TABLE `Pub_Fac`
+  ADD CONSTRAINT `Pub_Fac_ibfk_1` FOREIGN KEY (`Pub_ID`) REFERENCES `Publication` (`Pub_ID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `Pub_Fac_ibfk_2` FOREIGN KEY (`Faculty_ID`) REFERENCES `Faculty` (`Faculty_ID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `Staff`

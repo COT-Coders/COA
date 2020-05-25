@@ -112,7 +112,7 @@
 			else {  //  faculty should be logged in
 				$this->load->library('form_validation');
 				$this->form_validation->set_rules('pub_title', 'Publication Title', 'trim|min_length[5]|required|htmlspecialchars');
-				$this->form_validation->set_rules('pub_desc', 'Publication Description', 'trim|min_length[20]|required|htmlspecialchars');
+				$this->form_validation->set_rules('pub_abs', 'Publication Abstract', 'trim|min_length[20]|required|htmlspecialchars');
 				$this->form_validation->set_rules('pub_name', 'Publication Name', 'trim|min_length[5]|required|htmlspecialchars');
 				$this->form_validation->set_rules('pub_date', 'Publication Date', 'required');
 				//$this->form_validation->set_rules('pub_link', 'Publication Link', 'trim|min_length[10]|required|htmlspecialchars');

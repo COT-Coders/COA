@@ -70,6 +70,7 @@
 									<p>Head Department of Agrometeorology</p>
 									<p>College of Agriculture</p>
 									<p>G B Pant University, Pantnagar</p>
+									<p> <?php if($details[0]['Address']) { echo $details[0]['Address']; } else { echo "Not provided"; } ?> </p>
 									<p> Email : <span class="text-danger"><?php if($details[0]['Email']) { echo $details[0]['Email']; } else { echo "Not provided"; } ?> <!--abc@gmail.com--></span></p>
 									<p> Office Phone : <span class="text-danger"><?php if($details[0]['Office_Contact']) { echo $details[0]['Office_Contact']; } else { echo "Not provided"; } ?> <!--911--></span></p>
 									<p> Personal Phone : <span class="text-danger"><?php if($details[0]['Personal_Contact']) { echo $details[0]['Personal_Contact']; } else { echo "Not provided"; } ?> <!--911--></span></p>

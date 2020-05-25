@@ -27,6 +27,13 @@
 			return $this->db->get('Staff')->result_array();
 		}
 		
+		public function get_faculty_info($dept_id) {
+			//  check of active needs to be applied
+			$this->db->select();
+			$this->db->where("Dept_ID", $dept_id);
+			return $this->db->get('Faculty')->result_array();
+		}
+
 		/*public function insert($data) {
 			$data = array(
 					'Dept_Name' => ‘1’,

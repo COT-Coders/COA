@@ -55,7 +55,7 @@
 
 		public function insert_publication() {
 			$pub_title = $this->input->post('pub_title');
-			$pub_desc = $this->input->post('pub_desc');
+			$pub_abs = $this->input->post('pub_abs');
 			$pub_name = $this->input->post('pub_name');
 			$pub_date = $this->input->post('pub_date');
 
@@ -63,7 +63,7 @@
 					'Faculty_ID' => $this->session->userdata('fac_id'),
 					'Dept_ID' => $this->session->userdata('fac_dept_id'),
 					'Title' => $pub_title,
-					'Description' => $pub_desc,
+					'Abstract' => $pub_abs,
 					'Publication_Name' => $pub_name,
 					'Date' => $pub_date
 					);  //  associative array of field value pairs

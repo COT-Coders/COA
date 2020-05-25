@@ -84,7 +84,7 @@
 				<?php echo validation_errors('<div class="error"><i class="fa fa-exclamation-triangle"></i>', '</div>'); ?>
 
 				<input type="text" id="pub_title" name="pub_title" placeholder="Title" value="<?php echo set_value('pub_title'); ?>" required />
-				<input type="text" id="pub_desc" name="pub_desc" placeholder="Description" value="<?php echo set_value('pub_desc'); ?>" required/>
+				<input type="text" id="pub_abs" name="pub_abs" placeholder="Abstract" value="<?php echo set_value('pub_desc'); ?>" required/>
 				<input type="text" id="pub_name" name="pub_name" placeholder="Publication Name" value="<?php echo set_value('pub_name'); ?>" required/>
 				<input type="date" id="pub_date" name="pub_date" placeholder="Date" value="<?php echo set_value('pub_date'); ?>" required/>
 				<!--<input type="text" id="pub_link" name="pub_link" placeholder="Publication Link" value="<?php echo set_value('pub_link'); ?>" required/>-->

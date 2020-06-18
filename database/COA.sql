@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 25, 2020 at 01:13 AM
+-- Generation Time: Jun 18, 2020 at 08:07 PM
 -- Server version: 5.7.30-0ubuntu0.18.04.1
--- PHP Version: 7.2.24-0ubuntu0.18.04.4
+-- PHP Version: 7.2.24-0ubuntu0.18.04.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -114,7 +114,8 @@ CREATE TABLE `Faculty` (
 --
 
 INSERT INTO `Faculty` (`Faculty_ID`, `Name`, `Email`, `Address`, `Office_Contact`, `Personal_Contact`, `Designation`, `Dept_ID`, `Specialization`, `Interest_Area`, `Professional_Info`, `Img_Link`, `Password`, `Role`, `Active`) VALUES
-(1, 'Samaksh', 'abc@gmail.com', 'Somewhere but not nowhere', 123, 0, 'Student', 1, NULL, NULL, 'Will not give', '', 'samaksh', 2, 1);
+(1, 'Samaksh', 'abc@gmail.com', 'Somewhere but not nowhere', 123, 0, 'Head of Department', 1, NULL, NULL, 'Will not give', '', 'samaksh', 3, 1),
+(2, 'Mayank', 'xyz@gmail.com', 'Haldwani mein bada ghar', 456, 789, 'Dean', 1, NULL, NULL, 'Will tell later', '', 'mayank', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -168,7 +169,8 @@ CREATE TABLE `Publication` (
 
 INSERT INTO `Publication` (`Pub_ID`, `Title`, `Abstract`, `Publication_Name`, `Date`, `Authors`, `Pub_Link`) VALUES
 (1, 'Title is unique and test1', 'Entering description for test1. Will be adding more tests.', 'Pub Name', '2018-03-06', '', ''),
-(2, 'Title for test2', 'Will continue to enter details, but currently entering for test2', 'IJBAAR', '2020-05-04', '', '');
+(2, 'Title for test2', 'Will continue to enter details, but currently entering for test2', 'IJBAAR', '2020-05-04', '', ''),
+(3, 'Title for test3', 'Will give later.', 'IJBAAR', '2020-06-18', '', '');
 
 -- --------------------------------------------------------
 
@@ -180,6 +182,15 @@ CREATE TABLE `Pub_Fac` (
   `Pub_ID` int(11) NOT NULL,
   `Faculty_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Pub_Fac`
+--
+
+INSERT INTO `Pub_Fac` (`Pub_ID`, `Faculty_ID`) VALUES
+(1, 1),
+(2, 1),
+(3, 2);
 
 -- --------------------------------------------------------
 
@@ -329,7 +340,7 @@ ALTER TABLE `Department`
 -- AUTO_INCREMENT for table `Faculty`
 --
 ALTER TABLE `Faculty`
-  MODIFY `Faculty_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Faculty_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `Miscellaneous`
 --
@@ -339,7 +350,7 @@ ALTER TABLE `Miscellaneous`
 -- AUTO_INCREMENT for table `Publication`
 --
 ALTER TABLE `Publication`
-  MODIFY `Pub_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Pub_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `Staff`
 --

@@ -68,7 +68,7 @@
 										<?php
 											$count = count($pub_info);
 											for($i=0; $i<$count; $i++) {
-												?><li><?php echo $pub_info[$i]['Title']; ?></li>
+												?><li><?php echo $pub_info[$i][0]['Title']; ?></li>
 											<?php }
 										?>
 									</ol>

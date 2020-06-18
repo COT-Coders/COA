@@ -16,8 +16,7 @@
 		<!--<input type="image" src="<?php echo base_url();?>assets/layout/images/sign_in.gif" id="signin" alt="Sign In" />-->
 
 		<button type="submit" class="btn btn-primary">Add</button>
-		
-	  </div>
+		</div>
 
 	<?php echo form_close(); ?>
 

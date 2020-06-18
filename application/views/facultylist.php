@@ -83,8 +83,8 @@
 									<tr> <td> Phone </td> <td></td> <td> +91901234567890 </td> </tr>
 									<tr> <td> Website </td> <td></td> <td> <a href="<?php echo site_url(); ?>/faculty">Faculty Website </a> </td> </tr> 
 									<tr> <td> Email </td> <td></td> <td> <?php echo $records[$i]['Email']; ?> </td> </tr>
-									<tr> <td> Specialization </td> <td></td> <td> Agrometrology, Agriculture </td> </tr>
-									<tr> <td width="140"> Area of Interest </td> <td></td> <td> Agrometrology </td> </tr>
+									<tr> <td> Specialization </td> <td></td> <td> <?php echo $records[$i]['Specialization']; ?> </td> </tr>
+									<tr> <td width="140"> Area of Interest </td> <td></td> <td> <?php echo $records[$i]['Interest_Area']; ?> </td> </tr>
 								</table>						
 							</div>
 						</div>

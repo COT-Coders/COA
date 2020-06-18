@@ -48,7 +48,7 @@
 
 		public function staff_form_check() {
 			if(!$this->session->userdata('logged_in')) {  //  if faculty is not looged in, redirect to faculty home/index page
-				redirect('/faculty/');
+				redirect(site_url());
 			}
 			else {  //  faculty should be logged in
 				$this->load->library('form_validation');
@@ -96,6 +96,7 @@
 			if( $this->session->userdata('logged_in') == 'true' ) {
 				$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
 				$data['pub_info'] = $this->faculty_model->get_publication_info($this->session->userdata('fac_id'));
+				//print_r($data['pub_info']);
 
 				$this->load->view('templates/department_header');
 				$this->load->view('faculty_publications', $data);

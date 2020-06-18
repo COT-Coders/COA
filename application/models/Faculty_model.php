@@ -50,7 +50,16 @@
 		public function get_publication_info($fac_id) {
 			$this->db->select();
 			$this->db->where("Faculty_ID", $fac_id);
-			return $this->db->get('Publication')->result_array();
+			$pub_fac = $this->db->get('Pub_Fac')->result_array();
+			//print_r($pub_fac);
+
+			$pub_info = array();
+			foreach ($pub_fac as $i) {
+				$this->db->select();
+				$this->db->where("Pub_ID", $i['Pub_ID']);
+				$pub_info[] = $this->db->get('Publication')->result_array();
+			}
+			return $pub_info;
 		}
 
 		public function insert_publication() {

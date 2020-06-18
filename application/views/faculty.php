@@ -28,9 +28,15 @@
 								<li class="list-group-item"><a href="<?php echo site_url('faculty/fmeetings'); ?>">Meetings & Conferences</a></li>
 
 								<?php
-									if($this->session->userdata('role') == 2) {  //  only HOD can add Staff
+									if(($this->session->userdata('logged_in') == 'true') && $this->session->userdata('role') == 3) {  //  only HOD can add Staff, Role of HOD=3
 										?>
 										<li class="list-group-item"><a href="<?php echo site_url('faculty/add_staff'); ?>">Add Staff</a></li>
+										<li class="list-group-item"><a href="<?php echo site_url('department/update_info'); ?>">Dept. Info.</a></li>
+									<?php }
+									else if(($this->session->userdata('logged_in') == 'true') && $this->session->userdata('role') == 2) {  //  only Dean can update Head of any Department and UG Students, Role of Dean=2
+										?>
+										<li class="list-group-item"><a href="<?php echo site_url('department/add_student'); ?>">Add Students</a></li>
+										<li class="list-group-item"><a href="<?php echo site_url('department/update_hod'); ?>">Update HOD</a></li>
 									<?php }
 								?>
 							</ul>  
@@ -114,9 +120,6 @@
 											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
 											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
 											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>	
 										</tbody>
 									</table>
 								</div>
@@ -130,9 +133,6 @@
 											<tr><th>Year</th><th>Experience</th><th>Description</th></tr>
 										</thead>
 										<tbody>
-											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
 											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
 											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
 											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>

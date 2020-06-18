@@ -5,7 +5,6 @@
 
 		<h2> About <?php echo $records[0]['Dept_Name']	; ?> </h2>
 		<div class="row">
-
 			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
 				<img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
 			</div>
@@ -20,7 +19,6 @@
 
 		<h2> Vision </h2>
 		<div class="row">
-
 			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
 				<img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
 			</div>
@@ -34,13 +32,25 @@
 
 		<h2> Mission </h2>
 		<div class="row">
-			
 			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
 				<img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
 			</div>
 			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
 				<p class="text-justify">
 					<?php echo $records[0]['Mission']; ?>
+				</p>
+				<p class="clearfix"></p>
+			</div>
+		</div>
+
+		<h2> Mandate </h2>
+		<div class="row">
+			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
+				<img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
+			</div>
+			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
+				<p class="text-justify">
+					<?php echo $records[0]['Mandate']; ?>
 				</p>
 				<p class="clearfix"></p>
 			</div>

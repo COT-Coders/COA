@@ -17,21 +17,17 @@
 				<h3 class="text-white">Links</h3>
 				<div class="col-md-6">
 					<ul class="pages">
-						<li><a href="#">Gallary</a></li>
+						<li><a href="#">Gallary</a></li Visit us at: www.coa.edu.in<br>
+                College of Agriculture,<br> G.B. Pant Univerrsity of Agriculture and Technology Pantnagar, Pantnagar<br> Udham Singh nagar, 263145<br>
+                Uttrakhand, India
+                <br>>
 						<li><a href="#">Activities</a></li>
 						<!--<li><a href="#">Labs</a></li>-->
 						<li><a href="#">University website</a></li>
 						<li><a href="#">Advice</a></li>
 					</ul>   
 				</div>
-				<!--<div class="col-md-6">
-					<ul class="list">
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Contacts</a></li>
-						<li><a href="#">Terms & Condition</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-					</ul>
-				</div>-->
+				
 			</div>
 			<!--<div class="col-md-2 footer-social animated fadeInDown">
 				<h4>Follow Us</h4>

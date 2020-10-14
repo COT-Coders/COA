@@ -28,9 +28,9 @@ class Welcome extends CI_Controller {
 	{
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		//print_r($data);
-		$this->load->view('templates/header_home_new', $data);
+		$this->load->view('templates/header_home', $data);
 		$this->load->view('college_home'); 
-		$this->load->view('templates/footer_new');
+		$this->load->view('templates/footer_new1');
 	}
 
 	public function about()

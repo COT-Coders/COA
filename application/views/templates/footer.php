@@ -1,103 +1,69 @@
-<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  footer section =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
-	    
-		<footer class="container-fluid" style="margin-top:auto;">
-	   		<div class="row">
-	   			<div class="col-md-12" style="margin-bottom:0.5%;height:80px;background-color:#0F204B;border-top:1px solid RGB(0,76,102);">
-	   				<p style="color:white; text-align:center; margin-top:2.8%;">
-	   					<?php 
-	   					if( isset($visitor) && $visitor ){
-	   						?>
+  <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <div class="col-md-12 footer-brand animated fadeInLeft">
+          <span style="padding-bottom: 10px; padding-top: 10px"><img src="<?php echo base_url();?>assets/img/pantnagar_logo.png" alt="GBPUAT Pantnagar" width="50" height="50"></span> 
 
-	   					<span class="pull-left">Visitor counter - <span class="label label-warning"><strong><?php echo $visitor;?></strong></span></span>
+            <span style="padding-left:8px">G. B. Pant University of Agriculture & Technology</span>
+            
+            &nbsp;
+             <p class="text-justify" style="margin-top: 10">G. B. Pant University of Agriculture and Technology (GBPUA&T), also known as Pantnagar University, is the first agricultural university of India. It was inaugurated by Jawahar Lal Nehru on 17 November 1960 as the "Uttar Pradesh Agricultural University" (UPAU). Later the name was changed to "Govind Ballabh Pant University of Agriculture and Technology" in 1972 in memory of the first Chief Minister of Uttar Pradesh, statesman and Bharat Ratna recipient Pandit Govind Ballabh Pant.</p>
+            <!--<p>© 2020 College of Agriculture, G.B Pant University of Agriculture and Technology, All rights reserved</p>-->
+          
+      </div>
+          </div>
 
-	   					<?php 
-	   					}
-	   					?>
+          <div class="col-xs-6 col-md-3">
+            <h4 class="text-white">Quick Links</h4>
+              
+              <div class="col-md-6">
+                <ul class="pages">
+                  <li><a href="#">Gallary</a></li>
+                  <li><a href="#">Activities</a></li>
+                  <!--<li><a href="#">Labs</a></li>-->
+                  <li><a href="#">University website</a></li>
+                  <li><a href="#">Advice</a></li>
+                </ul>   
+              </div>
+              
+           
+          </div>
 
-                    &#169; Copyright 2015, Directorate of Experiment Station , <a href="http://gbpuat.ac.in" target="_blank">GBPUAT Pantnagar</a> - All rights reserved.
-	   				<span class="pull-right"><a href="<?php echo site_url(); ?>/team" id="team" style="color:white;">Site Development Team</a></span>
-	   				</p>
-	   			</div>
-			</div>
-		</footer>
-		<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  footer section Ends =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
+          <div class="col-xs-6 col-md-3">
+            
+            <h4 class="text-white">Contact us</h4>
+            <address>
+              <i>@mail: <a href="mailto:webmaster@example.com">info@coa.edu.in</a>.<br> 
+                Visit us at: www.coa.edu.in<br>
+                College of Agriculture,<br> G.B. Pant Univerrsity of Agriculture and Technology Pantnagar, Pantnagar<br> Udham Singh nagar, 263145<br>
+                Uttrakhand, India
+                <br>
+              </i>
+          
+            </address>
+            <a href="#"><p class="text-white" style="font-size: 16">Reach out to developers </p></a>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">© 2020 College of Agriculture, G.B. Pant University of Agriculture and Technology, All rights reserved</a>.
+            </p>
+          </div>
 
-		<section>
-	    	
-	    	
-	    </section>
-
-
-		
-	    <script src="<?php echo base_url();?>assets/js/ie10-viewport-bug-workaround.js"></script>
-
-
-<!-- Navigation Bar DropDown Script -->
-  <script>
-$(document).ready(function() {	
-	//NAVBAR
-	$('.navbar-main-menu > li.dropdown').mouseenter(function() {
-		$(this).addClass('open');
-	});
-	
-	$('.navbar-main-menu > li.dropdown').mouseleave(function() {
-		$(this).removeClass('open');
-	});
-	
-	var minimum = 1250;
-	var maximum = 1500;
-	
-	$( '#slider-range' ).slider({
-      range: true,
-      min: minimum,
-      max: maximum,
-      values: [ minimum, maximum ],
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.values[ 0 ] );
-		$( "#amount2" ).val( "$" + ui.values[ 1 ] );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ));
-	$( "#amount2" ).val( "$" + $( "#slider-range" ).slider( "values", 1 ));
-	});
-
-	
-	
-	// for reight affix button
-	var screen_width = $(window).width();
-	var screen_height = $(window).height();
-
-	var top_1 = (screen_height/2 -30) + "px";
-	var top_2 = (screen_height/2 +170) + "px";
-
-	var left_1 = (screen_width-100) + "px";
-	var left_2 = (screen_width-120) + "px";
-
-
-	$('.right_affix').css({'top':top_1, 'left':left_1 });
-	$('.right_affix_2').css({'top':top_2, 'left':left_2 });
-		
-	// for dynamic change in offset of screen width 
-	$(window).resize( function(){
-
-		var screen_width = $(window).width();
-		var screen_height =  $(window).height();
-
-		var top_1 = (screen_height/2 -100) + "px";
-		var top_2 = (screen_height/2 +100) + "px";
-
-		var left_1 = (screen_width-100) + "px";
-		var left_2 = (screen_width-120) + "px";
-
-
-		$('.right_affix').css({'top':top_1, 'left':left_1 });
-		$('.right_affix_2').css({'top':top_2, 'left':left_2 });
-
-	});
-
-
-    </script>
-
-
-	</body>
-	</html>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>

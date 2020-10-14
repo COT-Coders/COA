@@ -29,6 +29,13 @@
 	            		<?php echo form_close();
 	            		*/
 	            		?>
+	            		<li>placeholder</li>
+	            		<li>placeholder</li>
+	            		<li>placeholder</li>
+	            		<li>placeholder</li>
+	            		<li>placeholder</li>
+	            		<li>placeholder</li>
+	            		<li>placeholder</li>
 					</ul>
 
 				</div>

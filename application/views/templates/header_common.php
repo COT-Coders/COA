@@ -19,7 +19,7 @@
 
 	
 	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/custom_nav.css">
-	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/footer.css">
+	<link rel="stylesheet" href="<?php echo base_url();?>assets/css/footer_new.css">
 
 	
 

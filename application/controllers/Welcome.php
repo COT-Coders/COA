@@ -30,7 +30,7 @@ class Welcome extends CI_Controller {
 		//print_r($data);
 		$this->load->view('templates/header_home', $data);
 		$this->load->view('college_home'); 
-		$this->load->view('templates/footer_new1');
+		$this->load->view('templates/footer');
 	}
 
 	public function about()
@@ -38,7 +38,7 @@ class Welcome extends CI_Controller {
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
 		$this->load->view('about_us'); 
-		$this->load->view('templates/footer_new');
+		$this->load->view('templates/footer');
 	}
 
 	public function collage_activities()
@@ -46,7 +46,7 @@ class Welcome extends CI_Controller {
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
 		$this->load->view('collage_activities'); 
-		$this->load->view('templates/footer_new');
+		$this->load->view('templates/footer');
 	}
 
 	public function event_details()
@@ -54,7 +54,7 @@ class Welcome extends CI_Controller {
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
 		$this->load->view('collage_activity_details'); 
-		$this->load->view('templates/footer_new');
+		$this->load->view('templates/footer');
 	}
 
 	public function departments_list()
@@ -65,7 +65,7 @@ class Welcome extends CI_Controller {
 		//print_r($data);
 		$this->load->view('templates/header_common', $data);
 		$this->load->view('college_departments'); 
-		$this->load->view('templates/footer_new');
+		$this->load->view('templates/footer');
 	}
 
 	public function ug_programs()
@@ -74,7 +74,7 @@ class Welcome extends CI_Controller {
 		//$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
 		//$this->load->view('collage_activity_details'); 
-		$this->load->view('templates/footer_new');
+		$this->load->view('templates/footer');
 	}
 
 	public function pg_programs()
@@ -83,6 +83,6 @@ class Welcome extends CI_Controller {
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
 		//$this->load->view('collage_activity_details'); 
-		$this->load->view('templates/footer_new');
+		$this->load->view('templates/footer');
 	}
 }

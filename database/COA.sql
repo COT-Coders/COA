@@ -243,6 +243,10 @@ CREATE OR REPLACE TABLE 'Student' (
 --
 -- Indexes for table 'Awards'
 --
+
+---/**-------------------------------- done till here -------***************
+
+
 ALTER TABLE 'Awards'
   ADD PRIMARY KEY ('H_ID'),
   ADD KEY 'Faculty_ID' ('Faculty_ID'),

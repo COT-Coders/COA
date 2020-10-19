@@ -56,7 +56,11 @@
 				$this->form_validation->set_rules('staff_desig', 'Staff Designation', 'trim|min_length[5]|required|htmlspecialchars');
 				$this->form_validation->set_rules('staff_info', 'Staff Personal Info', 'trim|min_length[5]|required|htmlspecialchars');
 				$this->form_validation->set_rules('staff_address', 'Staff Address', 'trim|min_length[5]|required|htmlspecialchars');
-				$this->form_validation->set_rules('staff_ph_no', 'Staff Phone Number', 'trim|min_length[10]|required|htmlspecialchars');  //  Phone no. of staff will be of atleast 10 digits
+				$this->form_validation->set_rules('staff_ph_no', 'Staff Phone Number', 'numeric|min_length[10]|required|is_unique[Staff.Phone]');  //  Phone no. of staff will be of atleast 10 digits
+
+				/*
+				Note - Check for duplicate entries of mobile no., mobile no. is getting changed after entering and inserting into database
+				*/
 
 				if($this->form_validation->run() == false) {
 					//$data['user_logged_in'] = 'false';

@@ -24,7 +24,7 @@ class Logout extends CI_Controller {
 		print_r($this->session->userdata);*/
 
 		//echo "In Logout";
-		redirect('/welcome/');  //  redirect to page from where it is called
+		redirect(site_url('department'));  //  redirect to the department page from where it is called
 	}
 }
 ?>

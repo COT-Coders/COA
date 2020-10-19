@@ -32,10 +32,11 @@
 			$personal_info = $this->input->post('staff_info');
 			$staff_address = $this->input->post('staff_address');
 			$staff_ph_no = $this->input->post('staff_ph_no');
-
+			echo $staff_ph_no;
+			
 			$data = array(
 					'Staff_Name' => $staff_name,
-					'Dept_ID' => $this->session->userdata('dept_id'),  //  hard coded in login controller
+					'Dept_ID' => $this->session->userdata('fac_dept_id'),  //  in login controller
 					'Designation' => $designation,
 					'Personal_Info' => $personal_info,
 					'Address' => $staff_address,

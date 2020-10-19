@@ -20,7 +20,9 @@
 }
  #header{
 
-    background:#0F204B;padding:1% 0% 1% 8.5%;text-align: center;
+    background:#0F204B;
+    padding:1% 0% 1% 8.5%;
+    text-align: center;
  }
  #header h3{
 
@@ -29,8 +31,15 @@
 
  #logo{
 
- 	max-width:100px;max-height:100px;
+ 	max-width:100px;
+    max-height:100px;
+    text-align: center;
  }
+
+#logo img{
+    display:inline-block;
+}
+
  #title{
 
  	color:white;padding-left:0%;

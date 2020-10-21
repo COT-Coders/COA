@@ -65,6 +65,16 @@
 									<ol>
 										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
 										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
+										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
 										<?php
 											$count = count($pub_info);
 											for($i=0; $i<$count; $i++) {
@@ -74,24 +84,33 @@
 									</ol>
 								</span>
 							</div>
-						</div>  <!-- end of topslider -->
+						</div> 
 					</div>
 				</div>
-			</div>  <!-- Main carousel ends -->
 
-			<?php echo form_open('faculty/add_publication'); ?>
-			<div class="fl_right">
-				<?php echo validation_errors('<div class="error"><i class="fa fa-exclamation-triangle"></i>', '</div>'); ?>
 
-				<input type="text" id="pub_title" name="pub_title" placeholder="Title" value="<?php echo set_value('pub_title'); ?>" required />
-				<input type="text" id="pub_abs" name="pub_abs" placeholder="Abstract" value="<?php echo set_value('pub_desc'); ?>" required/>
-				<input type="text" id="pub_name" name="pub_name" placeholder="Publication Name" value="<?php echo set_value('pub_name'); ?>" required/>
-				<input type="date" id="pub_date" name="pub_date" placeholder="Date" value="<?php echo set_value('pub_date'); ?>" required/>
-				<!--<input type="text" id="pub_link" name="pub_link" placeholder="Publication Link" value="<?php echo set_value('pub_link'); ?>" required/>-->
+				
 
-				<button type="submit" class="btn btn-primary">Add Publication</button>
-			</div>
-			<?php echo form_close(); ?>
+				<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" style="margin-left: 6%">Add publication</button>
+				  <div id="demo" class="collapse">
+				    <?php echo form_open('faculty/add_publication'); ?>
+						<div class="fl_right">
+							<?php echo validation_errors('<div class="error"><i class="fa fa-exclamation-triangle"></i>', '</div>'); ?>
+
+							<input type="text" id="pub_title" name="pub_title" placeholder="Title" value="<?php echo set_value('pub_title'); ?>" required />
+							<input type="text" id="pub_abs" name="pub_abs" placeholder="Abstract" value="<?php echo set_value('pub_desc'); ?>" required/>
+							<input type="text" id="pub_name" name="pub_name" placeholder="Publication Name" value="<?php echo set_value('pub_name'); ?>" required/>
+							<input type="date" id="pub_date" name="pub_date" placeholder="Date" value="<?php echo set_value('pub_date'); ?>" required/>
+							<!--<input type="text" id="pub_link" name="pub_link" placeholder="Publication Link" value="<?php echo set_value('pub_link'); ?>" required/>-->
+
+							<button type="submit" class="btn btn-primary">Add Publication</button>
+						</div>
+					<?php echo form_close(); ?>
+				</div>
+
+			</div> 
+
+			
 		
 			</div>		   
 		</div>

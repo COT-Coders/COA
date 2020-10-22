@@ -19,7 +19,12 @@
 
 					<div class="card-body">
 						<div style="margin-left: 30;margin-right: 30">
+							
 							<h5 class="card-title"><b><?php echo $details[0]['Name']; ?></b></h5>
+								
+
+							
+
 							<p class="card-text"> <b><?php echo $details[0]['Designation']; ?></b> </p>
 							<p class="card-text"> <b> B.Sc, M.Sc, Phd </b> </p>
 						</div>
@@ -57,7 +62,17 @@
 						<div class="topslider">	
 							<div class="col-md-11 text-justify" style="margin-left:3%;padding-bottom:2%;">
 								<div class="separator"></div>
-								<h3><b><?php echo $details[0]['Name']; ?></b></h3>
+
+								<div class="row">
+									<div class="col-md-10"><h3><b><?php echo $details[0]['Name']; ?></b></h3> </div>
+									<div class="col-md-2">
+										<button type="button"class="btn btn-info " data-toggle="modal" data-target="#myModalHorizontal">
+										    Add new
+										</button>
+									</div>
+								</div>
+
+								
 								<div class="separator"></div>
 								<h4><b>Publications </b></h4>
 
@@ -88,7 +103,80 @@
 					</div>
 				</div>
 
+				
 
+		<!-- Modal -->
+		<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
+		     aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <!-- Modal Header -->
+		            <div class="modal-header">
+		                <button type="button" class="close" 
+		                   data-dismiss="modal">
+		                       <span aria-hidden="true">&times;</span>
+		                       <span class="sr-only">Close</span>
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    New Publication
+		                </h4>
+		            </div>
+		            
+		            <!-- Modal Body -->
+		            <div class="modal-body">
+		                
+		                <form class="form-horizontal" role="form">
+		                  
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="inputEmail3">Title</label>
+		                    <div class="col-sm-10">
+		                        <input type="text" class=" form-control" placeholder="Title"/>
+		                    </div>
+
+		                  </div>
+
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Publication">Publication</label>
+		                    <div class="col-sm-10">
+		                        <input type="text" class=" form-control" placeholder="Publication Name"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Date">Date</label>
+		                    <div class="col-sm-10">
+		                        <input type="date" class=" form-control" placeholder="Date"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Abstract">Abstract</label>
+		                    <div class="col-sm-10">
+		                    	<textarea  class="md-textarea form-control" rows="3" placeholder="Abstract"></textarea>
+		                    </div>
+
+		                  </div>
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-2 col-sm-10">
+		                      <button type="submit" class="btn btn-default">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+		            </div>
+		            
+					           
+			    </div>
+			</div>
+		</div>
+
+
+
+
+
+			<!-- commwnted old form
 				
 
 				<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" style="margin-left: 6%">Add publication</button>
@@ -101,12 +189,12 @@
 							<input type="text" id="pub_abs" name="pub_abs" placeholder="Abstract" value="<?php echo set_value('pub_desc'); ?>" required/>
 							<input type="text" id="pub_name" name="pub_name" placeholder="Publication Name" value="<?php echo set_value('pub_name'); ?>" required/>
 							<input type="date" id="pub_date" name="pub_date" placeholder="Date" value="<?php echo set_value('pub_date'); ?>" required/>
-							<!--<input type="text" id="pub_link" name="pub_link" placeholder="Publication Link" value="<?php echo set_value('pub_link'); ?>" required/>-->
+							<!--<input type="text" id="pub_link" name="pub_link" placeholder="Publication Link" value="<?php echo set_value('pub_link'); ?>" required/>
 
 							<button type="submit" class="btn btn-primary">Add Publication</button>
 						</div>
 					<?php echo form_close(); ?>
-				</div>
+				</div> -->
 
 			</div> 
 

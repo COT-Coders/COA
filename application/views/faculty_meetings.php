@@ -59,7 +59,17 @@
 		        			
         					<div class="col-md-11 text-justify" style="margin-left:3%;padding-bottom:2%;">
         						<div class="separator"></div>
-								<h3><b>Dr A.S. Nain</b></h3>
+								    
+                    <div class="row">
+                      <div class="col-md-10 col-sm-10 col-xs-10"><h3 style="margin-top: 1px"><b>Ajeet Singh Nain</b></h3> </div>
+                      <div class="col-md-2 col-sm-2 col-xs-2">
+                        <button type="button"class="btn btn-info h3-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-top: 1px">
+                            Add new
+                        </button>
+                      </div>
+                    </div>
+
+
 								<div class="separator"></div>
                 <h4><b>Meetings and Conferences</b></h4>
 								<span>
@@ -95,6 +105,72 @@
 	  		
 	              	</div>
 	            </div>
+
+              <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" 
+                       data-dismiss="modal">
+                           <span aria-hidden="true">&times;</span>
+                           <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        New Conference
+                    </h4>
+                </div>
+                
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    
+                    <form class="form-horizontal" role="form">
+                      
+                      <div class="form-group">
+                        <label  class="col-sm-2 control-label" for="inputEmail3">Title</label>
+                        <div class="col-sm-10">
+                            <input type="text" class=" form-control" placeholder="Title"/>
+                        </div>
+
+                      </div>
+
+
+                      <div class="form-group">
+                        <label  class="col-sm-2 control-label" for="Publication">Publication</label>
+                        <div class="col-sm-10">
+                            <input type="text" class=" form-control" placeholder="Publication Name"/>
+                        </div>
+
+                      </div>
+
+                      <div class="form-group">
+                        <label  class="col-sm-2 control-label" for="Date">Date</label>
+                        <div class="col-sm-10">
+                            <input type="date" class=" form-control" placeholder="Date"/>
+                        </div>
+
+                      </div>
+
+                      <div class="form-group">
+                        <label  class="col-sm-2 control-label" for="Abstract">Abstract</label>
+                        <div class="col-sm-10">
+                          <textarea  class="md-textarea form-control" rows="3" placeholder="Abstract"></textarea>
+                        </div>
+
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                
+                     
+          </div>
+      </div>
+    </div>
 	        </div>
 
 	       

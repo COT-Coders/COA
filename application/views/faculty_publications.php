@@ -60,13 +60,13 @@
 						</nav>
 
 						<div class="topslider">	
-							<div class="col-md-11 text-justify" style="margin-left:3%;padding-bottom:2%;">
+							<div class="col-md-11 text-justify" style="margin-left:3%;padding-bottom:1%;">
 								<div class="separator"></div>
 
 								<div class="row">
-									<div class="col-md-10"><h3><b><?php echo $details[0]['Name']; ?></b></h3> </div>
-									<div class="col-md-2">
-										<button type="button"class="btn btn-info " data-toggle="modal" data-target="#myModalHorizontal">
+									<div class="col-md-10 col-sm-10 col-xs-10"><h3 style="margin-top: 1px"><b><?php echo $details[0]['Name']; ?></b></h3> </div>
+									<div class="col-md-2 col-sm-2 col-xs-2">
+										<button type="button"class="btn btn-info h3-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-top: 1px">
 										    Add new
 										</button>
 									</div>

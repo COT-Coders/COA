@@ -10,6 +10,12 @@
 			$query = $this->db->get("Department");
 		}
 
+		public function get_dept_name($dept_id) {
+			$this->db->select('Dept_Name');
+			$this->db->where("Dept_ID", $dept_id);
+			return $this->db->get('Department')->result_array();
+		}
+
 		public function get_dept_names() {
 			$this->db->select('Dept_Name, Dept_ID');
 			return $this->db->get('Department')->result_array();
@@ -75,30 +81,24 @@
 			$this->db->update("Faculty", $data);*/
 		}
 
-		public function update_dept_info()
+		public function update_dept_info($dept_id)
 		{
-			$dept_id = $this->input->post('dept_id');
-			$fac_id = $this->input->post('fac_id');
+			$about = $this->input->post('about');
+			$vision = $this->input->post('vision');
+			$mission = $this->input->post('mission');
+			$mandate = $this->input->post('mandate');
 
-			//echo "Dept_ID = ".$dept_id."<br>";
-			//echo "Faculty_ID = ".$fac_id."<br>";
+			$data = array(
+					'History' => $about,
+					'Vision' => $vision,
+					'Mission' => $mission,
+					'Mandate' => $mandate
+					);  //  associative array of field value pairs
 
-			//  finding current HOD of dept_id
-			$this->db->select('Faculty_ID, Name');
+			//  Update dept. info.
+			$this->db->set($data);
 			$this->db->where("Dept_ID", $dept_id);
-			$this->db->where_in("Role", 3);  //  get current HOD of the dept_id selected by Dean
-			$current_hod = $this->db->get('Faculty')->result_array();
-			print_r($current_hod);
-
-			//  Update role of old(current) HOD from HOD(3) to faculty(4)
-			/*$data = array('Role' => ‘4’);  //  
-			$this->db->where("Faculty_ID", $current_hod[0]['Faculty_ID']); 
-			$this->db->update("Faculty", $data);*/
-
-			//  Update role of new fac_id from faculty(4) to HOD(3)
-			/*$data = array('Role' => ‘3’);
-			$this->db->where("Faculty_ID", $fac_id); 
-			$this->db->update("Faculty", $data);*/
+			$this->db->update("Department", $data);
 		}
 
 		/*public function insert($data) {

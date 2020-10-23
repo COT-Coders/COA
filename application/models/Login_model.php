@@ -11,7 +11,7 @@
 			//$password = md5( $this->input->post('password') );
 			$password = $this->input->post('password');
 
-			//  later add check whether user is active or not
+			//  later add check whether user is active or not, i.e., faculty is still teaching in the college or not
 			$query = $this->db->get_where('Faculty', array('Email' => $user_email, 'Password' => $password) );
 
 			//print_r($query->result());
@@ -52,4 +52,4 @@
 		}*/
 
 	} 
-?> 
+?>

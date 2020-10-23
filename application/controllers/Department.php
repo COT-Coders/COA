@@ -9,11 +9,7 @@
 			$this->load->helper(array('form'));
 		}
 
-		public function index() {
-			//$data['dept_names'] = $this->dep_model->get_dept_names();
-			//print_r($data);
-			//print_r($this->session->userdata);
-
+		public function get_active_dept_id() {
 			$brow_dept_id = $this->session->userdata('browsing_dept_id');
 			//echo "Recieved from session".$brow_dept_id;
 
@@ -28,10 +24,16 @@
 				$dept_id = $this->session->userdata('browsing_dept_id');
 				//echo "Setting default browsing id to: ".$dept_id;
 			}
+			return $dept_id;
+		}
 
+		public function index() {
+			//$data['dept_names'] = $this->dep_model->get_dept_names();
+			//print_r($data);
+
+			$dept_id = $this->get_active_dept_id();
 			$data['records'] = $this->dep_model->get_dept_info($dept_id);
-			//$dept_id = $this->input->post('dept_id');
-			//echo "Department ID from button in dept. list".$dept_id;
+
 			$this->load->view('templates/department_header', $data);
 			$this->load->view('department', $data);
 			$this->load->view('templates/department_footer');
@@ -46,14 +48,14 @@
 			/*$dept_id = $id;
 			$data['records'] = $this->dep_model->get_dept_info($dept_id);
 			//print_r($data);
-
-			$this->load->view('templates/department_header', $data);
-			$this->load->view('department', $data);
-			$this->load->view('templates/department_footer');*/
+			*/
 		}
 
 		public function program() {
-			$this->load->view('templates/department_header');
+			$dept_id = $this->get_active_dept_id();
+			$dept_name['records'] = $this->dep_model->get_dept_name($dept_id);
+
+			$this->load->view('templates/department_header', $dept_name);
 			$this->load->view('d_programs');
 			$this->load->view('templates/department_footer');
 		}
@@ -71,20 +73,23 @@
 				//echo "Setting default browsing id to: ".$dept_id;
 			}
 
+			$dept_name['records'] = $this->dep_model->get_dept_name($dept_id);
 			$data['records'] = $this->dep_model->get_faculty_info($dept_id);
-			//print_r($data);
-
-			$this->load->view('templates/department_header');
+			
+			$this->load->view('templates/department_header', $dept_name);
+			//print_r($data);			
 			$this->load->view('facultylist', $data);
 			$this->load->view('templates/department_footer');
 		}
 
 		public function staff() {
 			//  passing parameter to the model function to get staff of that particular dept_id only (either by argument to staff() function or by session)
+			$dept_id = $this->get_active_dept_id();
+			$dept_name['records'] = $this->dep_model->get_dept_name($dept_id);
 			$data['records'] = $this->dep_model->get_staff_info(1);  //  Hard coded as of now
 			//print_r($data);
 
-			$this->load->view('templates/department_header');
+			$this->load->view('templates/department_header', $dept_name);
 			$this->load->view('stafflist', $data);
 			$this->load->view('templates/department_footer');
 		}
@@ -101,7 +106,9 @@
 				}
 				//print_r($data1);
 
-				$this->load->view('templates/department_header');
+				$dept_id = $this->get_active_dept_id();
+				$dept_name['records'] = $this->dep_model->get_dept_name($dept_id);
+				$this->load->view('templates/department_header', $dept_name);
 				$this->load->view('update_hod', $data1);
 			}
 			else if($this->session->userdata('logged_in') == 'true')
@@ -131,12 +138,13 @@
 		}
 
 		public function update_dept_info() {
-			if( ($this->session->userdata('logged_in') == 'true') && ($this->session->userdata('role') == 3) ) {  //  Only HOD can update dept. info.
+			if( ($this->session->userdata('logged_in') == 'true') && ($this->session->userdata('role') == 3) ) {  //  Only HOD can update his/her dept. info.
 
 				$dept_id = $this->session->userdata('fac_dept_id');
 				$data['records'] = $this->dep_model->get_dept_info($dept_id);
-				$this->load->view('templates/department_header');
+				$this->load->view('templates/department_header', $data);
 				$this->load->view('update_dept_info', $data);
+				$this->load->view('templates/department_footer');
 			}
 			else if($this->session->userdata('logged_in') == 'true')
 				echo "Sorry. You don't have permissions.";
@@ -157,30 +165,40 @@
 				$this->form_validation->set_rules('mandate', 'mandate', 'trim|min_length[10]|required|htmlspecialchars');
 
 				if($this->form_validation->run() == false) {
-					//$this->load->view('templates/header', $data);
+					echo validation_errors();
+					/*$dept_id = $this->session->userdata('fac_dept_id');
+					$data['records'] = $this->dep_model->get_dept_info($dept_id);
+					$this->load->view('templates/header', $data);
 					$this->load->view('update_dept_info');
-					//$this->load->view('templates/footer');
+					$this->load->view('templates/footer');*/
 				}
 				else {  //  form validation is true
 					echo "Form validated";
-					//  insert values in department table
-
-					$status = $this->faculty_model->update_dept_info();
+					
+					//  update values in department table
+					$dept_id = $this->session->userdata('fac_dept_id');
+					$status = $this->dep_model->update_dept_info($dept_id);
 					echo $status;
 					sleep(5);
-					redirect(site_url('faculty'));
+					redirect(site_url('faculty'));  //  to be changed to department when option for navigating to his/her profile for faculty is added
 				}  //  end of else checking from validation
 			}  //  end of else checking logged_in as HOD
 		}  //  end of update_dept_info_form
 
 		public function research() {
-			$this->load->view('templates/department_header');
+			$dept_id = $this->get_active_dept_id();
+			$dept_name['records'] = $this->dep_model->get_dept_name($dept_id);
+
+			$this->load->view('templates/department_header', $dept_name);
 			$this->load->view('research');
 			$this->load->view('templates/department_footer');
 		}
 
 		public function activities() {
-			$this->load->view('templates/department_header');
+			$dept_id = $this->get_active_dept_id();
+			$dept_name['records'] = $this->dep_model->get_dept_name($dept_id);
+
+			$this->load->view('templates/department_header', $dept_name);
 			$this->load->view('activities');
 			$this->load->view('templates/department_footer');
 		}

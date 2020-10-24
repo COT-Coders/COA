@@ -127,16 +127,5 @@
 			} 
 		}*/
 	
-		/*public function update($data,$old_roll_no) {
-			$data = array(
-					'roll_no' => ‘1’,
-					'name' => ‘Virat’
-					);  //  associative array of field value pairs
-
-			$this->db->set($data); 
-			$this->db->where("roll_no", $old_roll_no); 
-			$this->db->update("stud", $data); 
-		}*/
-
 	} 
 ?> 

@@ -3,7 +3,7 @@
 
 		function __construct() {
 			parent::__construct();
-			$this->load->model('faculty_model');
+			$this->load->model(array('faculty_model', 'dep_model'));
 			$this->load->helper(array('form'));
 		}
 
@@ -13,7 +13,8 @@
 				$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
 				//print_r($data);
 
-				$this->load->view('templates/department_header');
+				$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
+				$this->load->view('templates/department_header', $dept_name);
 				$this->load->view('faculty', $data);
 				$this->load->view('templates/department_footer');
 			}
@@ -140,8 +141,8 @@
 			}  //  end of else checking logged_in
 		}  //  end of add_publication function
 
-		public function fresearch() { 
-			$this->load->helper('url');
+		public function fac_research() {
+			$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
 			$this->load->view('templates/department_header');
 			$this->load->view('faculty_research'); 
 			$this->load->view('templates/department_footer');

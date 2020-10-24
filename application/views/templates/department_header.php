@@ -149,7 +149,12 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 						<!-- Change according to user_logged_in to Logout link -->
 						<?php
 							if( $this->session->userdata('logged_in') == 'true' ) { ?>
-								<li><a href="<?php echo site_url('logout'); ?>"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> LogOut </a></li> <?php
+								<select class="form-control" id="prof_log_out" name="prof_log_out">
+									<option> Select </option>
+									<option value="<?php echo site_url('faculty'); ?>"> Profile </option>
+									<option value="<?php echo site_url('logout'); ?>"> LogOut </option>
+								</select>	
+							<?php
 							}
 							else { ?>
 								<!--<li><a href="<?php echo site_url('login'); ?>"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </a></li>-->
@@ -233,6 +238,11 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 				});
 				
 				return false;
+			});
+
+			$("#prof_log_out").on("change", function() {
+				location.href = this.value;
+				//location.href = this.href;
 			});
 		</script>
 	</header>

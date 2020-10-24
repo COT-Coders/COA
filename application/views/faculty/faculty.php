@@ -24,7 +24,7 @@
 								<!--<li class="list-group-item active"><a href="#">Profile</a></li>-->
 								<li class="list-group-item"><a href="<?php echo site_url('faculty/fcourses'); ?>">Courses</a></li>
 								<li class="list-group-item"><a href="<?php echo site_url('faculty/fpublications'); ?>">Add Publications</a></li>
-								<li class="list-group-item"><a href="<?php echo site_url('faculty/fresearch'); ?>">Research</a></li>
+								<li class="list-group-item"><a href="<?php echo site_url('faculty/fac_research'); ?>">Research</a></li>
 								<li class="list-group-item"><a href="<?php echo site_url('faculty/fmeetings'); ?>">Meetings & Conferences</a></li>
 
 								<?php

@@ -35,7 +35,7 @@
 			$data['records'] = $this->dep_model->get_dept_info($dept_id);
 
 			$this->load->view('templates/department_header', $data);
-			$this->load->view('department', $data);
+			$this->load->view('department/department', $data);
 			$this->load->view('templates/department_footer');
 		}
 
@@ -56,7 +56,7 @@
 			$dept_name['records'] = $this->dep_model->get_dept_name($dept_id);
 
 			$this->load->view('templates/department_header', $dept_name);
-			$this->load->view('d_programs');
+			$this->load->view('department/dept_programs');
 			$this->load->view('templates/department_footer');
 		}
 
@@ -78,7 +78,7 @@
 			
 			$this->load->view('templates/department_header', $dept_name);
 			//print_r($data);			
-			$this->load->view('facultylist', $data);
+			$this->load->view('department/facultylist', $data);
 			$this->load->view('templates/department_footer');
 		}
 
@@ -90,7 +90,7 @@
 			//print_r($data);
 
 			$this->load->view('templates/department_header', $dept_name);
-			$this->load->view('stafflist', $data);
+			$this->load->view('department/stafflist', $data);
 			$this->load->view('templates/department_footer');
 		}
 
@@ -109,7 +109,7 @@
 				$dept_id = $this->get_active_dept_id();
 				$dept_name['records'] = $this->dep_model->get_dept_name($dept_id);
 				$this->load->view('templates/department_header', $dept_name);
-				$this->load->view('update_hod', $data1);
+				$this->load->view('college/update_hod', $data1);
 			}
 			else if($this->session->userdata('logged_in') == 'true')
 				echo "Sorry. You don't have permissions.";
@@ -143,7 +143,7 @@
 				$dept_id = $this->session->userdata('fac_dept_id');
 				$data['records'] = $this->dep_model->get_dept_info($dept_id);
 				$this->load->view('templates/department_header', $data);
-				$this->load->view('update_dept_info', $data);
+				$this->load->view('department/update_dept_info', $data);
 				$this->load->view('templates/department_footer');
 			}
 			else if($this->session->userdata('logged_in') == 'true')

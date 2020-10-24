@@ -29,7 +29,7 @@ class Welcome extends CI_Controller {
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		//print_r($data);
 		$this->load->view('templates/header_home', $data);
-		$this->load->view('college_home'); 
+		$this->load->view('college/college_home'); 
 		$this->load->view('templates/footer');
 	}
 
@@ -37,15 +37,15 @@ class Welcome extends CI_Controller {
 	{
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
-		$this->load->view('about_us'); 
+		$this->load->view('college/about_us'); 
 		$this->load->view('templates/footer');
 	}
 
-	public function collage_activities()
+	public function college_activities()
 	{
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
-		$this->load->view('collage_activities'); 
+		$this->load->view('college/college_activities'); 
 		$this->load->view('templates/footer');
 	}
 
@@ -53,7 +53,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
-		$this->load->view('collage_activity_details'); 
+		$this->load->view('college/college_activity_details'); 
 		$this->load->view('templates/footer');
 	}
 
@@ -64,7 +64,7 @@ class Welcome extends CI_Controller {
 		sort($data['dept_names']);
 		//print_r($data);
 		$this->load->view('templates/header_common', $data);
-		$this->load->view('college_departments'); 
+		$this->load->view('college/college_departments'); 
 		$this->load->view('templates/footer');
 	}
 

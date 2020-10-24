@@ -15,7 +15,7 @@
 
 				$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
 				$this->load->view('templates/department_header', $dept_name);
-				$this->load->view('faculty', $data);
+				$this->load->view('faculty/faculty', $data);
 				$this->load->view('templates/department_footer');
 			}
 			else {
@@ -42,7 +42,7 @@
 
 		public function add_staff() {
 			if( $this->session->userdata('logged_in') == 'true' )
-				$this->load->view('add_staff');
+				$this->load->view('department/add_staff');
 			else
 				redirect(site_url());
 		}
@@ -64,12 +64,13 @@
 				*/
 
 				if($this->form_validation->run() == false) {
+					echo validation_errors();
 					//$data['user_logged_in'] = 'false';
 					//$data['title'] = 'Login';
 					//$data['invalid_login_class'] = 'hidden';
 
 					//$this->load->view('templates/header', $data);
-					$this->load->view('add_staff');
+					//$this->load->view('department/add_staff');
 					//$this->load->view('templates/footer');
 				}
 				else {  //  form validation is true
@@ -93,7 +94,7 @@
 		
 		public function fcourses() {
 			$this->load->view('templates/department_header');
-			$this->load->view('faculty_courses'); 
+			$this->load->view('faculty/faculty_courses'); 
 			$this->load->view('templates/department_footer');
 		}
 		
@@ -104,7 +105,7 @@
 				//print_r($data['pub_info']);
 
 				$this->load->view('templates/department_header');
-				$this->load->view('faculty_publications', $data);
+				$this->load->view('faculty/faculty_publications', $data);
 				$this->load->view('templates/department_footer');
 			}
 			else
@@ -124,9 +125,10 @@
 				//$this->form_validation->set_rules('pub_link', 'Publication Link', 'trim|min_length[10]|required|htmlspecialchars');
 
 				if($this->form_validation->run() == false) {
+					echo validation_errors();
 					$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
 					$this->load->view('templates/department_header');
-					$this->load->view('faculty_publications', $data);
+					$this->load->view('faculty/faculty_publications', $data);
 					$this->load->view('templates/department_footer');
 				}
 				else {  //  form validation is true
@@ -144,14 +146,14 @@
 		public function fac_research() {
 			$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
 			$this->load->view('templates/department_header');
-			$this->load->view('faculty_research'); 
+			$this->load->view('faculty/faculty_research'); 
 			$this->load->view('templates/department_footer');
 		} 
 
 		public function fmeetings() { 
 			$this->load->helper('url');
 			$this->load->view('templates/department_header');
-			$this->load->view('faculty_meetings'); 
+			$this->load->view('faculty/faculty_meetings'); 
 			$this->load->view('templates/department_footer');
 		} 
 	} 

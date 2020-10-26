@@ -62,7 +62,17 @@
 								<div class="separator"></div>
 								<h3><b><?php echo $details[0]['Name']; ?> <!--Dr A.S. Nain--></b></h3>
 								<div class="separator"></div>
-								<h4><b>About the faculty</b></h4>
+
+
+								<div class="row">
+									<div class="col-md-10 col-sm-10 col-xs-10"><h4 style="margin-top: 1px"><b>About the faculty</b></h4> </div>
+									<div class="col-md-2 col-sm-2 col-xs-2">
+									<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
+										</button>-->
+									<a href="#" data-toggle="modal" data-target="#myModalHorizontal" style="float:right">Edit</a>
+									</div>
+								</div>
+
 								<span>Dr A.S. Nain completed his PhD from Indian Space Research Organization (ISRO), India in the year 2002 and worked as 
 								Visiting Scientist / postdoctoral fellow in ZALF (Leibniz), Muncheberg, Germany from 2003 to 2005. He is currently holding 
 								prestigious NABARD-Chair and Head, Department of Agrometeorology, GB Pant University of Agriculture and Technology. Prior to 
@@ -151,3 +161,144 @@
 		</div>
 	</div>
 </section>
+
+<!-- modals for Edit and update operations -- >
+
+<!-- 1) Modal for editing faculty summary -->
+
+
+<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
+		     aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <!-- Modal Header -->
+		            <div class="modal-header">
+		                <button type="button" class="close" 
+		                   data-dismiss="modal">
+		                       <span aria-hidden="true">&times;</span>
+		                       <span class="sr-only">Close</span>
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    New Publication
+		                </h4>
+		            </div>
+		            
+		            <!-- Modal Body -->
+		            <div class="modal-body">
+		                
+		                <form class="form-horizontal" role="form">
+		                  
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="inputEmail3">Title</label>
+		                    <div class="col-sm-10">
+		                        <input type="text" class=" form-control" placeholder="Title"/>
+		                    </div>
+
+		                  </div>
+
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Publication">Publication</label>
+		                    <div class="col-sm-10">
+		                        <input type="text" class=" form-control" placeholder="Publication Name"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Date">Date</label>
+		                    <div class="col-sm-10">
+		                        <input type="date" class=" form-control" placeholder="Date"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Abstract">Abstract</label>
+		                    <div class="col-sm-10">
+		                    	<textarea  class="md-textarea form-control" rows="3" placeholder="Abstract"></textarea>
+		                    </div>
+
+		                  </div>
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-2 col-sm-10">
+		                      <button type="submit" class="btn btn-default">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+		            </div>
+		            
+					           
+			    </div>
+			</div>
+		</div>	
+
+
+<!-- 1) Modal for editing contact details -->
+
+
+<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
+		     aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <!-- Modal Header -->
+		            <div class="modal-header">
+		                <button type="button" class="close" 
+		                   data-dismiss="modal">
+		                       <span aria-hidden="true">&times;</span>
+		                       <span class="sr-only">Close</span>
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    New Publication
+		                </h4>
+		            </div>
+		            
+		            <!-- Modal Body -->
+		            <div class="modal-body">
+		                
+		                <form class="form-horizontal" role="form">
+		                  
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="inputEmail3">Title</label>
+		                    <div class="col-sm-10">
+		                        <input type="text" class=" form-control" placeholder="Title"/>
+		                    </div>
+
+		                  </div>
+
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Publication">Publication</label>
+		                    <div class="col-sm-10">
+		                        <input type="text" class=" form-control" placeholder="Publication Name"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Date">Date</label>
+		                    <div class="col-sm-10">
+		                        <input type="date" class=" form-control" placeholder="Date"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Abstract">Abstract</label>
+		                    <div class="col-sm-10">
+		                    	<textarea  class="md-textarea form-control" rows="3" placeholder="Abstract"></textarea>
+		                    </div>
+
+		                  </div>
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-2 col-sm-10">
+		                      <button type="submit" class="btn btn-default">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+		            </div>
+		            
+					           
+			    </div>
+			</div>
+		</div>			          

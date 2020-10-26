@@ -69,7 +69,7 @@
 									<div class="col-md-2 col-sm-2 col-xs-2">
 									<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
 										</button>-->
-									<a href="#" data-toggle="modal" data-target="#myModalHorizontal" style="float:right">Edit</a>
+									<a href="#" data-toggle="modal" data-target="#editProfileSummary" style="float:right">Edit</a>
 									</div>
 								</div>
 
@@ -81,8 +81,16 @@
 								prestegeous awards viz Young Scientist Awards (twice), Dr BB Singh Research Excellence Award, Faculty Excellence Award (twice) etc. 
 										
 								</span>
-
-								<h4><b>Contact Details</b></h4>
+							    <br></br>
+								<!--<h4><b>Contact Details</b></h4>-->
+								<div class="row">
+									<div class="col-md-10 col-sm-10 col-xs-10"><h4 style="margin-top: 1px"><b>Contact Details</b></h4> </div>
+									<div class="col-md-2 col-sm-2 col-xs-2">
+									<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
+										</button>-->
+									<a href="#" data-toggle="modal" data-target="#editContactDetails" style="float:right">Edit</a>
+									</div>
+								</div>
 								<span>
 									<p>Head Department of Agrometeorology</p>
 									<p>College of Agriculture</p>
@@ -94,11 +102,35 @@
 								</span>
 
 
-								<h4><b>Membership details</b></h4>
+								<!--<h4><b>Membership details</b></h4>-->
+								<div class="row">
+									<div class="col-md-10 col-sm-10 col-xs-10"><h4 style="margin-top: 1px"><b>Membership details</b></h4> </div>
+									<div class="col-md-2 col-sm-2 col-xs-2">
+									<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
+										</button>-->
+									<a href="#" data-toggle="modal" data-target="#addMembership" style="float:right">Add</a>
+									</div>
+								</div>
 								<span>
 									<ul>  
-										<li><b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b></li>
-										<li><b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b></li>
+										
+											<div class="row"><li>
+												<div class="col-md-10 col-sm-10 col-xs-10">
+													<b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b>
+												</div>
+												<div class="col-md-2 col-sm-2 col-xs-2">
+													<a href="#" data-toggle="modal" data-target="#editMembership" style="float:right">Edit</a>
+												</div></li>
+											</div>
+										
+											<div class="row"><li>
+												<div class="col-md-10 col-sm-10 col-xs-10">
+													<b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b>
+												</div>
+												<div class="col-md-2 col-sm-2 col-xs-2">
+													<a href="#" data-toggle="modal" data-target="#editMembership" style="float:right">Edit</a>
+												</div></li>
+											</div>
 									</ul>
 								</span>
 
@@ -167,7 +199,7 @@
 <!-- 1) Modal for editing faculty summary -->
 
 
-<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
+<div class="modal fade" id="editProfileSummary" tabindex="-1" role="dialog" 
 		     aria-labelledby="myModalLabel" aria-hidden="true">
 		    <div class="modal-dialog">
 		        <div class="modal-content">
@@ -179,7 +211,7 @@
 		                       <span class="sr-only">Close</span>
 		                </button>
 		                <h4 class="modal-title" id="myModalLabel">
-		                    New Publication
+		                    Edit Summary
 		                </h4>
 		            </div>
 		            
@@ -187,36 +219,11 @@
 		            <div class="modal-body">
 		                
 		                <form class="form-horizontal" role="form">
-		                  
+		             
 		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="inputEmail3">Title</label>
+		                    <label  class="col-sm-2 control-label" for="Abstract">About the Faulty</label>
 		                    <div class="col-sm-10">
-		                        <input type="text" class=" form-control" placeholder="Title"/>
-		                    </div>
-
-		                  </div>
-
-
-		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="Publication">Publication</label>
-		                    <div class="col-sm-10">
-		                        <input type="text" class=" form-control" placeholder="Publication Name"/>
-		                    </div>
-
-		                  </div>
-
-		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="Date">Date</label>
-		                    <div class="col-sm-10">
-		                        <input type="date" class=" form-control" placeholder="Date"/>
-		                    </div>
-
-		                  </div>
-
-		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="Abstract">Abstract</label>
-		                    <div class="col-sm-10">
-		                    	<textarea  class="md-textarea form-control" rows="3" placeholder="Abstract"></textarea>
+		                    	<textarea  class="md-textarea form-control" rows="15" placeholder="About yourself"></textarea>
 		                    </div>
 
 		                  </div>
@@ -234,10 +241,10 @@
 		</div>	
 
 
-<!-- 1) Modal for editing contact details -->
+<!-- 2) Modal for editing contact details -->
 
 
-<div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog" 
+<div class="modal fade" id="editContactDetails" tabindex="-1" role="dialog" 
 		     aria-labelledby="myModalLabel" aria-hidden="true">
 		    <div class="modal-dialog">
 		        <div class="modal-content">
@@ -249,7 +256,7 @@
 		                       <span class="sr-only">Close</span>
 		                </button>
 		                <h4 class="modal-title" id="myModalLabel">
-		                    New Publication
+		                    Edit Contact Details
 		                </h4>
 		            </div>
 		            
@@ -259,34 +266,92 @@
 		                <form class="form-horizontal" role="form">
 		                  
 		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="inputEmail3">Title</label>
-		                    <div class="col-sm-10">
+		                    <label  class="col-sm-3 control-label" for="addresss1">Address line 1</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Address line 1"/>
+		                    </div>
+
+		                  </div>
+		                  <div class="form-group">
+		                    <label  class="col-sm-3 control-label" for="addresss2">Address line 2</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Title"/>
+		                    </div>
+
+		                  </div>
+		                  <div class="form-group">
+		                    <label  class="col-sm-3 control-label" for="addresss3">Address line 3</label>
+		                    <div class="col-sm-9">
 		                        <input type="text" class=" form-control" placeholder="Title"/>
 		                    </div>
 
 		                  </div>
 
-
 		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="Publication">Publication</label>
-		                    <div class="col-sm-10">
-		                        <input type="text" class=" form-control" placeholder="Publication Name"/>
+		                    <label  class="col-sm-3 control-label" for="addresss3">Email</label>
+		                    <div class="col-sm-9">
+		                        <input type="email" class=" form-control" placeholder="Title"/>
 		                    </div>
 
 		                  </div>
 
 		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="Date">Date</label>
-		                    <div class="col-sm-10">
-		                        <input type="date" class=" form-control" placeholder="Date"/>
+		                    <label  class="col-sm-3 control-label" for="Office Phone">Office Phone</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="05964-123456"/>
 		                    </div>
 
 		                  </div>
 
 		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="Abstract">Abstract</label>
+		                    <label  class="col-sm-3 control-label" for="Personal Phone">Personal Phone</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="9411xxxxx"/>
+		                    </div>
+
+		                  </div>
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-3 col-sm-9">
+		                      <button type="submit" class="btn btn-default">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+		            </div>
+		            
+					           
+			    </div>
+			</div>
+		</div>			          
+
+
+<!-- 3) Modal for adding Membership details summary -->
+
+
+<div class="modal fade" id="addMembership" tabindex="-1" role="dialog" 
+		     aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <!-- Modal Header -->
+		            <div class="modal-header">
+		                <button type="button" class="close" 
+		                   data-dismiss="modal">
+		                       <span aria-hidden="true">&times;</span>
+		                       <span class="sr-only">Close</span>
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    Edit Summary
+		                </h4>
+		            </div>
+		            
+		            <!-- Modal Body -->
+		            <div class="modal-body">
+		                
+		                <form class="form-horizontal" role="form">
+		             
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Abstract">About the Faulty</label>
 		                    <div class="col-sm-10">
-		                    	<textarea  class="md-textarea form-control" rows="3" placeholder="Abstract"></textarea>
+		                    	<textarea  class="md-textarea form-control" rows="15" placeholder="About yourself"></textarea>
 		                    </div>
 
 		                  </div>
@@ -301,4 +366,48 @@
 					           
 			    </div>
 			</div>
-		</div>			          
+		</div>	
+
+<!-- 4) Modal for editing Membership details summary -->
+
+
+<div class="modal fade" id="editMembership" tabindex="-1" role="dialog" 
+		     aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <!-- Modal Header -->
+		            <div class="modal-header">
+		                <button type="button" class="close" 
+		                   data-dismiss="modal">
+		                       <span aria-hidden="true">&times;</span>
+		                       <span class="sr-only">Close</span>
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    Edit Summary
+		                </h4>
+		            </div>
+		            
+		            <!-- Modal Body -->
+		            <div class="modal-body">
+		                
+		                <form class="form-horizontal" role="form">
+		             
+		                  <div class="form-group">
+		                    <label  class="col-sm-2 control-label" for="Abstract">About the Faulty</label>
+		                    <div class="col-sm-10">
+		                    	<textarea  class="md-textarea form-control" rows="15" placeholder="About yourself"></textarea>
+		                    </div>
+
+		                  </div>
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-2 col-sm-10">
+		                      <button type="submit" class="btn btn-default">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+		            </div>
+		            
+					           
+			    </div>
+			</div>
+		</div>	

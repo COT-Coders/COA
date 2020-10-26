@@ -101,72 +101,123 @@
 									<p> Personal Phone : <span class="text-danger"><?php if($details[0]['Personal_Contact']) { echo $details[0]['Personal_Contact']; } else { echo "Not provided"; } ?> <!--911--></span></p>
 								</span>
 
-
+								<br></br>
 								<!--<h4><b>Membership details</b></h4>-->
-								<div class="row">
-									<div class="col-md-10 col-sm-10 col-xs-10"><h4 style="margin-top: 1px"><b>Membership details</b></h4> </div>
-									<div class="col-md-2 col-sm-2 col-xs-2">
-									<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
-										</button>-->
-									<a href="#" data-toggle="modal" data-target="#addMembership" style="float:right">Add</a>
+								<div id="Membership">
+									<div class="row">
+										<div class="col-md-10 col-sm-10 col-xs-10"><h4 style="margin-top: 1px"><b>Membership details</b></h4> </div>
+										<div class="col-md-2 col-sm-2 col-xs-2">
+										<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
+											</button>-->
+										<a href="#" data-toggle="modal" data-target="#addMembership" style="float:right">Add</a>
+										</div>
 									</div>
+									<span>
+										<ul>  
+											
+												<div class="row"><li>
+													<div class="col-md-10 col-sm-10 col-xs-10">
+														<b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b>
+													</div>
+													<div class="col-md-2 col-sm-2 col-xs-2">
+														<a href="#" data-toggle="modal" data-target="#editMembership" style="float:right">Edit</a>
+													</div></li>
+												</div>
+											
+												<div class="row"><li>
+													<div class="col-md-10 col-sm-10 col-xs-10">
+														<b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b>
+													</div>
+													<div class="col-md-2 col-sm-2 col-xs-2">
+														<a href="#" data-toggle="modal" data-target="#editMembership" style="float:right">Edit</a>
+													</div></li>
+												</div>
+										</ul>
+									</span>
 								</div>
-								<span>
-									<ul>  
-										
-											<div class="row"><li>
-												<div class="col-md-10 col-sm-10 col-xs-10">
-													<b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b>
-												</div>
-												<div class="col-md-2 col-sm-2 col-xs-2">
-													<a href="#" data-toggle="modal" data-target="#editMembership" style="float:right">Edit</a>
-												</div></li>
-											</div>
-										
-											<div class="row"><li>
-												<div class="col-md-10 col-sm-10 col-xs-10">
-													<b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b>
-												</div>
-												<div class="col-md-2 col-sm-2 col-xs-2">
-													<a href="#" data-toggle="modal" data-target="#editMembership" style="float:right">Edit</a>
-												</div></li>
-											</div>
-									</ul>
-								</span>
 
-								<h4><b>Personal details</b></h4>
-								<span>
+								<br></br>
+								<!--<h4><b>Personal details</b></h4>-->
+								<div id="Education">
+									<div class="row">
+										<div class="col-md-10 col-sm-10 col-xs-10"><h4 style="margin-top: 1px"><b>Educational Experience</b></h4> </div>
+										<div class="col-md-2 col-sm-2 col-xs-2">
+										<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
+											</button>-->
+										<a href="#" data-toggle="modal" data-target="#addMembership" style="float:right">Add</a>
+										</div>
+									</div>
+									<span>
+										<div class="table-responsive">          
+											<table class="table">
+												<thead>
+													<tr><th>Year</th><th>Degree</th><th>Description</th><th></th></tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1914-1918</td>
+														<td> Black Ops</td>
+														<td>Defeated Germans in world war</td>
+														<td ><a href="#" data-toggle="modal" data-target="#editMembership" style="float: right;">edit</a></td>
+													</tr>
+													<tr>
+														<td>1914-1918</td>
+														<td> Black Ops</td>
+														<td>Defeated Germans in world war</td>
+														<td ><a href="#" data-toggle="modal" data-target="#editMembership" style="float: right;">edit</a></td>
+													</tr>
+													<tr>
+														<td>1914-1918</td>
+														<td> Black Ops</td>
+														<td>Defeated Germans in world war</td>
+														<td ><a href="#" data-toggle="modal" data-target="#editMembership" style="float: right;">edit</a></td>
+													</tr>
+											</table>
+											</div>
+									</span>
+							    </div>
+							    <br></br>
+
+								<!--<h4><b>Professional Experience</b></h4>-->
+								<div id="Professional">
+									<div class="row">
+										<div class="col-md-10 col-sm-10 col-xs-10"><h4 style="margin-top: 1px"><b>Professional Experience</b></h4> </div>
+										<div class="col-md-2 col-sm-2 col-xs-2">
+										<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
+											</button>-->
+										<a href="#" data-toggle="modal" data-target="#addMembership" style="float:right">Add</a>
+										</div>
+									</div>
+									<span> 
 									<div class="table-responsive">          
 										<table class="table">
 											<thead>
-												<tr><th>Year</th><th>Degree</th><th>Description</th></tr>
+												<tr><th>Year</th><th>Experience</th><th>Description</th><th></th></tr>
 											</thead>
 											<tbody>
-												<tr><td>1919</td><td>Degree 1</td><td>in xsz stream, from xyz college + any other</td></tr>
-												<tr><td>1919</td><td>Degree 2</td><td>in xsz stream, from xyz college + any other</td></tr>
-												<tr><td>1919</td><td>Degree 3</td><td>in xsz stream, from xyz college + any other</td></tr>
-												<tr><td>1919</td><td>Degree 4</td><td>in xsz stream, from xyz college + any other</td></tr>
+												<tr>
+													<td>1914-1918</td>
+													<td> Black Ops</td>
+													<td>Defeated Germans in world war</td>
+													<td ><a href="#" data-toggle="modal" data-target="#editMembership" style="float: right;">edit</a></td>
+												</tr>
+												<tr>
+													<td>1914-1918</td>
+													<td> Black Ops</td>
+													<td>Defeated Germans in world war</td>
+													<td ><a href="#" data-toggle="modal" data-target="#editMembership" style="float: right;">edit</a></td>
+												</tr>
+												<tr>
+													<td>1914-1918</td>
+													<td> Black Ops</td>
+													<td>Defeated Germans in world war</td>
+													<td ><a href="#" data-toggle="modal" data-target="#editMembership" style="float: right;">edit</a></td>
+												</tr>
 											</tbody>
 										</table>
-										</div>
-								</span>
-
-
-								<h4><b>Professional Experience</b></h4>
-								<span> 
-								<div class="table-responsive">          
-									<table class="table">
-										<thead>
-											<tr><th>Year</th><th>Experience</th><th>Description</th></tr>
-										</thead>
-										<tbody>
-											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops</td><td>Defeated Germans in world war</td></tr>
-										</tbody>
-									</table>
-								</div>
-								</span>
+									</div>
+									</span>
+							    </div>
 
 								<h4><b>Administrative Experience</b></h4>
 								<span>
@@ -339,7 +390,7 @@
 		                       <span class="sr-only">Close</span>
 		                </button>
 		                <h4 class="modal-title" id="myModalLabel">
-		                    Edit Summary
+		                    Edit Membership
 		                </h4>
 		            </div>
 		            
@@ -349,9 +400,9 @@
 		                <form class="form-horizontal" role="form">
 		             
 		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="Abstract">About the Faulty</label>
-		                    <div class="col-sm-10">
-		                    	<textarea  class="md-textarea form-control" rows="15" placeholder="About yourself"></textarea>
+		                    <label  class="col-sm-3 control-label" for="Membership">Membership</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Membership"/>
 		                    </div>
 
 		                  </div>
@@ -383,7 +434,7 @@
 		                       <span class="sr-only">Close</span>
 		                </button>
 		                <h4 class="modal-title" id="myModalLabel">
-		                    Edit Summary
+		                    Edit Membership
 		                </h4>
 		            </div>
 		            
@@ -393,9 +444,9 @@
 		                <form class="form-horizontal" role="form">
 		             
 		                  <div class="form-group">
-		                    <label  class="col-sm-2 control-label" for="Abstract">About the Faulty</label>
-		                    <div class="col-sm-10">
-		                    	<textarea  class="md-textarea form-control" rows="15" placeholder="About yourself"></textarea>
+		                    <label  class="col-sm-3 control-label" for="Membership">Membership</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Membership"/>
 		                    </div>
 
 		                  </div>
@@ -411,3 +462,121 @@
 			    </div>
 			</div>
 		</div>	
+
+<!-- 4) Modal for adding Educational details summary -->
+<div class="modal fade" id="addEducation" tabindex="-1" role="dialog" 
+		     aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <!-- Modal Header -->
+		            <div class="modal-header">
+		                <button type="button" class="close" 
+		                   data-dismiss="modal">
+		                       <span aria-hidden="true">&times;</span>
+		                       <span class="sr-only">Close</span>
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    Add Education
+		                </h4>
+		            </div>
+		            
+		            <!-- Modal Body -->
+		            <div class="modal-body">
+		                
+		                <form class="form-horizontal" role="form">
+		             
+		                  <div class="form-group">
+		                    <label  class="col-sm-3 control-label" for="Year">Year</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Year"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-3 control-label" for="Degree">Degree</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Degree"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-3 control-label" for="Description">Description</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Description"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-2 col-sm-10">
+		                      <button type="submit" class="btn btn-default">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+		            </div>
+		            
+					           
+			    </div>
+			</div>
+		</div>
+
+<!-- 4) Modal for editing Educational details summary -->
+<div class="modal fade" id="editEducation" tabindex="-1" role="dialog" 
+		     aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <!-- Modal Header -->
+		            <div class="modal-header">
+		                <button type="button" class="close" 
+		                   data-dismiss="modal">
+		                       <span aria-hidden="true">&times;</span>
+		                       <span class="sr-only">Close</span>
+		                </button>
+		                <h4 class="modal-title" id="myModalLabel">
+		                    Edit Education
+		                </h4>
+		            </div>
+		            
+		            <!-- Modal Body -->
+		            <div class="modal-body">
+		                
+		                <form class="form-horizontal" role="form">
+		             
+		                  <div class="form-group">
+		                    <label  class="col-sm-3 control-label" for="Year">Year</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Year"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-3 control-label" for="Degree">Degree</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Degree"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <label  class="col-sm-3 control-label" for="Description">Description</label>
+		                    <div class="col-sm-9">
+		                        <input type="text" class=" form-control" placeholder="Description"/>
+		                    </div>
+
+		                  </div>
+
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-2 col-sm-10">
+		                      <button type="submit" class="btn btn-default">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+		            </div>
+		            
+					           
+			    </div>
+			</div>
+		</div>

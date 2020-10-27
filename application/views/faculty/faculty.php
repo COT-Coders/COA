@@ -218,21 +218,47 @@
 									</span>
 							    </div>
 
-								<h4><b>Administrative Experience</b></h4>
-								<span>
-								<div class="table-responsive">          
-									<table class="table">
-										<thead>
-											<tr><th>Year</th><th>Experience</th><th>Description</th></tr>
-										</thead>
-										<tbody>
-											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-											<tr><td>1914-1918</td><td> Black Ops comander</td><td>Defeated Germans in world war</td></tr>
-										</tbody>
-									</table>
+								<!--<h4><b>Administrative Experience</b></h4>-->
+								<div id="Administrative">
+									<div class="row">
+										<div class="col-md-10 col-sm-10 col-xs-10"><h4 style="margin-top: 1px"><b>Administrative Experience</b></h4> </div>
+										<div class="col-md-2 col-sm-2 col-xs-2">
+										<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
+											</button>-->
+										<a href="#" data-toggle="modal" data-target="#addAdministrative" style="float:right;margin-right:10%">Add</a>
+										</div>
+									</div>
+									<span>
+									<div class="table-responsive">          
+										<table class="table">
+											<thead>
+												<tr><th>Year</th><th>Experience</th><th>Description</th><th></th></tr>
+											</thead>
+											<tbody>
+													<tr>
+														<td>1914-1918</td>
+														<td> Black Ops</td>
+														<td>Defeated Germans in world war</td>
+														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">edit</a></td>
+													</tr>
+													<tr>
+														<td>1914-1918</td>
+														<td> Black Ops</td>
+														<td>Defeated Germans in world war</td>
+														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">edit</a></td>
+													</tr>
+													<tr>
+														<td>1914-1918</td>
+														<td> Black Ops</td>
+														<td>Defeated Germans in world war</td>
+														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">edit</a></td>
+													</tr>
+												
+											</tbody>
+										</table>
+									</div>
+									</span>
 								</div>
-								</span>
 							</div>
 						</div>  <!-- end of topslider -->
 						</div>
@@ -699,7 +725,7 @@
 		</div>
 
 
-<!-- 7) Modal for adding Administrative details summary -->
+<!-- 9) Modal for adding Administrative details summary -->
 <div class="modal fade" id="addAdministrative" tabindex="-1" role="dialog" 
 		     aria-labelledby="myModalLabel" aria-hidden="true">
 		    <div class="modal-dialog">
@@ -712,7 +738,7 @@
 		                       <span class="sr-only">Close</span>
 		                </button>
 		                <h4 class="modal-title" id="myModalLabel">
-		                    Add Education
+		                    Add Administrative Experience
 		                </h4>
 		            </div>
 		            
@@ -724,7 +750,7 @@
 		                  <div class="form-group">
 		                    <label  class="col-sm-3 control-label" for="Year">Year</label>
 		                    <div class="col-sm-9">
-		                        <input type="text" class=" form-control" placeholder="Year"/>
+		                        <input type="text" class=" form-control" placeholder="19xx-19xx"/>
 		                    </div>
 
 		                  </div>
@@ -758,7 +784,7 @@
 			</div>
 		</div>
 
-<!-- 8) Modal for editing Professional details summary -->
+<!-- 10) Modal for editing Professional details summary -->
 <div class="modal fade" id="editAdministrative" tabindex="-1" role="dialog" 
 		     aria-labelledby="myModalLabel" aria-hidden="true">
 		    <div class="modal-dialog">
@@ -771,7 +797,7 @@
 		                       <span class="sr-only">Close</span>
 		                </button>
 		                <h4 class="modal-title" id="myModalLabel">
-		                    Edit Education
+		                    Edit Administrative Experience
 		                </h4>
 		            </div>
 		            
@@ -783,7 +809,7 @@
 		                  <div class="form-group">
 		                    <label  class="col-sm-3 control-label" for="Year">Year</label>
 		                    <div class="col-sm-9">
-		                        <input type="text" class=" form-control" placeholder="Year"/>
+		                        <input type="text" class=" form-control" placeholder="19xx-19xx"/>
 		                    </div>
 
 		                  </div>

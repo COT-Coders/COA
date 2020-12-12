@@ -183,13 +183,13 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 
 								        <!-- body -->
 								        <div class="modal-body">
+								        	<div id="alert-msg"></div>
 								            <div class="form-group">
 								              <input type="text" id="user_email" name="user_email" class="form-control" placeholder="Email"/>
 								            </div>
 								            <div class="form-group">
 								              <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
 								            </div>
-								          <div id="alert-msg"></div>
 								        </div>
 								        
 								        <!-- footer -->

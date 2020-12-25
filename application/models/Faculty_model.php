@@ -70,15 +70,27 @@
 			$pub_date = $this->input->post('pub_date');
 
 			$data = array(
-					'Faculty_ID' => $this->session->userdata('fac_id'),
-					'Dept_ID' => $this->session->userdata('fac_dept_id'),
 					'Title' => $pub_title,
 					'Abstract' => $pub_abs,
 					'Publication_Name' => $pub_name,
 					'Date' => $pub_date
 					);  //  associative array of field value pairs
+
 			if ($this->db->insert("Publication", $data))
-				return true;
+			{
+				$last_primary_key = $this->db->insert_id("Publication");
+				//echo $last_primary_key;
+				
+				$data1 = array(
+						'Pub_ID' => $last_primary_key,
+						'Faculty_ID' => $this->session->userdata('fac_id')
+						);  //  associative array of field value pairs
+				//print_r($data1);
+				if($this->db->insert("Pub_Fac", $data1))
+					return true;
+				else
+					return false;
+			}
 			else
 				return false;
 		}

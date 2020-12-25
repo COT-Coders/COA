@@ -1,4 +1,5 @@
-<?php 
+<?php
+	defined('BASEPATH') OR exit('No direct script access allowed');
 	class Faculty extends CI_Controller {
 
 		function __construct() {
@@ -117,6 +118,9 @@
 				redirect('/faculty/');
 			}
 			else {  //  faculty should be logged in
+				//echo $this->session->userdata('fac_id');
+				//echo $this->session->userdata('fac_dept_id');
+
 				$this->load->library('form_validation');
 				$this->form_validation->set_rules('pub_title', 'Publication Title', 'trim|min_length[5]|required|htmlspecialchars');
 				$this->form_validation->set_rules('pub_abs', 'Publication Abstract', 'trim|min_length[20]|required|htmlspecialchars');
@@ -126,24 +130,25 @@
 
 				if($this->form_validation->run() == false) {
 					echo validation_errors();
-					$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
-					$this->load->view('templates/department_header');
-					$this->load->view('faculty/faculty_publications', $data);
-					$this->load->view('templates/department_footer');
 				}
 				else {  //  form validation is true
-					echo "Form validated";
+					//echo "Validated";
+					
 					//  insert values in publication table
-
 					$status = $this->faculty_model->insert_publication();
-					echo $status;
-					sleep(5);
-					redirect('/faculty/');
+					//echo $status;
+					if($status)
+						echo "Validated";
+					else
+						echo "Invalidated";
+					//sleep(5);
+					//redirect('/faculty/');
+					
 				}  //  end of else checking from validation
 			}  //  end of else checking logged_in
 		}  //  end of add_publication function
 
-		public function fac_research() {
+		public function fresearch() {
 			$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
 			$this->load->view('templates/department_header');
 			$this->load->view('faculty/faculty_research'); 

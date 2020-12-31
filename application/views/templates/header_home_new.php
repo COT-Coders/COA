@@ -67,7 +67,7 @@
 	          </li>
 
 	          <li class="nav-item">
-		        <a class="nav-link" href="<?php echo site_url(); ?>/Welcome/collage_activities">Activities</a>
+		        <a class="nav-link" href="<?php echo site_url(); ?>/Welcome/college_activities">Activities</a>
 		      </li>
 
 		    </ul>

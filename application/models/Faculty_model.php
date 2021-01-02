@@ -76,23 +76,22 @@
 					'Date' => $pub_date
 					);  //  associative array of field value pairs
 
-			if ($this->db->insert("Publication", $data))
-			{
-				$last_primary_key = $this->db->insert_id("Publication");
-				//echo $last_primary_key;
-				
-				$data1 = array(
+			$this->db->trans_start();
+			$this->db->insert("Publication", $data);
+			$last_primary_key = $this->db->insert_id("Publication");
+			//echo $last_primary_key;
+			$data1 = array(
 						'Pub_ID' => $last_primary_key,
 						'Faculty_ID' => $this->session->userdata('fac_id')
-						);  //  associative array of field value pairs
-				//print_r($data1);
-				if($this->db->insert("Pub_Fac", $data1))
-					return true;
-				else
-					return false;
-			}
-			else
+					);  //  associative array of field value pairs
+			//print_r($data1);
+			$this->db->insert("Pub_Fac", $data1);
+			$this->db->trans_complete();
+
+			if($this->db->trans_status() === FALSE)
 				return false;
+			else
+				return true;
 		}
 
 		/*public function delete($roll_no) { 

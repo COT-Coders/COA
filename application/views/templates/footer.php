@@ -21,7 +21,7 @@
               
               <div class="col-md-6">
                 <ul class="pages">
-                  <li><a href="#">Gallary</a></li>
+                  <li><a href="#">Gallery</a></li>
                   <li><a href="#">Activities</a></li>
                   <!--<li><a href="#">Labs</a></li>-->
                   <li><a href="#">University website</a></li>

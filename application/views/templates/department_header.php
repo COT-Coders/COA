@@ -63,7 +63,7 @@ Developed and Designed by :: Students of College of Technology,GBPUAT pantnagar
 						<div class="row">
 							<div class="col-md-6 university_link text-left">
 								<h2  style="padding-left:10px"><a href="<?php echo site_url(); ?>" target="_blank">College Of Agriculture</a></h2>
-								<h4 style="padding-left:10px"><a href="http://www.gbpuat.ac.in" target="_blank">G. B. Pant Universiity of Agriculture and Technology</a></h4>
+								<h4 style="padding-left:10px"><a href="http://www.gbpuat.ac.in" target="_blank">G. B. Pant University of Agriculture and Technology</a></h4>
 							</div>
 						</div>
 					</div>

@@ -8,6 +8,8 @@
 
 -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -49,7 +51,7 @@
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
 						<ul class="dropdown-menu">
 							<li class="dropdown-item"><a href="<?php echo site_url(); ?>/Welcome/departments_list" style="text-decoration: none;">Departments</a></li>
-							<li class="dropdown-item"><a href="#">Programs of Study</a></li>
+							<li class="dropdown-item"><a href="<?php echo site_url(); ?>/Welcome/programs">Programs of Study</a></li>
 							<li class="dropdown-item"><a href="#">Link 2</a></li>
 						</ul>
 					</li>

@@ -68,21 +68,14 @@ class Welcome extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function ug_programs()
-	{
-		$this->load->model('dep_model');
-		//$data['dept_names'] = $this->dep_model->get_dept_names();
-		$this->load->view('templates/header_common', $data);
-		//$this->load->view('collage_activity_details'); 
-		$this->load->view('templates/footer');
-	}
-
-	public function pg_programs()
+	public function programs()
 	{
 		$this->load->model('dep_model');
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		$this->load->view('templates/header_common', $data);
-		//$this->load->view('collage_activity_details'); 
+		$this->load->view('college/college_programs'); 
 		$this->load->view('templates/footer');
 	}
+
+	
 }

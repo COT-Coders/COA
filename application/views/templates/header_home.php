@@ -51,7 +51,7 @@
 	            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
 	            <ul class="dropdown-menu">
 	            	<li class="dropdown-item"><a href="<?php echo site_url(); ?>/Welcome/departments_list" style="text-decoration: none;">Departments</a></li>
-	            	<li class="dropdown-item"><a href="#">Programs of Study</a></li>
+	            	<li class="dropdown-item"><a href="<?php echo site_url(); ?>/Welcome/programs">Programs of Study</a></li>
 	            	<li class="dropdown-item"><a href="#">Link 2</a></li>
 	          	</ul>
               </li>

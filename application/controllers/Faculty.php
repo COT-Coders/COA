@@ -20,7 +20,19 @@
 				$this->load->view('templates/department_footer');
 			}
 			else {
-				redirect(site_url());
+				if($this->session->get_userdata('browsing_fac_id') >= 1)
+				{
+					$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('browsing_fac_id'));
+					//print_r($dept_name['records']);
+
+					$this->load->view('templates/department_header', $dept_name);
+					//echo "Browsing Faculty ID:".$this->session->userdata('browsing_fac_id');
+					$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('browsing_fac_id'));
+					$this->load->view('faculty/faculty', $data);
+					$this->load->view('templates/department_footer');
+				}
+				else
+					redirect(site_url());
 			}
 		}
 
@@ -40,6 +52,13 @@
 			$this->load->view('templates/department_footer');
 		}*/
 
+		public function desc() {
+			$id = $this->uri->segment(3);
+			echo "URI".$id;
+			$this->session->set_userdata('browsing_fac_id', $id);
+
+			redirect('/faculty/');
+		}
 
 		public function add_staff() {
 			if( $this->session->userdata('logged_in') == 'true' )
@@ -94,8 +113,12 @@
 		
 		
 		public function fcourses() {
-			$this->load->view('templates/department_header');
-			$this->load->view('faculty/faculty_courses'); 
+			$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
+			//print_r($data);
+
+			$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
+			$this->load->view('templates/department_header', $dept_name);
+			$this->load->view('faculty/faculty_courses', $data);
 			$this->load->view('templates/department_footer');
 		}
 		
@@ -149,9 +172,12 @@
 		}  //  end of add_publication function
 
 		public function fresearch() {
+			$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
+			//print_r($data);
+
 			$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
-			$this->load->view('templates/department_header');
-			$this->load->view('faculty/faculty_research'); 
+			$this->load->view('templates/department_header', $dept_name);
+			$this->load->view('faculty/faculty_research', $data); 
 			$this->load->view('templates/department_footer');
 		} 
 

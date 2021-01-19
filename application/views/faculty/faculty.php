@@ -2,6 +2,14 @@
 			
 		
 <!-- Left Sidebar -->
+<?php
+	function modal_edit()
+	{
+		if($this->session->userdata('logged_in')) ?>
+			<a href="#" data-toggle="modal" data-target="#editProfileSummary" style="float:right">Edit</a>
+		<?php
+	}
+?>
 
 <section class="container-fluid">
 	<div class="row">
@@ -9,6 +17,7 @@
 		<div class="col-md-10" style="background-color:RGB(245,245,245);">
 			<div class="row">
 				<div class="col-sm-2 col-md-2" id="left-sidebar" style="margin-top:1%">
+					
 					<!-- Accordian left-sidebar  starts -->
 					<div class="card" >
 						<img class="card-img-top img-responsive" src="<?php echo base_url();?>assets/img/ajeet_sir.jpg" style="height: 200px;width: 200px">
@@ -19,6 +28,7 @@
 								<p class="card-text"> <b> B.Sc, M.Sc, Phd </b> </p>
 							</div>
 							
+							<?php if($this->session->userdata('logged_in') == 'true') { ?>
 							<ul class="list-group">
 								<li class="list-group-item"><a href="#">Profile</a></li>
 								<!--<li class="list-group-item active"><a href="#">Profile</a></li>-->
@@ -40,7 +50,8 @@
 										<li class="list-group-item"><a href="<?php echo site_url('department/update_hod'); ?>">Update HOD</a></li>
 									<?php }
 								?>
-							</ul>  
+							</ul>
+							<?php } ?>
 						</div>
 					</div>
 					<!-- Accordian ends -->
@@ -69,7 +80,9 @@
 									<div class="col-md-2 col-sm-2 col-xs-2">
 									<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
 										</button>-->
+									<?php if($this->session->userdata('logged_in')) { ?>
 									<a href="#" data-toggle="modal" data-target="#editProfileSummary" style="float:right">Edit</a>
+									<?php } ?>
 									</div>
 								</div>
 
@@ -88,7 +101,9 @@
 									<div class="col-md-2 col-sm-2 col-xs-2">
 									<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
 										</button>-->
+									<?php if($this->session->userdata('logged_in')) { ?>
 									<a href="#" data-toggle="modal" data-target="#editContactDetails" style="float:right">Edit</a>
+									<?php } ?>
 									</div>
 								</div>
 								<span>
@@ -109,7 +124,9 @@
 										<div class="col-md-2 col-sm-2 col-xs-2">
 										<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
 											</button>-->
+										<?php if($this->session->userdata('logged_in')) { ?>
 										<a href="#" data-toggle="modal" data-target="#addMembership" style="float:right;margin-right: 10%">Add</a>
+										 	<?php } ?>
 										</div>
 									</div>
 									<span>
@@ -120,7 +137,9 @@
 														<b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b>
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-2">
+														<?php if($this->session->userdata('logged_in')) { ?>
 														<a href="#" data-toggle="modal" data-target="#editMembership" style="float:right;margin-right: 10%">Edit</a>
+														<?php } ?>
 													</div></li>
 												</div>
 											
@@ -128,9 +147,10 @@
 													<div class="col-md-10 col-sm-10 col-xs-10">
 														<b>Member of Institute of Electrical and Electronics Engineers (IEEE)</b>
 													</div>
+													<?php if($this->session->userdata('logged_in')) { ?>
 													<div class="col-md-2 col-sm-2 col-xs-2">
 														<a href="#" data-toggle="modal" data-target="#editMembership" style="float:right;margin-right: 10%">Edit</a>
-													</div></li>
+													</div> <?php } ?> </li>
 												</div>
 										</ul>
 									</span>
@@ -144,7 +164,10 @@
 										<div class="col-md-2 col-sm-2 col-xs-2">
 										<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
 											</button>-->
+										<? modal_edit(); ?>
+										<?php if($this->session->userdata('logged_in')) { ?>
 										<a href="#" data-toggle="modal" data-target="#addEducation" style="float:right;margin-right: 10%">Add</a>
+										<?php } ?>
 										</div>
 									</div>
 										<div class="table-responsive">          
@@ -157,19 +180,25 @@
 														<td>1914-1918</td>
 														<td> Black Ops</td>
 														<td>Defeated Germans in world war</td>
-														<td ><a href="#" data-toggle="modal" data-target="#editEducation" style="float: right;">edit</a></td>
+														<?php if($this->session->userdata('logged_in')) { ?>
+														<td ><a href="#" data-toggle="modal" data-target="#editEducation" style="float: right;">Edit</a></td>
+														<?php } ?>
 													</tr>
 													<tr>
 														<td>1914-1918</td>
 														<td> Black Ops</td>
 														<td>Defeated Germans in world war</td>
-														<td ><a href="#" data-toggle="modal" data-target="#editEducation" style="float: right;">edit</a></td>
+														<?php if($this->session->userdata('logged_in')) { ?>
+														<td ><a href="#" data-toggle="modal" data-target="#editEducation" style="float: right;">Edit</a></td>
+														<?php } ?>
 													</tr>
 													<tr>
 														<td>1914-1918</td>
 														<td> Black Ops</td>
 														<td>Defeated Germans in world war</td>
-														<td ><a href="#" data-toggle="modal" data-target="#editEducation" style="float: right;">edit</a></td>
+														<?php if($this->session->userdata('logged_in')) { ?>
+														<td ><a href="#" data-toggle="modal" data-target="#editEducation" style="float: right;">Edit</a></td>
+														<?php } ?>
 													</tr>
 											</table>
 										</div>
@@ -184,7 +213,9 @@
 										<div class="col-md-2 col-sm-2 col-xs-2">
 										<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
 											</button>-->
+										<?php if($this->session->userdata('logged_in')) { ?>
 										<a href="#" data-toggle="modal" data-target="#addProfessional" style="float:right;margin-right:10%">Add</a>
+										<?php } ?>
 										</div>
 									</div>
 									<span> 
@@ -198,19 +229,25 @@
 													<td>1914-1918</td>
 													<td> Black Ops</td>
 													<td>Defeated Germans in world war</td>
-													<td ><a href="#" data-toggle="modal" data-target="#editProfessional" style="float: right;">edit</a></td>
+													<?php if($this->session->userdata('logged_in')) { ?>
+													<td ><a href="#" data-toggle="modal" data-target="#editProfessional" style="float: right;">Edit</a></td>
+													<?php } ?>
 												</tr>
 												<tr>
 													<td>1914-1918</td>
 													<td> Black Ops</td>
 													<td>Defeated Germans in world war</td>
-													<td ><a href="#" data-toggle="modal" data-target="#editProfessional" style="float: right;">edit</a></td>
+													<?php if($this->session->userdata('logged_in')) { ?>
+													<td ><a href="#" data-toggle="modal" data-target="#editProfessional" style="float: right;">Edit</a></td>
+													<?php } ?>
 												</tr>
 												<tr>
 													<td>1914-1918</td>
 													<td> Black Ops</td>
 													<td>Defeated Germans in world war</td>
-													<td ><a href="#" data-toggle="modal" data-target="#editProfessional" style="float: right;">edit</a></td>
+													<?php if($this->session->userdata('logged_in')) { ?>
+													<td ><a href="#" data-toggle="modal" data-target="#editProfessional" style="float: right;">Edit</a></td>
+													<?php } ?>
 												</tr>
 											</tbody>
 										</table>
@@ -225,7 +262,9 @@
 										<div class="col-md-2 col-sm-2 col-xs-2">
 										<!--	<button type="button"class="btn btn-info h5-size" data-toggle="modal" data-target="#myModalHorizontal" style="float:right;margin-bottom:5px">Edit
 											</button>-->
+										<?php if($this->session->userdata('logged_in')) { ?>
 										<a href="#" data-toggle="modal" data-target="#addAdministrative" style="float:right;margin-right:10%">Add</a>
+										<?php } ?>
 										</div>
 									</div>
 									<span>
@@ -239,19 +278,25 @@
 														<td>1914-1918</td>
 														<td> Black Ops</td>
 														<td>Defeated Germans in world war</td>
-														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">edit</a></td>
+														<?php if($this->session->userdata('logged_in')) { ?>
+														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">Edit</a></td>
+														<?php } ?>
 													</tr>
 													<tr>
 														<td>1914-1918</td>
 														<td> Black Ops</td>
 														<td>Defeated Germans in world war</td>
-														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">edit</a></td>
+														<?php if($this->session->userdata('logged_in')) { ?>
+														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">Edit</a></td>
+														<?php } ?>
 													</tr>
 													<tr>
 														<td>1914-1918</td>
 														<td> Black Ops</td>
 														<td>Defeated Germans in world war</td>
-														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">edit</a></td>
+														<?php if($this->session->userdata('logged_in')) { ?>
+														<td ><a href="#" data-toggle="modal" data-target="#editAdministrative" style="float: right;">Edit</a></td>
+														<?php } ?>
 													</tr>
 												
 											</tbody>

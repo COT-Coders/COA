@@ -68,7 +68,7 @@
 				$dept_id = $this->session->userdata('browsing_dept_id');
 
 			if(!$dept_id) {
-				//echo "Neither browsing, not faculty dept. id is set in department/faculty_list";
+				//echo "If neither browsing, not faculty dept. id is set in department/faculty_list, then ";
 				$this->session->set_userdata('browsing_dept_id', 1);
 				$dept_id = $this->session->userdata('browsing_dept_id');
 				//echo "Setting default browsing id to: ".$dept_id;

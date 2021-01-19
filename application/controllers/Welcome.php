@@ -63,8 +63,8 @@ class Welcome extends CI_Controller {
 		$data['dept_names'] = $this->dep_model->get_dept_names();
 		sort($data['dept_names']);
 		//print_r($data);
-		$this->load->view('templates/header_common', $data);
-		$this->load->view('college/college_departments'); 
+		$this->load->view('templates/header_common');
+		$this->load->view('college/college_departments', $data); 
 		$this->load->view('templates/footer');
 	}
 

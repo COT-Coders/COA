@@ -48,7 +48,7 @@
 
 				<?php
 					$no_of_fac = count($records);
-					echo $no_of_fac;
+					echo "No. of faculties(in view):".$no_of_fac;
 
 					for($i=0; $i<$no_of_fac; $i++) {
 						?>
@@ -58,10 +58,10 @@
 							</div>
 				   
 							<div class="col-sm-9 col-md-9">
-								<h3> <a> <?php echo $records[$i]['Name']; ?> </a>&nbsp<b> <?php echo $records[$i]['Designation']; ?> </b> </h3>
+								<h3> <a href="<?php echo site_url("faculty/desc/".$records[$i]['Faculty_ID']);  // echo $encoded_link; ?>"> <?php echo $records[$i]['Name']; ?> </a>&nbsp<b> <?php echo $records[$i]['Designation']; ?> </b> </h3>
 								<table cellspacing="10"> 
 									<tr> <td width="140"> Office </td> <td></td> <td> B114 </td> </tr>
-									<tr> <td> Phone </td> <td></td> <td> +91901234567890 </td> </tr>
+									<tr> <td> Phone </td> <td></td> <td> <?php echo $records[$i]['Office_Contact']; ?> </td> </tr>
 									<tr> <td> Website </td> <td></td> <td> <a href="<?php echo site_url(); ?>/faculty">Faculty Website </a> </td> </tr> 
 									<tr> <td> Email </td> <td></td> <td> <?php echo $records[$i]['Email']; ?> </td> </tr>
 									<tr> <td> Specialization </td> <td></td> <td> <?php echo $records[$i]['Specialization']; ?> </td> </tr>
@@ -86,7 +86,7 @@
 			<div class="panel-body">
 			<ul>
 				<li> content 1 </li>
-				<li> content 2</li>
+				<li> content 2 </li>
 				<li> content 3 </li>
 				<li> content 4 </li>
 				<li> content 5 </li>

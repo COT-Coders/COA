@@ -11,7 +11,7 @@
 				<div class="col-sm-2 col-md-2" id="left-sidebar"  style="margin-top:1%">
 					
 				<!-- Accordian left-sidebar  starts -->
-				<div class="card" style="width: 21rem;">
+				<div class="card">
 					<img class="card-img-top img-responsive" src="<?php echo base_url();?>assets/img/ajeet_sir.jpg" style="height: 200px;width: 200px">
 				  	<div class="card-body">
 				  		<div class="text-center">

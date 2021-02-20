@@ -13,17 +13,17 @@
 
 <section class="container-fluid">
 	<div class="row">
-	<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
 		<div class="col-md-10" style="background-color:RGB(245,245,245);">
 			<div class="row">
 				<div class="col-sm-2 col-md-2" id="left-sidebar" style="margin-top:1%">
 					
 					<!-- Accordian left-sidebar  starts -->
 					<div class="card" >
-						<img class="card-img-top img-responsive" src="<?php echo base_url();?>assets/img/ajeet_sir.jpg" style="height: 200px;width: 200px">
+						<img class="card-img-top img-responsive" src="<?php echo base_url().'assets/images/faculty/fac_'.$details[0]['Faculty_ID'].'.jpg'; ?>" style="height: 200px;width: 200px">
 						<div class="card-body">
 							<div style="margin-left: 30;margin-right: 30">
-								<h5 class="card-title"><b><?php echo $details[0]['Name']; ?> <!--Ajeet Singh Nain--></b></h5>
+								<h5 class="card-title"><b><?php echo $details[0]['Name']; ?></b></h5>
 								<p class="card-text"> <b> <?php echo $details[0]['Designation']; ?> </b> </p>
 								<p class="card-text"> <b> B.Sc, M.Sc, Phd </b> </p>
 							</div>

@@ -3,10 +3,12 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-8" style="background-color:RGB(245,245,245);">
 
+		<?php $images_path = base_url()."assets/images/departments/dept_".$records[0]['Dept_ID']."/"; ?>
+
 		<h2> About <?php echo $records[0]['Dept_Name']	; ?> </h2>
 		<div class="row">
 			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
-				<img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
+				<img class="pull-left img-thumbnail" src="<?php echo $images_path.'about.jpeg'; ?>" alt="..." style="margin-righr:10px">
 			</div>
 			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
 				<p class="text-justify">
@@ -20,7 +22,7 @@
 		<h2> Vision </h2>
 		<div class="row">
 			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
-				<img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
+				<img class="pull-left img-thumbnail" src="<?php echo $images_path.'vision.jpeg'; ?>" alt="..." style="margin-righr:10px">
 			</div>
 			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
 				<p class="text-justify">
@@ -33,7 +35,7 @@
 		<h2> Mission </h2>
 		<div class="row">
 			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
-				<img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
+				<img class="pull-left img-thumbnail" src="<?php echo $images_path.'mission.jpeg'; ?>" alt="..." style="margin-righr:10px">
 			</div>
 			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
 				<p class="text-justify">
@@ -46,7 +48,7 @@
 		<h2> Mandate </h2>
 		<div class="row">
 			<div class="col-sm-2 col-md-2 col-xs-2 float-left">
-				<img class="pull-left img-thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIsCK8HrLIkqEcFpYbYzgJjt9JRWaCaxkEkiTLQ-dtQocLDeyK&s" alt="..." style="margin-righr:10px">
+				<img class="pull-left img-thumbnail" src="<?php echo $images_path.'mission.jpeg'; ?>" alt="..." style="margin-righr:10px">
 			</div>
 			<div class="col-sm-9 col-md-9 col-xs-10 float-right">
 				<p class="text-justify">

@@ -54,7 +54,7 @@
 						?>
 						<div class="row">
 							<div class="col-sm-3 col-md-3">
-								<img class="card-img-top img-responsive" src="<?php echo base_url();?>assets/img/ajeet_sir.jpg" style="height: 200px;width: 200px">
+								<img class="card-img-top img-responsive" src="<?php echo base_url().'assets/images/faculty/fac_'.$records[$i]['Faculty_ID'].'.jpg'; ?>" style="height: 200px;width: 200px">
 							</div>
 				   
 							<div class="col-sm-9 col-md-9">

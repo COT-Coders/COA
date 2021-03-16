@@ -22,9 +22,9 @@
 				  		<ul class="list-group">
 							<li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty">Profile</a></li>
 							<li class="list-group-item"><a href="#">Courses</a></li>
-							<li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fpublications">Publications</a></li>
 							<li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fresearch">Research</a></li>
 							<li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty/fmeetings">Meetings & Conferences</a></li>
+							<li class="list-group-item"><a href="<?php echo site_url('faculty/fpublications'); ?>">Publications</a></li>
 				   			
 				   			<?php
 				   				if(($this->session->userdata('logged_in') == 'true') && $this->session->userdata('role') == 3) {  //  only HOD can add Staff, Role of HOD=3

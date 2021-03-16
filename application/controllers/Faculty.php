@@ -8,32 +8,34 @@
 			$this->load->helper(array('form'));
 		}
 
+		public function get_fac_id_loggedin_browsing() {
+			if( $this->session->userdata('logged_in') == 'true' )
+				return $this->session->userdata('fac_id');
+			else {
+				$id = $this->session->get_userdata();
+				//print_r($id['browsing_fac_id']);
+				
+				if( $id['browsing_fac_id'] >= 1)
+					return $id['browsing_fac_id'];
+				else
+					return 0;
+			}
+		}
+
 		public function index() {
-			if( $this->session->userdata('logged_in') == 'true' ) {
-				//echo $this->session->userdata('fac_id');
-				$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
+			$fac_id = $this->get_fac_id_loggedin_browsing();
+			if($fac_id) {
+				//echo $fac_id;
+				$dept_name['records'] = $this->dep_model->get_dept_name($fac_id);
+				$data['details'] = $this->faculty_model->get_fac_details($fac_id);
 				//print_r($data);
 
-				$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
 				$this->load->view('templates/department_header', $dept_name);
 				$this->load->view('faculty/faculty', $data);
 				$this->load->view('templates/department_footer');
 			}
-			else {
-				if($this->session->get_userdata('browsing_fac_id') >= 1)
-				{
-					$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('browsing_fac_id'));
-					//print_r($dept_name['records']);
-
-					$this->load->view('templates/department_header', $dept_name);
-					//echo "Browsing Faculty ID:".$this->session->userdata('browsing_fac_id');
-					$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('browsing_fac_id'));
-					$this->load->view('faculty/faculty', $data);
-					$this->load->view('templates/department_footer');
-				}
-				else
-					redirect(site_url());
-			}
+			else
+				redirect(site_url());
 		}
 
 		/*public function index() {
@@ -113,22 +115,31 @@
 		
 		
 		public function fcourses() {
-			$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
-			//print_r($data);
+			$fac_id = $this->get_fac_id_loggedin_browsing();
+			if($fac_id) {
+				//echo $fac_id;
+				$dept_name['records'] = $this->dep_model->get_dept_name($fac_id);
+				$data['details'] = $this->faculty_model->get_fac_details($fac_id);
+				//print_r($data);
 
-			$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
-			$this->load->view('templates/department_header', $dept_name);
-			$this->load->view('faculty/faculty_courses', $data);
-			$this->load->view('templates/department_footer');
+				$this->load->view('templates/department_header', $dept_name);
+				$this->load->view('faculty/faculty_courses', $data);
+				$this->load->view('templates/department_footer');
+			}
+			else
+				redirect(site_url());
 		}
 		
 		public function fpublications() {
-			if( $this->session->userdata('logged_in') == 'true' ) {
-				$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
-				$data['pub_info'] = $this->faculty_model->get_publication_info($this->session->userdata('fac_id'));
+			$fac_id = $this->get_fac_id_loggedin_browsing();
+			if($fac_id) {
+				//echo $fac_id;
+				$dept_name['records'] = $this->dep_model->get_dept_name($fac_id);
+				$data['details'] = $this->faculty_model->get_fac_details($fac_id);
+				$data['pub_info'] = $this->faculty_model->get_publication_info($fac_id);
 				//print_r($data['pub_info']);
 
-				$this->load->view('templates/department_header');
+				$this->load->view('templates/department_header', $dept_name);
 				$this->load->view('faculty/faculty_publications', $data);
 				$this->load->view('templates/department_footer');
 			}
@@ -172,20 +183,36 @@
 		}  //  end of add_publication function
 
 		public function fresearch() {
-			$data['details'] = $this->faculty_model->get_fac_details($this->session->userdata('fac_id'));
-			//print_r($data);
+			$fac_id = $this->get_fac_id_loggedin_browsing();
+			if($fac_id) {
+				//echo $fac_id;
+				$dept_name['records'] = $this->dep_model->get_dept_name($fac_id);
+				$data['details'] = $this->faculty_model->get_fac_details($fac_id);
+				//print_r($data);
 
-			$dept_name['records'] = $this->dep_model->get_dept_name($this->session->userdata('fac_id'));
-			$this->load->view('templates/department_header', $dept_name);
-			$this->load->view('faculty/faculty_research', $data); 
-			$this->load->view('templates/department_footer');
+				$this->load->view('templates/department_header', $dept_name);
+				$this->load->view('faculty/faculty_research', $data);
+				$this->load->view('templates/department_footer');
+			}
+			else
+				redirect(site_url());
 		} 
 
 		public function fmeetings() { 
 			$this->load->helper('url');
-			$this->load->view('templates/department_header');
-			$this->load->view('faculty/faculty_meetings'); 
-			$this->load->view('templates/department_footer');
+			$fac_id = $this->get_fac_id_loggedin_browsing();
+			if($fac_id) {
+				//echo $fac_id;
+				$dept_name['records'] = $this->dep_model->get_dept_name($fac_id);
+				$data['details'] = $this->faculty_model->get_fac_details($fac_id);
+				//print_r($data);
+
+				$this->load->view('templates/department_header', $dept_name);
+				$this->load->view('faculty/faculty_meetings', $data);
+				$this->load->view('templates/department_footer');
+			}
+			else
+				redirect(site_url());			
 		} 
 	} 
 ?>

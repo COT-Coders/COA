@@ -1,10 +1,6 @@
 <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  Main section =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url();?>/assets/js/more.js"></script>
-		
+
 <!-- Left Sidebar -->
 
 <section class="container-fluid">
@@ -28,10 +24,10 @@
 							<ul class="list-group">
 								<li class="list-group-item"><a href="<?php echo site_url('faculty'); ?>">Profile</a></li>
 								<li class="list-group-item"><a href="<?php echo site_url('faculty/fcourses'); ?>">Courses</a></li>
-								<li class="list-group-item"><a href="#">Add Publications</a></li>
 								<li class="list-group-item"><a href="<?php echo site_url('faculty/fresearch'); ?>">Research</a></li>
 								<li class="list-group-item"><a href="<?php echo site_url('faculty/fmeetings'); ?>">Meetings & Conferences</a></li>
-
+								<li class="list-group-item"><a href="#">Publications</a></li>
+								
 								<?php
 									if(($this->session->userdata('logged_in') == 'true') && $this->session->userdata('role') == 3) {  //  only HOD can add Staff, Role of HOD=3
 										?>
@@ -67,12 +63,18 @@
 								<div class="separator"></div>
 
 								<div class="row">
-									<div class="col-md-10 col-sm-10 col-xs-10"><h3 style="margin-top: 1px"><b><?php echo $details[0]['Name']; ?></b></h3> </div>
-									<div class="col-md-2 col-sm-2 col-xs-2">
-										<button type="button"class="btn btn-info h3-size" data-toggle="modal" data-target="#add_pub_modal" style="float:right;margin-top: 1px">
-											Add new
-										</button>
+									<div class="col-md-10 col-sm-10 col-xs-10">
+										<h3 style="margin-top: 1px"><b><?php echo $details[0]['Name']; ?></b>
+										</h3>
 									</div>
+
+									<?php if($this->session->userdata('logged_in') == 'true') { ?>
+										<div class="col-md-2 col-sm-2 col-xs-2">
+											<button type="button"class="btn btn-info h3-size" data-toggle="modal" data-target="#add_pub_modal" style="float:right;margin-top: 1px">
+												Add new
+											</button>
+										</div>
+									<?php } ?>
 								</div>
 
 								
@@ -81,7 +83,6 @@
 
 								<span>
 									<ol>
-										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
 										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
 										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>
 										<li>Dr A S Nain, How to Kill Hitler, 1945, World War 2 pulblication house,</li>

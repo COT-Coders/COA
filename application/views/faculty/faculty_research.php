@@ -19,13 +19,12 @@
 							<p class="card-text"> <b> B.Sc, M.Sc, Phd </b> </p>
 						</div>
 
-						<?php if($this->session->userdata('logged_in') == 'true') { ?>
 						<ul class="list-group">
 							<li class="list-group-item"><a href="<?php echo site_url(); ?>/faculty">Profile</a></li>
 							<li class="list-group-item"><a href="<?php echo site_url('faculty/fcourses'); ?>">Courses</a></li>
-							<li class="list-group-item"><a href="<?php echo site_url('faculty/fpublications'); ?>">Add Publications</a></li>
 							<li class="list-group-item"><a href="#">Research</a></li>
 							<li class="list-group-item"><a href="<?php echo site_url('faculty/fmeetings'); ?>">Meetings & Conferences</a></li>
+							<li class="list-group-item"><a href="<?php echo site_url('faculty/fpublications'); ?>">Publications</a></li>
 
 							<?php
 								if(($this->session->userdata('logged_in') == 'true') && $this->session->userdata('role') == 3) {  //  only HOD can add Staff, Role of HOD=3
@@ -41,7 +40,6 @@
 								<?php }
 							?>
 						</ul>
-						<?php } ?>
 					</div>
 				</div>
 				<!-- Accordian ends -->
